@@ -4,11 +4,20 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var limits = require('limits');
+var minify = require('express-minify');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//Limits configuration
+var limits_config = {
+    enable: true,
+    file_uploads: true,
+    post_max_size: 1048580 //1MB
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +30,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+app.use(minify()); //Minifies the assets (might need to use options)
+app.use(limits(limits_config)); // limit size of uploads to lessen the impact of DoS attempts
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 

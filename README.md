@@ -1,4 +1,4 @@
-Roadmunk Consumer Facing Marketing Site
+Roadmunk Consumer Facing Site
 =========================================
 
 Add documentation **here** when site is set up

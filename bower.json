@@ -1,0 +1,12 @@
+{
+  "name": "Roadmunk",
+  "version": "0.0.0",
+  "authors": [
+    "Brent Scheibelhut <brent@roadmunk.com>"
+  ],
+  "description": "Roadmunk Consumer Facing Site",
+  "main": "server.js",
+  "license": "MIT",
+  "homepage": "http://roadmunk.com",
+  "private": true
+}
