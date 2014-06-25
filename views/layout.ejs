@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Product" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="initial-scale=1.0">
+
+		<!-- Basic Meta Data -->
+		<title><%= title %></title> 
+		<meta name="description" content="<%= description %>" />
+		<meta name="author" content="<%= author %>">
+
+		<!-- Schema.org markup for Google+ --> 
+		<meta itemprop="name" content="<%= title %>"> 
+		<meta itemprop="description" content="<%= description %>"> 
+		<meta itemprop="image" content=" http://www.example.com/image.jpg"> <!-- Fill in image here -->
+
+		<!-- Open Graph data --> 
+		<meta property="og:title" content="<%= title %>" /> 
+		<meta property="og:type" content="website" /> 
+		<meta property="og:url" content=" http://roadmunk.com/" />
+		<meta property="og:image" content=" http://example.com/image.jpg" /> <!-- Fill in image here -->
+		<meta property="og:description" content="<%= description %>" /> 
+		<meta property="og:site_name" content="Roadmunk" /> 
+
+		<!-- Stylesheets -->
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+
+		<!-- Add something here so you can include specific stylesheet -->
+
+	</head>
+
+	<body>
+		<% include header %> <!-- The top bar for the site -->
+
+		<% include home %> <!-- Find out if there in a way to include a specific file here like using <%= content %>
+
+		<% include footer %> <!-- The footer for the site -->
+	</body>
+
+	<% include scripts %> <!-- The javascript needed by the site -->
+
+</html>
+
