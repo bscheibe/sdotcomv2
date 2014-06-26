@@ -1,22 +1,17 @@
 var express = require('express');
+var pageData = require('../data/index');
 var router = express.Router();
+
+var data = new pageData();
 
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Roadmunk' });
 });
 
-var homeData = {
-	title : "Roadmunk Landing Page",
-	description : "Create Brilliant Roadmaps with Roadmunk",
-	author : "Brent Scheibelhut",
-	content : "home",
-	filename: true
-}
-
 /* GET test page. */
 router.get('/test', function(req, res) {
-  res.render('layout', homeData);
+  res.render('layout', data.home);
 });
 
 module.exports = router;
