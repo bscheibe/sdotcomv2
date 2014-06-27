@@ -14,4 +14,9 @@ router.get('/test', function(req, res) {
   res.render('layout', data.home);
 });
 
+/* The 404 route */
+router.get('*', function (req, res) {
+	res.render('layout', data.home);
+});
+
 module.exports = router;
