@@ -29,6 +29,9 @@ Adding a New Page
 
 That's it. Run node server.js and your new page is live!
 
+###Note
+**Do not call you page content.ejs, otherwise it will use this page for all routes instead of the content variable route**
+
 EJS Templating
 ======================
 
