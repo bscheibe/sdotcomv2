@@ -32,6 +32,19 @@ That's it. Run node server.js and your new page is live!
 ###Note
 **Do not call you page content.ejs, otherwise it will use this page for all routes instead of the content variable route**
 
+Adding a New Stylesheet
+=========================
+1. Create the new stylesheet in the `/public/stylesheets` folder and use the suffix `.less`
+2. Open `/public/stylesheets/style.less` and type `@import ` + your stylesheet file name without the `.less` suffix
+
+All done! Try and use LESS where possible but LESS accepts pure CSS as well.
+
+Adding a New Section
+=====================
+1. Copy and paste a section code from `/views/home.ejs` and paste it where you want the new section
+2. If the above section is black (excluding a top section) then use the class `black-white` and similarily if the above section is white use the class `white-black` on the classes attached to the section.
+3. You want to alternate the SVG row so copy over the correct one and past in just below the section header (SHOULDO: Hook up a javascript binding that does this for us)
+
 EJS Templating
 ======================
 

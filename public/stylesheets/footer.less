@@ -1,0 +1,117 @@
+/* Footer Styling */
+
+@h4-font-size : 14px;
+@links-font-size : 12px;
+@copyright-font-size : @h4-font-size;
+
+
+@rwd-h4-font-size : 12px;
+@rwd-links-font-size : 10px;
+@rwd-copyright-font-size : @rwd-links-font-size;
+
+.footer {
+  width      : 100%;
+  border-top : 1px solid @border-color;
+  color      : @roadmunk-orange;
+  background : @steel-darkest;
+  .box-sizing(border-box);
+
+
+  a {
+    color           : @light-orange;
+    text-decoration : none;
+    .transition(color 0.1s);
+    &:hover {
+      color : @roadmunk-orange;
+      .transition(color 0.1s);
+    }
+    &:active {
+      color : @roadmunk-orange;
+    }
+  }
+
+  .row {
+    width: 70%;
+    margin: 2rem auto;
+
+    .flex-display();
+    .flex-direction(row);
+    .flex-wrap(wrap);
+    .align-items(center);
+    .justify-content(center);
+
+    .column {
+      width        : 18%;
+      margin-right : 3.5%;
+      margin-left  : 1%;
+
+      &:first-child {
+        margin-left : 0%;
+      }
+      &:last-child {
+        margin-right : 0;
+        width        : auto;
+      }
+
+      h4 {
+        margin         : 0;
+        line-height    : 2rem;
+        
+        font-size      : @h4-font-size;
+        text-transform : uppercase;
+        color          : @dark-orange;
+      }
+
+      ol {
+        padding-left : 0;
+        margin-top   : 5px;
+        font-size    : @links-font-size;
+        list-style   : none;
+        .box-sizing(border-box);
+        .nav-item {
+          line-height     : 2.2rem;
+        }
+      }
+
+    }
+  }
+
+  .copyright-info {
+    width          : 75%;
+    margin         : 0 auto;
+    padding        : 1.5rem 0;
+    background     : @steel-darkest;
+    
+    font-size      : @copyright-font-size;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    border-top     : 1px solid #777;
+    color          : @light-orange;
+
+    .flex-display();
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+  }
+}
+
+/* RWD for the footer */
+
+@media only screen and (max-width: 975px) {
+  .footer {
+    .row {
+      .column {
+        min-width : 120px;
+        h4 {
+          font-size : @rwd-h4-font-size;
+        }
+        ol {
+          font-size : @rwd-links-font-size;
+        }
+      }
+    }
+    .copyright-info {
+      font-size : @rwd-copyright-font-size;
+      .justify-content(flex-start);
+    }
+  }
+}
