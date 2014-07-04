@@ -45,12 +45,22 @@
   &.section-short {
     padding: 60px 0;
     &.top-header {
-      margin-top: 90px;
+      padding-top: 90px;
     }
   }
 
   &.section-normal {
     padding: 90px 0;
+    &.top-header {
+      padding-top: 120px;
+    }
+  }
+
+  &.section-large {
+    padding: 120px 0;
+    &.top-header {
+      padding-top: 150px;
+    }
   }
 
   .container {
@@ -74,6 +84,14 @@
         font-size   : 96px;
         line-height : 1;
       }
+      .text-large {
+        font-size: 72px;
+        line-height: 0.9;
+      }
+      .text-small {
+        font-size: 32px;
+        line-height: 0.5;
+      }
       .hairline {
         font-weight : 300;
       }
@@ -83,7 +101,7 @@
       }
     }
     .row {
-      .col-md-12 {
+      [class*="col-"] {
         z-index : 3;
       }
     }
@@ -107,10 +125,6 @@
 
   .background-overlay {
     z-index: 2;
-  }
-
-  .text-center {
-    text-align: center;
   }
 
   [class*="decor-"] {

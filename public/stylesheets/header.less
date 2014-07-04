@@ -1,4 +1,6 @@
 /* Top Bar Styling */
+@scroll-transition : 0.5s;
+
 #masthead {
   .transition(all 0.3s);
 }
@@ -7,16 +9,30 @@
   background-color : @steel-darkest;
   border-radius    : 0;
   border           : none;
-  //border-bottom    : 1px solid @border-color;
   min-height       : 90px;
   text-shadow      : none;
-  margin-bottom: 0;
+  margin-bottom    : 0;
+  z-index          : 1000;
   .transition(all 0.3s);
 
   &.navbar-scrolled {
-    .transition(all 0.3s);
     min-height: 70px;
-    .box-shadow(0px 4px 0px rgba(223, 46, 27, .3));
+    .box-shadow(0px 4px 0px rgba(47, 49, 52, 0.3));
+    .navbar-nav > li > a {
+      .transition(all @scroll-transition);
+       padding-top: 23px;
+       padding-bottom: 23px;
+    }
+    .navbar-brand {
+      .transition(all @scroll-transition);
+       line-height : 70px;
+       height      : 70px;
+    }
+    .navbar-toggle {
+      .transition(all @scroll-transition);
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
   }
 
   &.navbar-default {
@@ -52,7 +68,7 @@
     font-style: normal;
     font-weight: 400;
     position: relative;
-    .transition(all 0.2s);
+    .transition(all @scroll-transition);
     &:hover {
       color: @roadmunk-orange;
     }
@@ -86,6 +102,7 @@
   }
 
   .navbar-brand {
+    .transition(all @scroll-transition);
      padding     : 0;
      line-height : 90px;
      height      : 90px;
@@ -116,7 +133,7 @@
     .border-radius(0);
     .box-shadow(none);
 
-    .transition(all 0.2s);
+    .transition(all @scroll-transition);
     &.collapsed {
       .icon-bar {
         &:nth-child(2) {
@@ -178,8 +195,10 @@
         }
       }
     }
+
+    @vertical-padding : 5px;
+
     .navbar-nav > li > a {
-      @vertical-padding : 5px;
 
       padding-top    : @vertical-padding;
       padding-bottom : @vertical-padding;
@@ -188,6 +207,12 @@
       }
       &:before {
         display : none;
+      }
+    }
+    &.navbar-scrolled {
+      .navbar-nav > li > a {
+         padding-top: @vertical-padding;
+         padding-bottom: @vertical-padding;
       }
     }
   }

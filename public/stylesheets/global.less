@@ -2,3 +2,97 @@
 body {
   font-family:  'OpenSans', "Helvetica Neue", Helvetica, Arial;
 }
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	float: none;
+	margin: 0 auto;
+}
+
+.go-top {
+    position: fixed !important;
+    display: block;
+    font-size: 16px;
+    width: 2em;
+    height: 2em;
+    background: @roadmunk-orange;
+    text-align: center;
+    bottom: -44px;
+    opacity: 1;
+    right: 12px;
+    .transition(all 0.5s);
+    z-index: 100;
+}
+.go-top i {
+    line-height: 32px;
+    color: @white;
+}
+
+.hex-alt {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 21px;
+    height: 36px;
+    position: relative;
+    text-align: center;
+    line-height: 36px;
+}
+.hex-alt:before, .hex-alt:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    top: 0;
+    position: absolute;
+}
+.hex-alt:before {
+    border-right: 10px solid @roadmunk-orange;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    left: -10px;
+}
+.hex-alt:after {
+    border-left: 10px solid @roadmunk-orange;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    right: -10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+@media (max-width: 979px) {
+    .go-top {
+    	display: none !important;
+    } 
+}
+
+/* Animations */

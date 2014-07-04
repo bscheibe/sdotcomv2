@@ -45,6 +45,12 @@ Adding a New Section
 2. If the above section is black (excluding a top section) then use the class `black-white` and similarily if the above section is white use the class `white-black` on the classes attached to the section.
 3. You want to alternate the SVG row so copy over the correct one and past in just below the section header (SHOULDO: Hook up a javascript binding that does this for us)
 
+Adding a New Transition
+=========================
+1. Add the class `hidden` to the element you want to transition in (this makes sure you don't get the brief transition as it goes off screen)
+2. In the local javascript file utilize the document scroll function found on another or the one currently in use. Use control flow to initate the transition at the correct location on the screen.
+3. Get the class by its ID using jquery and add class `animated` as well as the name of animation class you want to use. Please see http://daneden.github.io/animate.css/ for the animations possible
+
 EJS Templating
 ======================
 
