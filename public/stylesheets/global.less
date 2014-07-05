@@ -28,13 +28,78 @@ body {
 	margin: 0 auto;
 }
 
+.text-xlarge {
+    font-size   : 96px;
+    line-height : 1;
+}
+
+.text-large {
+    font-size: 72px;
+    line-height: 0.9;
+}
+
+.text-medium {
+    font-size: 48px;
+    line-height: 0.9;
+}
+
+.text-small {
+    font-size: 32px;
+    line-height: 0.5;
+}
+
+.med-margin-bottom {
+    margin-bottom: 60px !important;
+}
+
+.small-margin-bottom {
+    margin-bottom: 30px !important;
+}
+
+.xsmall-margin-bottom {
+    margin-bottom: 15px !important;
+}
+
+.med-margin-top {
+    margin-top: 60px !important;
+}
+
+.small-margin-top {
+    margin-top: 30px !important;
+}
+
+.xsmall-margin-top {
+    margin-top: 15px !important;
+}
+
+.move-up {
+    margin-top: -30px !important;
+}
+
+/* Are these styles just used on home? */
+.box-list>li {
+    overflow: hidden;
+    padding-bottom: 24px;
+}
+
+.image-list > li {
+    //Centers the images
+    text-align: center;
+}
+
+/* End of those styles */
+
+
 a:link {
     text-decoration: none;
     color: @white;
 }
 
 .cta {
-    padding       : 15px 35px;
+    //Use width instead of left/right padding so we can center the button easily
+    //with margin auto
+    width         : 325px;
+    padding       : 15px 0;
     background    : @roadmunk-orange;
     color         : #fff;
     font-size     : 18px;
