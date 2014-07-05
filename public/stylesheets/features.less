@@ -14,13 +14,13 @@
 	.row {
 		.image-row {
 			img {
-				&:nth-child(n+1) {
-					margin-left: 80px;
-				}
+				margin-left: 80px;
+
 				&:first-child {
 					margin-left: 0;
 				}
 			}
+		}
 		.image-left {
 			img {
 				margin-left: 80px;
@@ -31,7 +31,6 @@
 				margin-right: 80px;
 			}
 		}
-		}
 	}
 	.subheader {
       margin: 30px auto 0 auto;
@@ -41,4 +40,26 @@
       margin: 30px auto 0 auto;
       font-size: 16px;
     }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+		.row {
+			.image-row {
+				img {
+					margin-left: 0;
+				}
+			}
+			.image-left {
+				img {
+					margin-left: 80px;
+				}
+			}
+			.image-left {
+				img {
+					margin-right: 80px;
+				}
+			}
+		}
+  	}
 }

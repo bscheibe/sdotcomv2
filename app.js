@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 
 app.set('port', process.env.PORT || 3030);
 
-app.use(favicon());
+app.use(favicon(path.join(__dirname, 'public/images/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

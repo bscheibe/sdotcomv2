@@ -28,6 +28,30 @@ body {
 	margin: 0 auto;
 }
 
+a:link {
+    text-decoration: none;
+    color: @white;
+}
+
+.cta {
+    padding       : 15px 35px;
+    background    : @roadmunk-orange;
+    color         : #fff;
+    font-size     : 18px;
+    border-radius : 4px;
+    text-shadow   : 1px 1px 0px rgba(255,255,255,.15);
+    text-align    : center;
+    .transition(all 0.2s);
+    &:hover {
+        .transition(all 0.2s);
+        color : @off-white;
+        background : @dark-orange;
+    }
+    &:before {
+        content : "Build My Roadmap For Free";
+    }
+}
+
 .go-top {
     position: fixed !important;
     display: block;

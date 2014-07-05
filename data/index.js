@@ -17,6 +17,24 @@ var Data = function() {
 		content : "features",
 		filename: true
 	}
+
+	//Pricing Page Data
+	this.pricing = {
+		title : "Roadmunk Pricing",
+		description : "Pricing for the Roadmunk Roadmap App",
+		author : "Brent Scheibelhut",
+		content : "pricing",
+		filename: true
+	}
+
+	//Terms and Conditions Page Data
+	this.termsandconditions = {
+		title : "Roadmunk Terms and Conditions",
+		description : "Terms and Conditions Roadmunk Roadmap App",
+		author : "Brent Scheibelhut",
+		content : "termsandconditions",
+		filename: true
+	}
 };
 
 module.exports = Data;
