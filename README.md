@@ -3,11 +3,13 @@ Roadmunk Consumer Facing Site
 
 Setup
 ========
-0. Install Git via http://git-scm.com/book/en/Getting-Started-Installing-Git and have acces rights to repo https://github.com/latifnanji/roadmunkWebsite
+0. Installs
+    - Install Git via http://git-scm.com/book/en/Getting-Started-Installing-Git and have acces rights to repo https://github.com/latifnanji/roadmunkWebsite
+    - Install Node via http://nodejs.org/
 1. Open terminal
 2. type `git init` (intialize git repository on local disk)
-3. type `git remote add production https://github.com/latifnanji/roadmunkWebsite.git ` (adds a remote to the repo)
-4. type `git clone production` (copies files from repo to local disk)
+3. type `git clone https://github.com/latifnanji/roadmunkWebsite.git` (copies files from repo to local disk)
+4. 3. type `git remote add production https://github.com/latifnanji/roadmunkWebsite.git ` (adds a remote to the repo so you can add code)
 5. type `cd roadmunkWebsite` (takes you into the repo you just cloned on your local disk)
 6. type `node server.js` (runs the server on your local host)
 7. copy and paste `http://localhost:3030` into your browser and your good to go
@@ -18,8 +20,9 @@ Accessing On Subsequent Visits
 =================================
 1. Open terminal (or if already open type `cd`)
 2. Type `cd roadmunkWebsite`
-3. Type `node server.js` (runs the server on your local host)
-4. copy and paste `http://localhost:3030` into your browser and you good to go 
+3. Type `git pull production` **(Do this step only if you want to update your local code with the code from the online repo)**
+4. Type `node server.js` (runs the server on your local host)
+5. copy and paste `http://localhost:3030` into your browser and you good to go 
 
 Adding a New Page
 ====================
