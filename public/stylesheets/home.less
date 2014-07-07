@@ -8,6 +8,9 @@
   }
   .background-overlay {
     background : @primary-color;
+    &.blog {
+      background: rgba(0,0,0,0.6);
+    }
   }
 
   .underline {
@@ -88,6 +91,10 @@
     }
   }
 
+  &.section-xlarge {
+    padding: 180px 0;
+  }
+
   .container {
     z-index : 3;
     .section-header {
@@ -98,6 +105,9 @@
       margin         : 0 auto 80px;
       z-index        : 3;
       font-size      : 18px;
+      &.blog {
+        margin: 0 auto;
+      }
       .headline {
         text-align    : center;
         display       : inline-block;
@@ -129,11 +139,31 @@
     bottom   : 0;
   }
 
+  //If something goes wrong change z-index to 1 for background-media and 2 for background-overlay
   .background-media {
     background-position : 0 0;
     background-repeat   : no-repeat;
     z-index             : 1;
     overflow            : hidden;
+    img.bg {
+      -webkit-filter: blur(1px);
+      filter : blur(1px);
+
+      /* Set rules to fill background */
+      min-width: 1024px;
+      max-height: 600px;
+      
+      /* Set up proportionate scaling */
+      width: 100%;
+      //height: auto;
+      
+      /* Set up positioning */
+      // Put fixed here if want parallax but currently broken with footer?
+      position: absolute;
+      //top: -150px;
+      top: 0px;
+      left: 0;
+    }
   }
 
   .background-overlay {
@@ -230,6 +260,17 @@
   }
   .box-round .box-inner {
       border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .section {
+    .background-media {
+      img.bg {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+      }
+    }
   }
 }
 

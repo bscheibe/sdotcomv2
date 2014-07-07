@@ -13,4 +13,5 @@ Current Bugs
 - [ ] Rename landing page class to something better
 - [ ] Changes transitions from all to only where needed
 - [ ] For filenames use only '_' or '-' but not both. Specify which one in the guide
-- [ ] Fix the top header issue
+- [ ] Fix the top header issue (ie. figure out a better way then `header` classes)
+- [ ] Use bootstrap on the footer columns

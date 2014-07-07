@@ -1,5 +1,6 @@
 var express = require('express');
 var pageData = require('../data/index');
+var blogData = require('../data/blog');
 var router = express.Router();
 
 var data = new pageData();
@@ -22,6 +23,11 @@ router.get('/pricing', function(req, res) {
 /* GET Blog page. */
 router.get('/blog', function(req, res) {
   res.render('layout', data.blog);
+});
+
+/* GET Blog page. */
+router.get('/blog1', function(req, res) {
+  res.render('layout', blogData.blogs[0]);
 });
 
 /* GET Company page. */
