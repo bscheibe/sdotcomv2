@@ -12,3 +12,5 @@ Current Bugs
 - [ ] Find a better way of adding the correct javascript files to the page instead of control flow?
 - [ ] Rename landing page class to something better
 - [ ] Changes transitions from all to only where needed
+- [ ] For filenames use only '_' or '-' but not both. Specify which one in the guide
+- [ ] Fix the top header issue

@@ -1,0 +1,139 @@
+<section class="section white-black section-short extra-top-header">
+	<div class="background-media"></div>
+	<div class="background-overlay"></div>
+	<div class="container">
+		<header class="section-header text-center">
+			<h1 class="headline text-medium hairline">Roadmunk Blog</h1>
+			<p>All The Latest News and Updates</p>
+		</header>
+	</div>
+</section>
+<article class="page type-page status-publish hentry">
+	<section class="section black-white section-normal has-top">
+		<div class="background-media"></div>
+		<div class="background-overlay"></div>
+		<div class="container">
+			<div class="row med-margin-bottom">
+				<div class="col-md-12 text-default">
+					<div class="row">
+						<ul class="list-unstyled">
+							<% blogData.blogs.forEach(function (blog) { %>
+								<li class="post-item col-md-4">
+									<div class="grid-post white-black">
+										<article id="<%= blog.id %>" class="post post-showinfo">
+											<div class="post-media overlay">
+												<%if (blog.image != "none") { %>
+													<a href="#" class="feature-image">
+														<img src="<%= blog.image %>">
+													</a>
+												<% } %>
+											</div>
+											<div class="post-head small-screen-center">
+												<h2 class="post-title"><a href="#"><%= blog.title %></a></h2>
+												<small class="post-author"><%= blog.author %></small>
+												<small class="post-date"><%= blog.date %></small>
+												<div class="post-icon">
+													<div class="hex-alt-big-white">
+														<span class="glyphicon glyphicon-<%= blog.icon %>"></span>
+													</div>
+												</div>
+											</div>
+											<div class="post-body">
+												<p><%= blog.description %></p>
+												<a href="#" class="more-link">Read More</a>
+											</div>
+											<div class="post-extras bordered">
+												<span class="post-category">
+													<span class="glyphicon glyphicon-home"></span>
+												</span>
+												<span class="post-tags">
+													<span class="glyphicon glyphicon-home"></span>
+												</span>
+												<span class="post-link">
+													<span class="glyphicon glyphicon-home"></span>
+												</span>
+											</div>
+										</article>
+									</div>
+								</li>
+							<% }); %>
+							<!--<li class="post-item col-md-4">
+								<div class="grid-post white-black">
+									<article id="post-181" class="post post-showinfo">
+										<div class="post-media overlay">
+											<a href="#" class="feature-image">
+												<img src="/images/blog-image1.png">
+											</a>
+										</div>
+										<div class="post-head small-screen-center">
+											<h2 class="post-title"><a href="#">Post Title</a></h2>
+											<small class="post-author">Schybo</small>
+											<small class="post-date">November 12, 2013</small>
+											<div class="post-icon">
+												<div class="hex-alt-big-white">
+													<span class="glyphicon glyphicon-home"></span>
+												</div>
+											</div>
+										</div>
+										<div class="post-body">
+											<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don’t know exactly when we turned on each other, but I know that seven of us survived the slide… and only five made it out. Now we took an oath, that I’m breaking now. We said we’d say it was the snow that killed the other two, but it wasn’t. Nature is lethal but it doesn’t hold a candle to man.</p>
+											<a href="#" class="more-link">Read More</a>
+										</div>
+										<div class="post-extras bordered">
+											<span class="post-category">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+											<span class="post-tags">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+											<span class="post-link">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+										</div>
+									</article>
+								</div>
+							</li>
+							<li class="post-item col-md-4">
+								<div class="grid-post white-black">
+									<article id="post-181" class="post post-showinfo">
+										<div class="post-media overlay">
+											<a href="#">
+												<img src="/images/blog-image1.png">
+											</a>
+										</div>
+										<div class="post-head small-screen-center">
+											<h2 class="post-title">
+											<a href="#">Post Title</a></h2>
+											<small class="post-author">Schybo</small>
+											<small class="post-date">November 12, 2013</small>
+											<div class="post-icon">
+												<div class="hex-alt-big-white">
+													<span class="glyphicon glyphicon-home"></span>
+												</div>
+											</div>
+										</div>
+										<div class="post-body">
+											<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don’t know exactly when we turned on each other, but I know that seven of us survived the slide… and only five made it out. Now we took an oath, that I’m breaking now. We said we’d say it was the snow that killed the other two, but it wasn’t. Nature is lethal but it doesn’t hold a candle to man.</p>
+											<a href="#" class="more-link">Read More</a>
+										</div>
+										<div class="post-extras bordered">
+											<span class="post-category">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+											<span class="post-tags">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+											<span class="post-link">
+												<span class="glyphicon glyphicon-home"></span>
+											</span>
+										</div>
+									</article>
+								</div>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</article>
