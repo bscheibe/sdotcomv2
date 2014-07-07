@@ -14,6 +14,13 @@ Setup
     - Imagine as if `http://localhost:3030` represented `http://roadmunk.com` and all the routes were the same off the link
     - So `http://localhost:3030/pricing` would go to our pricing page
 
+Accessing On Subsequent Visits
+=================================
+1. Open terminal (or if already open type `cd`)
+2. Type `cd roadmunkWebsite`
+3. Type `node server.js` (runs the server on your local host)
+4. copy and paste `http://localhost:3030` into your browser and you good to go 
+
 Adding a New Page
 ====================
 1. Create the new `.ejs` with the appropiate prefix in the views folder
