@@ -10,9 +10,9 @@ Setup
 4. type `git clone production` (copies files from repo to local disk)
 5. type `cd roadmunkWebsite` (takes you into the repo you just cloned on your local disk)
 6. type `node server.js` (runs the server on your local host)
-7. copy and paste `http://localhost:3000` into your browser and your good to go
-    - Imagine as if `http://localhost:3000` represented `http://roadmunk.com` and all the routes were the same off the link
-    - So `http://localhost:3000/pricing` would go to our pricing page
+7. copy and paste `http://localhost:3030` into your browser and your good to go
+    - Imagine as if `http://localhost:3030` represented `http://roadmunk.com` and all the routes were the same off the link
+    - So `http://localhost:3030/pricing` would go to our pricing page
 
 Adding a New Page
 ====================
