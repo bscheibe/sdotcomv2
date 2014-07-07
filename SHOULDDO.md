@@ -10,3 +10,5 @@ Current Bugs
 - [ ] Compress images for the web (Photoshop) such as those icons on the first page
 - [ ] Don't use 'move-up' class for the button on pricing and TnC page
 - [ ] Find a better way of adding the correct javascript files to the page instead of control flow?
+- [ ] Rename landing page class to something better
+- [ ] Changes transitions from all to only where needed

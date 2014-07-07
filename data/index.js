@@ -35,6 +35,15 @@ var Data = function() {
 		content : "termsandconditions",
 		filename: true
 	}
+
+	//Terms and Conditions Page Data
+	this.fourohfour = {
+		title : "Roadmunk 404",
+		description : "Roadmunk 404 - Page Not Found",
+		author : "Brent Scheibelhut",
+		content : "404",
+		filename: true
+	}
 };
 
 module.exports = Data;
