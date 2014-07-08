@@ -15,3 +15,6 @@ Current Bugs
 - [ ] For filenames use only '_' or '-' but not both. Specify which one in the guide
 - [ ] Fix the top header issue (ie. figure out a better way then `header` classes)
 - [ ] Use bootstrap on the footer columns
+- [ ] Have webkit font-smoothing on the body?
+- [ ] Have colors stated at top
+- [ ] Add markup to blog for ease of use

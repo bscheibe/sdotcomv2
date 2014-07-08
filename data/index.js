@@ -1,4 +1,4 @@
-var blogData = require('../data/blog');
+var blogData = require('./blog');
 
 var Data = function() {
 	

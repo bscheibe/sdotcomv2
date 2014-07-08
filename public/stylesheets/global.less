@@ -133,6 +133,33 @@ a:link {
     position: absolute;
 }
 
+.underline {
+    &:before {
+      opacity          : 1;
+      content          : "";
+      position         : absolute;
+      left             : 20px;
+      right            : 20px;
+      height           : 2px;
+      margin           : 0 auto;
+      width            : 100%;
+      bottom           : -15%;
+    }
+    &.underline-left {
+      &:before {
+        margin: 0;
+        width: 40%;
+        left: 0;
+        bottom : -35px;
+      }
+    }
+    &.underline-404 {
+      &:before {
+        bottom: -20px;
+      }
+    }
+}
+
 //Other button
 .btn, button {
     outline: 0;

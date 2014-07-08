@@ -25,9 +25,12 @@ router.get('/blog', function(req, res) {
   res.render('layout', data.blog);
 });
 
-/* GET Blog page. */
-router.get('/blog1', function(req, res) {
-  res.render('layout', blogData.blogs[0]);
+/* Create all the blog routes */
+blogData.blogs.forEach(function (blog) {
+  /* GET Blog page. */
+  router.get(blog.content, function(req, res) {
+    res.render('layout', blog);
+  });
 });
 
 /* GET Company page. */

@@ -24,33 +24,6 @@
   position : relative;
   z-index  : 4;
 
-  .underline {
-    &:before {
-      opacity          : 1;
-      content          : "";
-      position         : absolute;
-      left             : 20px;
-      right            : 20px;
-      height           : 2px;
-      margin: 0 auto;
-      width: 25%;
-      bottom           : -15%;
-    }
-    &.underline-left {
-      &:before {
-        margin: 0;
-        width: 40%;
-        left: 0;
-        bottom : -35px;
-      }
-    }
-    &.underline-404 {
-      &:before {
-        bottom: -20px;
-      }
-    }
-  }
-
   &.black-white {
     .section-fill(#fff, @steel-darkest);
   }
@@ -92,7 +65,7 @@
   }
 
   &.section-xlarge {
-    padding: 180px 0;
+    padding: 160px 0;
   }
 
   .container {
