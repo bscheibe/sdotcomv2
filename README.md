@@ -27,18 +27,32 @@ Accessing On Subsequent Visits
 
 Changing Text/Code/Image
 =======================
-0. Install Sublime Text: http://www.sublimetext.com/3
+0. Install Sublime Text: http://www.sublimetext.com/3 and have the local hosted site up on `http://localhost:3030`
 1. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
 2. You have two options of how to change text/code/image
+
     2.1 The code is layed out in clear and concise manner allowing you to find pages easily
-        - Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
-        - Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
-    2.2 If you want to change some text/code/image but don't know the location press `command+shift+f`
-        - In the find column type some of the text/code/image that you want to change
-        - In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
+        1. Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
+        2. Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
+        3. Make your changes and save the file though `Cmd+S`
+        4. Refresh your local broswer the changes should be displayed
+    
+    2.2. If you want to change some text/code but don't know the location press `command+shift+f`
+        1. In the find column type some of the text/code/image that you want to change
+        2. In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
         - Click find (**don't click replace**)
-        - A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
-        - Change what needs changing. Then save the file through `Cmd+S`
+        3. A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
+        4. Change what needs changing. Then save the file through `Cmd+S`
+        5. Refresh your local browser. The changes should be displayed
+
+    2.3. If you want to change and image:
+        1. Open up Finder and navigate to `~/Documents/roadmunkWebsite/public/image`
+        2. Copy over the image your new image into this folder and remember it's name
+        3. Follow the steps in 2.2 (to locate the old image) and in the find box type the URL of the image. You can find this URL by inspecting the element in your local browser.
+        4. Update the URL of the image after the `/images/` to the name of the image you just recently added
+        5. Save the file through `Cmd+S`
+        6. Regresh your local broser. The changes should be displayed
+        
 3. Once all your changes are finished open Terminal
 4. Type `cd ~/Documents/roadmunkWebsite`
 5. Type `git add -A`
