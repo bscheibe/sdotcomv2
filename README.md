@@ -7,22 +7,43 @@ Setup
     - Install Git via http://git-scm.com/book/en/Getting-Started-Installing-Git and have acces rights to repo https://github.com/latifnanji/roadmunkWebsite
     - Install Node via http://nodejs.org/
 1. Open terminal
-2. type `git init` (intialize git repository on local disk)
-3. type `git clone https://github.com/latifnanji/roadmunkWebsite.git` (copies files from repo to local disk)
-4. 3. type `git remote add production https://github.com/latifnanji/roadmunkWebsite.git ` (adds a remote to the repo so you can add code)
-5. type `cd roadmunkWebsite` (takes you into the repo you just cloned on your local disk)
-6. type `node server.js` (runs the server on your local host)
-7. copy and paste `http://localhost:3030` into your browser and your good to go
+2. type cd `~/Documents` (change directory to your documents)
+3. type `git init` (intialize git repository on local disk)
+4. type `git clone https://github.com/latifnanji/roadmunkWebsite.git` (copies files from repo to local disk) and enter credentials if needed
+5.. type `git remote add production https://github.com/latifnanji/roadmunkWebsite.git ` (adds a remote to the repo so you can add code)
+6. type `cd roadmunkWebsite` (takes you into the repo you just cloned on your local disk)
+7. type `node server.js` (runs the server on your local host)
+8. copy and paste `http://localhost:3030` into your browser and your good to go
     - Imagine as if `http://localhost:3030` represented `http://roadmunk.com` and all the routes were the same off the link
     - So `http://localhost:3030/pricing` would go to our pricing page
 
 Accessing On Subsequent Visits
 =================================
 1. Open terminal (or if already open type `cd`)
-2. Type `cd roadmunkWebsite`
+2. Type `cd ~/Documents/roadmunkWebsite` (just changing directories to where the files are located)
 3. Type `git pull production` **(Do this step only if you want to update your local code with the code from the online repo)**
 4. Type `node server.js` (runs the server on your local host)
-5. copy and paste `http://localhost:3030` into your browser and you good to go 
+5. copy and paste `http://localhost:3030` into your browser and you good to go
+
+Changing Text/Code/Image
+=======================
+0. Install Sublime Text: http://www.sublimetext.com/3
+1. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
+2. You have two options of how to change text/code/image
+    2.1 The code is layed out in clear and concise manner allowing you to find pages easily
+        - Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
+        - Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
+    2.2 If you want to change some text/code/image but don't know the location press `command+shift+f`
+        - In the find column type some of the text/code/image that you want to change
+        - In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
+        - Click find (**don't click replace**)
+        - A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
+        - Change what needs changing. Then save the file through `Cmd+S`
+3. Once all your changes are finished open Terminal
+4. Type `cd ~/Documents/roadmunkWebsite`
+5. Type `git add -A`
+6. Type `git commit -m "YOUR COMMIT MESSAGE GOES HERE"`
+7. Type `git push production master` and enter your credentials if needed 
 
 Adding a New Page
 ====================
