@@ -38,7 +38,7 @@ var Data = function() {
 		filename    : true
 	}
 
-	//Terms and Conditions Page Data
+	//Privacy Policy Page Data
 	this.privacypolicy = {
 		title       : "Roadmunk's Privacy Policy",
 		description : "Privacy Policy for Roadmunk's Roadmap App",
@@ -47,12 +47,21 @@ var Data = function() {
 		filename    : true
 	}
 
-	//Terms and Conditions Page Data
+	//Security Page Data
 	this.security = {
-		title       : "Roadmunk Terms and Conditions",
+		title       : "Roadmunk's Security Offering",
 		description : "Security offered by Roadmunk's Roadmap App",
 		author      : "Brent Scheibelhut",
 		content     : "security",
+		filename    : true
+	}
+
+	//Security Page Data
+	this.company = {
+		title       : "About Roadmunk and the Company",
+		description : "Learn what behind the team at the ever popular Roadmunk App",
+		author      : "Brent Scheibelhut",
+		content     : "company",
 		filename    : true
 	}
 

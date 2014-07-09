@@ -54,6 +54,10 @@ body {
     font-weight: 300 !important;
 }
 
+.large-margin-bottom {
+    margin-bottom: 90px !important;
+}
+
 .med-margin-bottom {
     margin-bottom: 60px !important;
 }
@@ -103,6 +107,9 @@ body {
 
 /* End of those styles */
 
+[class*="col-"] {
+    z-index : 3;
+}
 
 a:link {
     text-decoration: none;
@@ -185,6 +192,15 @@ a:link {
       &:before {
         bottom: -20px;
       }
+    }
+    &.underline-company {
+        &:before {
+            margin: 0;
+            width: 20%;
+            height: 1px;
+            left: 0;
+            bottom : -50px;
+        }
     }
 }
 
