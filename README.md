@@ -75,6 +75,33 @@ Changing Text/Code/Image
 7. Type `git commit -m "YOUR COMMIT MESSAGE GOES HERE"`
 8. Type `git push production master` and enter your credentials if needed 
 
+Adding a New Blog Post
+=======================
+1. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
+2. If you do not already have a writer account then:
+    -Open up `data/blog/authors.js`
+    -Copy Data from a previous author and fill in the required fields. Remember to change the name from say `latif` to your name
+    -SHOULDDO: Create a different image for an author
+3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it the name of the URL you want to see after `roadmunk.com/blog/`.
+5. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
+6. Type your blog post in the blog content div using HTML. Ignore the banner if statement. Save your changes with `Cmd+S`
+7. Open up `data/blog/blog.js`. Save your changes with `Cmd+S`. 
+    -Copy over a previous blog post's data (located between the `{...}`) and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
+    -Fill in the blog post data. Each are described below:
+        - **title**: The title of the blog post that will be display to the reads
+        - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `roadmunkWebsite/images/` directory and refer to 3.3 above
+        - **icon** : The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
+        - **author** : Put your author data here. It will be of the form `authorData.YOURNAME`
+        - **date** : The date you publish your post
+        - **description** : The META description field for the post. Keep it less than 50 words. 
+        - **partial** : The text you want to have display in the partial blog post displayed on the blog page
+        - **content** : The url of the blog post. Only change the name after `/blog/` and use the same name as you named your blog post file.
+        - **banner** : Put this to true if you want to use a CTA banner in your post. Put this to false if you do not want to.
+        - **bannerURL** : The name of the banner image you want to use. It is assumed you have placed the file in the `/images/` directory
+        - **id** : Increase this by one from the last post
+        - **filename** : Keep this as true
+    8. Follow steps 4-8 of adding code to the repo above to push your change live. 
+
 Adding a New Page
 ====================
 1. Create the new `.ejs` with the appropiate prefix in the views folder
