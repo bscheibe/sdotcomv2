@@ -139,6 +139,9 @@ Adding a New Transition
 2. In the local javascript file utilize the document scroll function found on another or the one currently in use. Use control flow to initate the transition at the correct location on the screen.
 3. Get the class by its ID using jquery and add class `animated` as well as the name of animation class you want to use. Please see http://daneden.github.io/animate.css/ for the animations possible
 
+Best Practices
+====================
+
 EJS Templating
 ======================
 

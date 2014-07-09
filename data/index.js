@@ -31,10 +31,28 @@ var Data = function() {
 
 	//Terms and Conditions Page Data
 	this.termsandconditions = {
-		title       : "Roadmunk Terms and Conditions",
+		title       : "Roadmunk's Terms and Conditions",
 		description : "Terms and Conditions Roadmunk Roadmap App",
 		author      : "Brent Scheibelhut",
 		content     : "termsandconditions",
+		filename    : true
+	}
+
+	//Terms and Conditions Page Data
+	this.privacypolicy = {
+		title       : "Roadmunk's Privacy Policy",
+		description : "Privacy Policy for Roadmunk's Roadmap App",
+		author      : "Brent Scheibelhut",
+		content     : "privacypolicy",
+		filename    : true
+	}
+
+	//Terms and Conditions Page Data
+	this.security = {
+		title       : "Roadmunk Terms and Conditions",
+		description : "Security offered by Roadmunk's Roadmap App",
+		author      : "Brent Scheibelhut",
+		content     : "security",
 		filename    : true
 	}
 

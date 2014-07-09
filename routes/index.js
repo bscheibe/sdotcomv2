@@ -39,8 +39,13 @@ router.get('/company', function(req, res) {
 });
 
 /* GET Privacy Policy page. */
-router.get('/privacy-policy', function(req, res) {
-  res.render('layout', data.privacyPolicy);
+router.get('/privacypolicy', function(req, res) {
+  res.render('layout', data.privacypolicy);
+});
+
+/* GET Security Page */
+router.get('/security', function(req, res) {
+  res.render('layout', data.security);
 });
 
 /* GET Support page. */

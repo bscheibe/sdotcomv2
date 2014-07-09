@@ -18,3 +18,4 @@ Current Bugs
 - [ ] Have webkit font-smoothing on the body?
 - [ ] Have colors stated at top
 - [ ] Add markup to blog for ease of use
+- [ ] Wrap each page in it's own div if you haven't done so already
