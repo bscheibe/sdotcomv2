@@ -84,7 +84,7 @@ Adding a New Blog Post
     -SHOULDDO: Create a different image for an author
 3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it the name of the URL you want to see after `roadmunk.com/blog/`.
 4. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
-5. Type your blog post in the blog content div using HTML. Ignore the banner if statement. Save your changes with `Cmd+S`
+5. Type your blog post in the blog content div using HTML. Refer to this page for the formatting tags: http://www.w3schools.com/html/html_formatting.asp. Always remember to close your tag after your are done formatting the text you want. Ignore the banner if statement. Save your changes with `Cmd+S`
 6. Open up `data/blog/blog.js`. Save your changes with `Cmd+S`. 
     - Copy over a previous blog post's data (located between the `{...}`) and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
     - Fill in the blog post data. Each are described below:
