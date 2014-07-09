@@ -83,11 +83,11 @@ Adding a New Blog Post
     -Copy Data from a previous author and fill in the required fields. Remember to change the name from say `latif` to your name
     -SHOULDDO: Create a different image for an author
 3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it the name of the URL you want to see after `roadmunk.com/blog/`.
-5. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
-6. Type your blog post in the blog content div using HTML. Ignore the banner if statement. Save your changes with `Cmd+S`
-7. Open up `data/blog/blog.js`. Save your changes with `Cmd+S`. 
-    -Copy over a previous blog post's data (located between the `{...}`) and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
-    -Fill in the blog post data. Each are described below:
+4. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
+5. Type your blog post in the blog content div using HTML. Ignore the banner if statement. Save your changes with `Cmd+S`
+6. Open up `data/blog/blog.js`. Save your changes with `Cmd+S`. 
+    - Copy over a previous blog post's data (located between the `{...}`) and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
+    - Fill in the blog post data. Each are described below:
         - **title**: The title of the blog post that will be display to the reads
         - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `roadmunkWebsite/images/` directory and refer to 3.3 above
         - **icon** : The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
@@ -100,7 +100,7 @@ Adding a New Blog Post
         - **bannerURL** : The name of the banner image you want to use. It is assumed you have placed the file in the `/images/` directory
         - **id** : Increase this by one from the last post
         - **filename** : Keep this as true
-    8. Follow steps 4-8 of adding code to the repo above to push your change live. 
+7. Follow steps 4-8 of adding code to the repo above to push your change live. 
 
 Adding a New Page
 ====================
