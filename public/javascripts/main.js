@@ -10,13 +10,33 @@ jQuery(window).load(function () {
     });
 });
 
-function goTop () {
-	window.scrollTo(0, 0);
-}
-
 $('.go-top').on("click", function() {
     $('html, body').animate({
         scrollTop: 0
     }, 500);
     return false;
+});
+
+$('#sprint').on("click", function() {
+    $(".selected-img").removeClass("selected-img");
+    $("#sprintImg").addClass("selected-img");
+
+    $(".selected").removeClass("selected");
+    $("#sprint").addClass("selected");
+});
+
+$('#product').on("click", function() {
+    $(".selected-img").removeClass("selected-img");
+    $("#productImg").addClass("selected-img");
+
+    $(".selected").removeClass("selected");
+    $("#product").addClass("selected");
+});
+
+$('#release').on("click", function() {
+    $(".selected-img").removeClass("selected-img");
+    $("#releaseImg").addClass("selected-img");
+
+    $(".selected").removeClass("selected");
+    $("#release").addClass("selected");
 });

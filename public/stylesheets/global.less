@@ -47,7 +47,7 @@ body {
 
 .text-small {
     font-size: 32px;
-    line-height: 0.5;
+    line-height: 1;
 }
 
 .thin {
@@ -348,7 +348,31 @@ a:link {
 @media (max-width: 979px) {
     .go-top {
     	display: none !important;
-    } 
+    }
+    .text-xlarge {
+        font-size   : 56px;
+        line-height : 1;
+    }
+
+    .text-large {
+        font-size: 42px;
+        line-height: 0.9;
+    }
+
+    .text-medium {
+        font-size: 34px;
+        line-height: 0.9;
+    }
+
+    .text-small {
+        font-size: 18px;
+        line-height: 0.5;
+    }
+    p {
+        &.get-smaller {
+            font-size: 16px;
+        }
+    }
 }
 
 /* Animations */

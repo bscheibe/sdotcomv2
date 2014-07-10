@@ -22,7 +22,7 @@
 
 .section {
   position : relative;
-  z-index  : 4;
+  z-index  : 3;
 
   &.black-white {
     .section-fill(#fff, @steel-darkest);
@@ -68,7 +68,7 @@
     padding: 160px 0;
   }
 
-  .container {
+  [class*="container"] {
     z-index : 3;
     .section-header {
       position       : relative;
@@ -97,6 +97,95 @@
       p {
         margin-top    : 12px;
         margin-bottom : 0;
+      }
+    }
+    .browser {
+      width         : 100%;
+      max-width     : 857px;
+      overflow      : hidden;
+      position      : relative;
+      border        : 1px solid #dedede;
+      margin: 0 auto;
+
+      .border-radius(6px);
+
+      .bg {
+        width: 100%;
+      }
+      .screen {
+        position : absolute;
+        display  : none;
+        width    : 100%;
+        top      : 9%;
+        left     : 0;
+        &.selected-img {
+          display: block;
+        }
+      }
+      //Used if using text-but not good for RWD
+      /*.url {
+        color     : #939393;
+        position  : absolute;
+        left      : 12%;
+        top       : 4.5%;
+        font-size : 1.25rem;
+      }*/
+    }
+    .feature-controls {
+      width: 360px;
+      margin : 25% auto 0 auto;
+      cursor : pointer;
+      li {
+        margin-bottom: 10%;
+        opacity: 0.4;
+
+        &.selected {
+          opacity: 1;
+        }
+
+        span {
+          .roadmap-icon {
+            @size : 57px;
+
+            .border-radius(100px);
+            width         : @size;
+            height        : @size;
+            float         : left;
+            margin-right  : 15px;
+            position      : relative;
+            display       : inline-block;
+            text-align    : center;
+            span {
+              @icon-size : 30px;
+
+              font-size : @icon-size;
+              color     : @light-font;
+              margin    : 12px 1px 0 0;
+            }
+            &.sprint {
+              background: @admin-green;
+            }
+            &.product {
+              background: @roadmunk-orange;
+            }
+            &.release {
+              background: @table-blue;
+            }
+          }
+
+          span {
+            &.info {
+              display     : inline-block;
+              width       : 250px;
+              margin-left : 15px;
+              color : @dark-font;
+              h3 {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
       }
     }
   }
@@ -236,6 +325,11 @@
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   .section {
+    [class*="container"] {
+      .feature-controls {
+        margin : 10% auto 0 auto;
+      }
+    }
     .background-media {
       img.bg {
         left: 50%;

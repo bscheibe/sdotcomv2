@@ -7,7 +7,7 @@ Current Bugs
 - [ ] Go through and make CSS as efficient as possible while still being easy to change
 - [ ] Go through CSS at end and have one main file which has the css used by more than one page
 - [ ] Get rid of 'image-row' class on features page and use col-md instead?
-- [ ] Compress images for the web (Photoshop) such as those icons on the first page
+- [ ] Compress images for the web (Photoshop) such as those icons on the first page etc.
 - [ ] Don't use 'move-up' class for the button on pricing and TnC page
 - [ ] Find a better way of adding the correct javascript files to the page instead of control flow?
 - [ ] Rename landing page class to something better
@@ -19,3 +19,4 @@ Current Bugs
 - [ ] Have colors stated at top
 - [ ] Add markup to blog for ease of use
 - [ ] Wrap each page in it's own div if you haven't done so already
+- [ ] Have underline on the current page
