@@ -10,7 +10,7 @@ var blogData = {
 		//This is one blog post
 		{
 			title       : "Roadmunk's First Blog Post", //
-			image       : "/images/blog-image1.png", //
+			image       : "/images/blog-image2.jpg", //
 			icon        : "home", //
 			author      : authorData.latif, //
 			date        : "November 12, 2013", //

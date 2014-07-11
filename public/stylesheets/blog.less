@@ -46,6 +46,9 @@
         .post-extras {
             position: relative;
             margin-left: 8px;
+            .post-comments {
+                font-size: 14px;
+            }
         }
         .post-body {
             position: relative;
@@ -56,6 +59,8 @@
         padding-top: 48px;
         background: @steel-dark;
         margin-bottom: 0px;
+        max-height: 200px;
+        overflow-y: hidden;
         //Figure out how to get overlay working
         &.overlay {
             background: rgba(0,0,0,0.07);
@@ -74,18 +79,27 @@
         margin-left: 0;
         margin-bottom: 24px;
         padding-top: 12px;
+        padding-bottom: 12px;
+        height: 50px;
         text-align: center;
         color: @dialog-bg;
 
         font-size: 18px;
         position: relative;
         //margin-bottom: 96px;
+        a {
+            color: @light-font;
+            &:hover {
+                color: darken(@light-font, 10%);
+            }
+        }
+
         &:before {
             position: absolute;
             content: "";
             height: 1px;
-            width: 36%;
-            left: 50%;
+            width: 45%;
+            left: 45%;
             margin-left: -18%;
             top: 0;
             background: @dialog-bg;
@@ -93,7 +107,7 @@
         &:after {
             display: none;
         }
-        span {
+        a {
             display: inline-block;
             padding-right: 5px;
             &:last-child {
@@ -123,11 +137,6 @@
     .post-date {
         font-style: italic;
         color: @steel-icon;
-    }
-    .post-type {
-        display: inline-block;
-        font-size: 16px;
-        text-transform: uppercase;
     }
     .more-link {
         display: block;

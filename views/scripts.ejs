@@ -10,6 +10,8 @@
 <script src="/javascripts/main.js"></script>
 <%if (content == "features") { %>
 	<script src="/javascripts/features.js"></script>
-<% } else if (content = "home") { %>
+<% } else if (content == "home") { %>
 	<!--<script src="/javascripts/home.js"></script>-->
+<% } else if (content == "blog") { %>
+	<% include commentcount %>
 <% } %>

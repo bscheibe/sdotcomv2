@@ -10,6 +10,9 @@
 </section>
 <article>
 	<section class="section white section-normal has-top">
+		<div class="decor-top">
+			<% include bottom-triangle-angle %>
+		</div>
 		<div class="background-media"></div>
 		<div class="background-overlay"></div>
 		<div class="container">
@@ -43,23 +46,31 @@
 												<a href="<%= blog.content %>" class="more-link">Read More</a>
 											</div>
 											<div class="post-extras bordered">
-												<span class="post-category">
-													<a href="#">
+												<span class="left">
+													<span class="post-comments">
+														<span class="glyphicon glyphicon-user"></span>
+														<a href="<%= blog.content %>#disqus_thread"></a>
+													</span >
+												</span>
+												<span class="right">
+													<a target="_blank" onclick="
+														return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com<%= blog.content %>">
 														<span class="icon-facebook"></span>
 													</a>
-												</span>
-												<span class="post-tags">
-													<a href="#">
+													<a href="
+														https://twitter.com/share?url=http://roadmunk.com<%= blog.content %>&text=<%= blog.description %>">
 														<span class="icon-twitter"></span>
 													</a>
-												</span>
-												<span class="post-link">
-													<a href="#">
+													<a target="_blank" onclick="
+														return !window.open(this.href, 'Facebook', 'width=640,height=500')"
+													href="http://www.linkedin.com/shareArticle?mini=true
+													&url=http://roadmunk.com<%= blog.content %>
+													&title=<%= blog.title %>
+													&summary=<%= blog.description %>
+													&source=roadmunk.com">
 														<span class="icon-linkedin"></span>
 													</a>
-												</span>
-												<span class="post-link">
-													<a href="#">
+													<a href="https://plus.google.com/share?url=<%= blog.content %>">
 														<span class="icon-googleplus"></span>
 													</a>
 												</span>
