@@ -25,12 +25,12 @@ $('#sprint').on("click", function() {
     $("#sprint").addClass("selected");
 });
 
-$('#product').on("click", function() {
+$('#project').on("click", function() {
     $(".selected-img").removeClass("selected-img");
-    $("#productImg").addClass("selected-img");
+    $("#projectImg").addClass("selected-img");
 
     $(".selected").removeClass("selected");
-    $("#product").addClass("selected");
+    $("#project").addClass("selected");
 });
 
 $('#release').on("click", function() {

@@ -9,6 +9,10 @@ p.callout {
     color: #717171;
 }
 
+p.features {
+    color: @steel-dark;
+}
+
 .text-left {
 	text-align: left !important;
 }
@@ -221,6 +225,15 @@ a:link {
             height: 1px;
             left: 0;
             bottom : -50px;
+        }
+    }
+    &.features-left {
+        &:before {
+            width: 50%;
+            left: 0;
+            margin: 0;
+            height: 1px;
+            bottom: 55%;
         }
     }
 }
