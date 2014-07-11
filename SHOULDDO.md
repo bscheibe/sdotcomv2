@@ -20,3 +20,4 @@ Current Bugs
 - [ ] Add markup to blog for ease of use
 - [ ] Wrap each page in it's own div if you haven't done so already
 - [ ] Have underline on the current page
+- [ ] Have a global css page imported first and a general one that is import last to reset styles (so you won't have to use !important)

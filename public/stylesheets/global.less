@@ -5,6 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p.callout {
+    color: #717171;
+}
+
 .text-left {
 	text-align: left !important;
 }
@@ -31,12 +35,12 @@ body {
 }
 
 .text-xlarge {
-    font-size   : 96px;
+    font-size   : 86px;
     line-height : 1;
 }
 
 .text-large {
-    font-size: 72px;
+    font-size: 66px;
     line-height: 0.9;
 }
 
@@ -135,6 +139,19 @@ a:link {
     }
     &:before {
         content : "Build My Roadmap For Free";
+    }
+    &.learn-more {
+        width: 250px;
+        background: @admin-green;
+        &:hover {
+            background : darken(@admin-green, 10%);
+        }
+        &:before {
+            content : "Learn More";
+        }
+    }
+    &.small-cta {
+        width: 275px;
     }
 }
 

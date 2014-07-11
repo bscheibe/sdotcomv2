@@ -32,6 +32,7 @@ Main components
   padding: 1em 1em;
   margin: 0;
   background-color: rgba(211, 104, 104, 0.9);
+  /*background-color: rgba(243, 156, 18, 0.9);*/
   color: white;
   font-size: 15px;
   font-size: 0.8125rem;
@@ -50,12 +51,14 @@ Main components
   cursor: pointer;
   margin-left: 10px;
   background-color: rgba(211, 104, 104, 0.9);
+  /*background-color: rgba(243, 156, 18, 0.9);*/
   background-repeat: no-repeat;
   background-size: 32px 64px;
   background-image: url("/vendor/customGmaps/images/cd-icon-controller.svg");
 }
 .no-touch #cd-zoom-in:hover, .no-touch #cd-zoom-out:hover {
   background-color: #d36868;
+  /*background-color: #FCC32A;*/
 }
 @media only screen and (min-width: 768px) {
   #cd-zoom-in, #cd-zoom-out {

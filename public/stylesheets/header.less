@@ -1,12 +1,15 @@
 /* Top Bar Styling */
 @scroll-transition : 0.5s;
+@bg-color : @table-blue;
+@text-color : @light-font;
+
 
 #masthead {
   .transition(all 0.3s);
 }
 
 .navbar {
-  background-color : @steel-darkest;
+  background-color : @bg-color;
   border-radius    : 0;
   border           : none;
   min-height       : 90px;
@@ -17,7 +20,7 @@
 
   &.navbar-scrolled {
     min-height: 70px;
-    .box-shadow(0px 4px 0px rgba(47, 49, 52, 0.3));
+    .box-shadow(0px 4px 0px rgba(26, 134, 160, 0.7));
     .navbar-nav > li > a {
       .transition(all @scroll-transition);
        padding-top: 23px;
@@ -46,21 +49,21 @@
   }
 
   .navbar-collapse {
-    border-color: lighten(@steel-darkest, 0.5%);
+    border-color: lighten(@dialog-bg, 0.5%);
   }
 
   .navbar-toggle {
     .icon-bar {
-        background-color: @roadmunk-orange;
+        background-color: @text-color;
         .box-shadow(none);
     }
     &:hover, &:focus {
-      background-color: @steel-darkest;
+      background-color: @bg-color;
     }
   }
 
   .navbar-nav > li > a {
-    color: @roadmunk-orange;
+    color: @text-color;
     font-size: 16px;
     padding-top: 33px;
     padding-bottom: 33px;
@@ -70,7 +73,7 @@
     position: relative;
     .transition(all @scroll-transition);
     &:hover {
-      color: @roadmunk-orange;
+      color: @text-color;
     }
   }
 
@@ -78,7 +81,7 @@
     opacity          : 0;
     content          : "";
     position         : absolute;
-    background-color : @roadmunk-orange;
+    background-color : @text-color;
     left             : 20px;
     right            : 20px;
     height           : 2px;
@@ -203,7 +206,7 @@
       padding-top    : @vertical-padding;
       padding-bottom : @vertical-padding;
       &:hover {
-        background-color : darken(@steel-darkest, 10%);
+        background-color : darken(@bg-color, 10%);
       }
       &:before {
         display : none;

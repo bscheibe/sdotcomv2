@@ -9,23 +9,28 @@
 @rwd-links-font-size : 10px;
 @rwd-copyright-font-size : @rwd-links-font-size;
 
+@bg-color: @table-blue;
+@text-color: @light-font;
+@header-text-color : @dialog-bg;
+@border-color : @dialog-bg;
+
 .footer {
   width      : 100%;
   border-top : 1px solid @border-color;
-  color      : @roadmunk-orange;
-  background : @steel-darkest;
+  color      : @text-color;
+  background : @bg-color;
   .box-sizing(border-box);
 
   a {
-    color           : @light-orange;
+    color           : @light-font;
     text-decoration : none;
     .transition(color 0.1s);
     &:hover {
-      color : @roadmunk-orange;
+      color : darken(@light-font, 10%);
       .transition(color 0.1s);
     }
     &:active {
-      color : @roadmunk-orange;
+      color : darken(@light-font, 10%);
     }
   }
 
@@ -58,7 +63,7 @@
         
         font-size      : @h4-font-size;
         text-transform : uppercase;
-        color          : @dark-orange;
+        color          : @header-text-color;
       }
 
       ol {
@@ -79,13 +84,13 @@
     width          : 75%;
     margin         : 0 auto;
     padding        : 1.5rem 0;
-    background     : @steel-darkest;
+    background     : @bg-color;
     
     font-size      : @copyright-font-size;
     letter-spacing : 1px;
     text-transform : uppercase;
-    border-top     : 1px solid #777;
-    color          : @light-orange;
+    border-top     : 1px solid @border-color;
+    color          : @text-color;
 
     .flex-display();
     .flex-wrap(wrap);
