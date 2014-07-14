@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Blog" lang="en">
+	<head>
+		<% include ../meta %>
+	</head>
+
+	<body>
+		<% include ../header %> <!-- The top bar for the site -->
+		<div class="blog-post">	
+			<section class="section white-black section-xlarge">
+				<div class="background-media">
+					<% if (image == "default") { %>
+						<img src="/images/blog/default.png" class="bg blur">
+					<% } else if (image != "none") { %>
+						<img src="<%= image %>" class="bg">
+					<% } %>
+				</div>
+				<div class="background-overlay blog">
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 center">
+							<header class="section-header blog text-left">
+								<h1 class="blog-title"><%= title %></h1>
+								<p class="author"><%= author.name %></p>
+								<p class="date"><%= date %></p>
+							</header>
+						</div>
+					</div>
+				</div>
+			</section>
+			<article class="page">
+				<section class="section black-white section-normal has-top">
+					<div class="background-media"></div>
+					<div class="background-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 text-default center">
+								<div class="blog-content">
+									<% include url %>
+								</div>
+								<%if (banner != false) { %>
+									<a href="#">
+										<img src="/images/<%= bannerURL %>">
+									</a>
+								<% } %>
+								<div class="footer">
+									<div class="col-md-2">
+										<div class="box-round box-huge">
+											<div class="box-dummy"></div>
+											<div class="box-inner">
+												<img src="/images/<%= author.profile_img %>">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-10">
+										<p class="author"><%= author.name %></p>
+										<p class="bio"><%= author.bio %></p>
+									</div>
+								</div>
+								<% include ../disqus-script %>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+		<% include ../gotop %> <!-- includes the content variable layout -->
+
+		<% include ../footer %> <!-- The footer for the site -->
+	</body>
+
+	<% include ../scripts %> <!-- The javascript needed by the site -->
+
+</html>

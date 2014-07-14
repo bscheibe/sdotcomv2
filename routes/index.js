@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var pageData = require('../data/index');
 var blogData = require('../data/blog');
 var router = express.Router();
@@ -28,8 +29,8 @@ router.get('/blog', function(req, res) {
 /* Create all the blog routes */
 blogData.blogs.forEach(function (blog) {
   /* GET Blog page. */
-  router.get(blog.content, function(req, res) {
-    res.render('layout', blog);
+  router.get(path.join('/blog/', blog.url), function(req, res) {
+    res.render('blog/blogLayout', blog);
   });
 });
 

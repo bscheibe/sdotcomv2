@@ -1,6 +1,6 @@
 @footer-height     : 60px;
 @seperator-color   : @steel-line;
-@cell-width        : 260px;
+@cell-width        : 290px;
 @letter-spacing    : 0.5px;
 @thin			   : 300;
 
@@ -32,14 +32,72 @@
 	}
 }
 
+.preview-switch {
+	float      : none;
+	margin-top : 40px;
+	span {
+		&.toggle-switch {
+			text-transform : uppercase;
+			letter-spacing : 1px;
+			font-weight    : 700;
+			cursor         : pointer;
+			float          : left;
+			font-size      : 14px;
+			padding-top    : 7px;
+			color          : @steel-lightest;
+			.transition(all 0.2s ease-in-out);
+		}
+		&.write {
+			color : @admin-green;
+		}
+		&.grey {
+			color      : @steel-lightest;
+			background : none;
+		}
+		&.right {
+			color : @table-blue;
+		}
+	}
+
+	.switch-pill {
+		float            : left;
+		background-color : @admin-green;
+		position         : relative;
+		margin           : 0 13px;
+		width            : 70px;
+		height           : 30px;
+		.transition(all 0.2s ease-in-out);
+		.border-radius(35px);
+
+		.switch {
+			background-color : @light-font;
+			position         : absolute;
+			top              : 3px;
+			left             : 3px;
+			width            : 24px;
+			height           : 24px;
+			.transition(all 0.2s ease-in-out);
+			.border-radius(12px);
+		}
+
+		&.right {
+			background-color : @table-blue;
+			.switch {
+				left : 43px;
+			}
+		}
+	}
+}
+
 .feature-table {
 	@table-width   : (@cell-width * 4) - 50;
 	@margin-top    : 50px;
 	@margin-bottom : 75px;
 
-	@starter-color    : #00C2E0;
-	@business-color   : #00ACD4;
-	@enterprise-color : #0088A2;
+	@starter-color      : #0ebee9;
+	@business-color     : #0DAAD1;
+	@professional-color : #0c96b9;
+	@enterprise-color   : #096f89;
 	
 	display      : block;
 	margin       : 0 auto;
@@ -85,6 +143,10 @@
 				background-color : @business-color;
 			}
 
+			&#professional {
+				background-color : @professional-color;
+			}
+
 			&#enterprise {
 				background-color        : @enterprise-color;
 				border-top-right-radius : @border-radius;
@@ -108,6 +170,9 @@
 				.price {
 					font-size: 400;
 					display: inline-block;
+					&.monthly {
+						display: none;
+					}
 				}
 				.contact {
 					font-size: 32px;
@@ -124,6 +189,9 @@
 					font-size: 10px;
 					font-weight: @thin;
 					display: block;
+					&.monthly {
+						display: none;
+					}
 				}
 			}
 		}
@@ -148,6 +216,7 @@
 		font-weight : 400;
 		background  : @dialog-bg;
 		border      : 1px solid @steel-line;
+
 		&.button-row {
 			background: inherit;
 			border: none;
@@ -185,6 +254,14 @@
 					}
 				}
 
+				&.professional {
+					background-color: @professional-color;
+					&:hover {
+						background-color: @table-blue;
+						cursor: pointer;
+					}
+				}
+
 				&.enterprise {
 					background-color: @enterprise-color;
 					&:hover {
@@ -205,6 +282,15 @@
 		padding-right  : 15px;
 		&.top {
 			border-top: 1px solid @steel-line;
+		}
+	}
+
+	//Zebra striping
+	tr {
+		&:nth-child(even) {
+			td {
+				background: @light-font;
+			}
 		}
 	}
 }

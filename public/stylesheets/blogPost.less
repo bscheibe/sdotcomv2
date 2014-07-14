@@ -36,9 +36,18 @@
 		color : rgba(0,0,0,0.8);
 		margin-bottom: 60px;
 		img {
-		  padding: 25px 0;
-	      width: 100%;
-	      height: auto;
+			margin: 15px;
+			&.fill {
+			  padding: 25px 0;
+		      width: 100%;
+		      height: auto;
+		    }
+   		}
+   		a {
+   			color: @roadmunk-orange;
+   			&:hover {
+   				color: @dark-orange;
+   			}
    		}
 	}
 	.footer {

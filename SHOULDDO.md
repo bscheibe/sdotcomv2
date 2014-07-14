@@ -21,3 +21,5 @@ Current Bugs
 - [ ] Wrap each page in it's own div if you haven't done so already
 - [ ] Have underline on the current page
 - [ ] Have a global css page imported first and a general one that is import last to reset styles (so you won't have to use !important)
+- [ ] Would automatically search blog images folder on blog pages
+- [x] Can you do a double layout for the blog (ie. reuse the original layout) [Not possible with EJS - had to simplify layout as much as possible]

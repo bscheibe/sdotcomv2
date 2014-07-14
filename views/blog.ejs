@@ -25,14 +25,14 @@
 									<div class="grid-post white-black">
 										<article id="<%= blog.id %>" class="post post-showinfo">
 											<div class="post-media overlay">
-												<%if (blog.image != "none") { %>
-													<a href="<%= blog.content %>" class="feature-image">
-														<img src="<%= blog.image %>">
+												<%if (blog.postImage != "none") { %>
+													<a href="/blog/<%= blog.url %>" class="feature-image">
+														<img src="<%= blog.postImage %>">
 													</a>
 												<% } %>
 											</div>
 											<div class="post-head small-screen-center">
-												<h2 class="post-title"><a href="<%= blog.content %>"><%= blog.title %></a></h2>
+												<h2 class="post-title"><a href="/blog/<%= blog.url %>"><%= blog.title %></a></h2>
 												<small class="post-author"><%= blog.author.name %></small>
 												<small class="post-date"><%= blog.date %></small>
 												<div class="post-icon">
@@ -43,34 +43,34 @@
 											</div>
 											<div class="post-body">
 												<p><%= blog.partial %></p>
-												<a href="<%= blog.content %>" class="more-link">Read More</a>
+												<a href="/blog/<%= blog.url %>" class="more-link">Read More</a>
 											</div>
 											<div class="post-extras bordered">
 												<span class="left">
 													<span class="post-comments">
 														<span class="glyphicon glyphicon-user"></span>
-														<a href="<%= blog.content %>#disqus_thread"></a>
+														<a href="/blog/<%= blog.url %>#disqus_thread"></a>
 													</span >
 												</span>
 												<span class="right">
 													<a target="_blank" onclick="
-														return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com<%= blog.content %>">
+														return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-facebook"></span>
 													</a>
 													<a href="
-														https://twitter.com/share?url=http://roadmunk.com<%= blog.content %>&text=<%= blog.description %>">
+														https://twitter.com/share?url=http://roadmunk.com/blog/<%= blog.url %>&text=<%= blog.description %>">
 														<span class="icon-twitter"></span>
 													</a>
 													<a target="_blank" onclick="
 														return !window.open(this.href, 'Facebook', 'width=640,height=500')"
 													href="http://www.linkedin.com/shareArticle?mini=true
-													&url=http://roadmunk.com<%= blog.content %>
+													&url=http://roadmunk.com/blog/<%= blog.url %>
 													&title=<%= blog.title %>
 													&summary=<%= blog.description %>
 													&source=roadmunk.com">
 														<span class="icon-linkedin"></span>
 													</a>
-													<a href="https://plus.google.com/share?url=<%= blog.content %>">
+													<a href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-googleplus"></span>
 													</a>
 												</span>
@@ -86,3 +86,5 @@
 		</div>
 	</section>
 </article>
+<!-- Putting here instead of in scripts due to collsion with the blog page otherwise -->
+<% include commentcount %>
