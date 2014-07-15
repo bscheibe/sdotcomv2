@@ -1,7 +1,7 @@
 // Configure the root ZeroClipboard object
 ZeroClipboard.setDefaults({
   
-  moviePath: "/vendor/zeroClipboard/ZeroClipboard.swf"
+  moviePath: "/vendor/zeroclipboard/ZeroClipboard.swf"
 
 });
 

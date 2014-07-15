@@ -1,23 +1,30 @@
 <script src="/vendor/jquery/dist/jquery.min.js"></script>
-<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<% if (content == "company") { %>
-	<script src="/vendor/customGmaps/js/modernizr.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ81ILn9i65wubHrnCJR2q5iIV6k7b4LA"></script>
-	<script src="/vendor/customGmaps/js/main.js"></script>
-<% } %>
+<% if (content != "style-guide") { %>	
+	<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<script src="/javascripts/main.js"></script>
-<%if (content == "features") { %>
-	<script src="/javascripts/features.js"></script>
-<% } else if (content == "home") { %>
-	<!--<script src="/javascripts/home.js"></script>-->
-<% } else if (content == "pricing") { %>
-	<script src="/javascripts/pricing.js"></script>
-<% } else if (content == "security") { %> 
-	<script type="text/javascript">
-		var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_YEnOGpoW", "10", "l", "black", "YEnOGpoW"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
-	</script>
+	<% if (content == "company") { %>
+		<script src="/vendor/customGmaps/js/modernizr.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ81ILn9i65wubHrnCJR2q5iIV6k7b4LA"></script>
+		<script src="/vendor/customGmaps/js/main.js"></script>
+	<% } %>
+
+	<script src="/javascripts/main.js"></script>
+	<%if (content == "features") { %>
+		<script src="/javascripts/features.js"></script>
+	<% } else if (content == "home") { %>
+		<!--<script src="/javascripts/home.js"></script>-->
+	<% } else if (content == "pricing") { %>
+		<script src="/javascripts/pricing.js"></script>
+	<% } else if (content == "security") { %> 
+		<script type="text/javascript">
+			var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_YEnOGpoW", "10", "l", "black", "YEnOGpoW"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+		</script>
+	<% } %>
+	
+<% } else { %>
+	<script src="/vendor/zeroclipboard/ZeroClipboard.min.js"></script>
+	<script src="/javascripts/init-zc.js"></script>
 <% } %>
 
 <!-- Start of Async HubSpot Analytics Code -->
