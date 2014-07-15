@@ -127,15 +127,31 @@ p.features {
     text-align: center;
 }
 
+.align-middle {
+    vertical-align: middle;
+}
+
 /* End of those styles */
 
 [class*="col-"] {
     z-index : 3;
 }
 
-a:link {
+a {
     text-decoration: none;
-    color: @white;
+    color: @roadmunk-orange;
+    .transition(color 0.2s);
+    &:hover {
+        text-decoration: none;
+        color: @dark-orange;
+        .transition(color 0.2s);
+    }
+    &.go-top {
+        color: #fff;
+        &:hover {
+            color: @off-white;
+        }
+    }
 }
 
 .container {
