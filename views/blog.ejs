@@ -26,13 +26,13 @@
 										<article id="<%= blog.id %>" class="post post-showinfo">
 											<div class="post-media overlay">
 												<%if (blog.postImage != "none") { %>
-													<a href="/blog/<%= blog.url %>" class="feature-image">
+													<a href="/blog/<%= blog.url %>" class="feature-image" title="<%= blog.title %>">
 														<img src="<%= blog.postImage %>">
 													</a>
 												<% } %>
 											</div>
 											<div class="post-head">
-												<h2 class="post-title"><a href="/blog/<%= blog.url %>"><%= blog.title %></a></h2>
+												<h2 class="post-title"><a title="<%= blog.title %>" href="/blog/<%= blog.url %>"><%= blog.title %></a></h2>
 												<small class="post-author"><%= blog.author.name %></small>
 												<small class="post-date"><%= blog.date %></small>
 												<div class="post-icon">
@@ -43,7 +43,7 @@
 											</div>
 											<div class="post-body">
 												<p><%= blog.partial %></p>
-												<a href="/blog/<%= blog.url %>" class="more-link">Read More</a>
+												<a title="<%= blog.title %>" href="/blog/<%= blog.url %>" class="more-link">Read More</a>
 											</div>
 											<div class="post-extras bordered">
 												<span class="left">
@@ -53,16 +53,16 @@
 													</span >
 												</span>
 												<span class="right">
-													<a target="_blank" onclick="
+													<a title="Share On Facebook" target="_blank" onclick="
 														return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-facebook"></span>
 													</a>
-													<a href="
+													<a title="Share On Twitter" href="
 														https://twitter.com/share?url=http://roadmunk.com/blog/<%= blog.url %>&text=<%= blog.description %>">
 														<span class="icon-twitter"></span>
 													</a>
-													<a target="_blank" onclick="
-														return !window.open(this.href, 'Facebook', 'width=640,height=500')"
+													<a title="Share On Linked In" target="_blank" onclick="
+														return !window.open(this.href, 'Linked In', 'width=640,height=500')"
 													href="http://www.linkedin.com/shareArticle?mini=true
 													&url=http://roadmunk.com/blog/<%= blog.url %>
 													&title=<%= blog.title %>
@@ -70,7 +70,7 @@
 													&source=roadmunk.com">
 														<span class="icon-linkedin"></span>
 													</a>
-													<a href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>">
+													<a title="Share On Google Plus" href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-googleplus"></span>
 													</a>
 												</span>

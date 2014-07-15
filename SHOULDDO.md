@@ -24,3 +24,4 @@ Current Bugs
 - [ ] Would automatically search blog images folder on blog pages
 - [x] Can you do a double layout for the blog (ie. reuse the original layout) [Not possible with EJS - had to simplify layout as much as possible]
 - [ ] Get minify assets working
+- [ ] Put some assets in the gitignore so they do not included with the site.

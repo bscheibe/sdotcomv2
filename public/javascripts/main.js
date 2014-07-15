@@ -17,6 +17,14 @@ $('.go-top').on("click", function() {
     return false;
 });
 
+//If an a element tag doesn't have a title than give it one via the text of sibling elements
+//Maybe can use on blog
+/*$("a").each(function() {
+    if (! $(this).prop('title')) {
+        $(this).prop('title', $(this).text());
+    }
+});*/
+
 $('#sprint').on("click", function() {
     $(".selected-img").removeClass("selected-img");
     $("#sprintImg").addClass("selected-img");
