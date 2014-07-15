@@ -5,15 +5,24 @@
 	</head>
 
 	<body>
-		<% include header %> <!-- The top bar for the site -->
+		<% if (content != "style-guide") { %>
+			<% include header %> <!-- The top bar for the site -->
+		<% } %>
 
 		<% include content %> <!-- includes the content variable layout -->
-		<% include gotop %> <!-- includes the content variable layout -->
 
-		<% include footer %> <!-- The footer for the site -->
+		<% if (content != "style-guide") { %>
+			<% include gotop %> <!-- includes the content variable layout -->
+
+			<% include footer %> <!-- The footer for the site -->
+		<% } %>
 	</body>
 
-	<% include scripts %> <!-- The javascript needed by the site -->
+	<% if (content != "style-guide") { %>
+		<% include scripts %> <!-- The javascript needed by the site -->
+	<% } else { %>
+		<% include style-guide-scripts %>
+	<% } %>
 
 </html>
 

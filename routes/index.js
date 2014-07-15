@@ -35,6 +35,11 @@ blogData.blogs.forEach(function (blog) {
 });
 
 /* GET Company page. */
+router.get('/styleguide', function(req, res) {
+  res.render('layout', data.styleguide);
+});
+
+/* GET Company page. */
 router.get('/company', function(req, res) {
   res.render('layout', data.company);
 });

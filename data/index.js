@@ -66,6 +66,15 @@ var Data = function() {
 	}
 
 	//404 Page Data
+	this.styleguide = {
+		title       : "Roadmunk's Style Guide'",
+		description : "All you would ever need to know about the styling for the incredibly popular Roadmunk roadmapping app",
+		author      : "Brent Scheibelhut",
+		content     : "style-guide",
+		filename    : true
+	}
+
+	//404 Page Data
 	this.fourohfour = {
 		title       : "Roadmunk 404",
 		description : "Roadmunk 404 - Page Not Found",

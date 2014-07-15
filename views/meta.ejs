@@ -20,13 +20,19 @@
 <meta property="og:description" content="<%= description %>" /> 
 <meta property="og:site_name" content="Roadmunk" /> 
 
-<!-- Stylesheets -->
-<link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
-<link rel='stylesheet' href='/stylesheets/fonts.css' />
-<link rel='stylesheet' href='/stylesheets/animate.css' />
-<link rel='stylesheet' href='/stylesheets/style.css' />
+<% if (content != "style-guide") { %>
 
-<!-- Custom GMaps Styling -->
-<link rel='stylesheet' href='/vendor/customGmaps/css/style.css' />
+	<!-- Stylesheets -->
+	<link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+	<link rel='stylesheet' href='/stylesheets/fonts.css' />
+	<link rel='stylesheet' href='/stylesheets/animate.css' />
+	<link rel='stylesheet' href='/stylesheets/style.css' />
 
-<!-- Add something here so you can include specific stylesheet -->
+	<!-- Custom GMaps Styling -->
+	<link rel='stylesheet' href='/vendor/customGmaps/css/style.css' />
+
+<% } else  { %>
+
+	<link rel='stylesheet' href='/stylesheets/styleGuide.css' />
+
+<% } %> 
