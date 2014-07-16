@@ -12,6 +12,8 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "jquery": "~2.1.1",
-    "zeroclipboard": "v1.3.5"
+    "zeroclipboard": "v1.3.5",
+    "magnific-popup": "~0.9.9",
+    "flexslider": "*"
   }
 }

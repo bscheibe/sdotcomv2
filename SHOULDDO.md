@@ -6,7 +6,7 @@ Current Bugs
 - [ ] Update crossBrowser.less so it contains all the browser prefixes not just some of them
 - [ ] Go through and make CSS as efficient as possible while still being easy to change
 - [ ] Go through CSS at end and have one main file which has the css used by more than one page
-- [ ] Get rid of 'image-row' class on features page and use col-md instead?
+- [x] Get rid of 'image-row' class on features page and use col-md instead?
 - [ ] Compress images for the web (Photoshop) such as those icons on the first page etc.
 - [ ] Don't use 'move-up' class for the button on pricing and TnC page
 - [ ] Find a better way of adding the correct javascript files to the page instead of control flow?
@@ -24,4 +24,6 @@ Current Bugs
 - [ ] Would automatically search blog images folder on blog pages
 - [x] Can you do a double layout for the blog (ie. reuse the original layout) [Not possible with EJS - had to simplify layout as much as possible]
 - [ ] Get minify assets working
+- [ ] Uninstall flexslider if not working
+- [ ] Split up Meta and stylesheets
 - [ ] Put some assets in the gitignore so they do not included with the site.
