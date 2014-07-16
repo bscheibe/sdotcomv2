@@ -24,13 +24,15 @@
 								<li class="post-item col-md-4">
 									<div class="grid-post white-black">
 										<article id="<%= blog.id %>" class="post post-showinfo">
+											<a href="/blog/<%= blog.url %>" title="<%= blog.title %>">
 											<div class="post-media overlay">
 												<%if (blog.postImage != "none") { %>
-													<a href="/blog/<%= blog.url %>" class="feature-image" title="<%= blog.title %>">
+													<div class="feature-image">
 														<img src="<%= blog.postImage %>">
-													</a>
+													</div>
 												<% } %>
 											</div>
+											</a>
 											<div class="post-head">
 												<h2 class="post-title"><a title="<%= blog.title %>" href="/blog/<%= blog.url %>"><%= blog.title %></a></h2>
 												<small class="post-author"><%= blog.author.name %></small>
@@ -57,8 +59,9 @@
 														return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-facebook"></span>
 													</a>
-													<a title="Share On Twitter" href="
-														https://twitter.com/share?url=http://roadmunk.com/blog/<%= blog.url %>&text=<%= blog.description %>">
+													<a title="Share On Twitter" onclick="
+											return !window.open(this.href, 'Twitter', 'width=640,height=300')" href="
+														https://twitter.com/share?url=http://roadmunk.com/blog/<%= blog.url %>&text=<%= blog.title %>">
 														<span class="icon-twitter"></span>
 													</a>
 													<a title="Share On Linked In" target="_blank" onclick="
@@ -70,7 +73,8 @@
 													&source=roadmunk.com">
 														<span class="icon-linkedin"></span>
 													</a>
-													<a title="Share On Google Plus" href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>">
+													<a title="Share On Google Plus" onclick="
+											return !window.open(this.href, 'Google Plus', 'width=640,height=500')" href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>">
 														<span class="icon-googleplus"></span>
 													</a>
 												</span>

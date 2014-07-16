@@ -1,10 +1,10 @@
-var starter_monthly = "12";
+var starter_monthly = "12.5";
 var starter_annually = "9";
 
 var business_monthly = "24";
 var business_annually = "19";
 
-var professional_monthly = "60";
+var professional_monthly = "61";
 var professional_annually = "49";
 
 $('#monthly').on("click", function() {

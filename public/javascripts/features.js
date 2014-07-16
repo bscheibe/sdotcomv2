@@ -24,5 +24,9 @@ jQuery(window).load(function () {
         	$('#feature_6_img').addClass("animated fadeInLeftBig");
         	$('#feature_6_text').addClass("animated fadeInRightBig");
         }
+        if ($(document).scrollTop() > 2600) {
+            $('#feature_7_text').addClass("animated fadeInLeftBig");
+            $('#feature_7_img').addClass("animated fadeInRightBig");
+        }
     });
 });

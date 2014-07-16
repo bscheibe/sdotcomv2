@@ -297,23 +297,26 @@ a {
 }
 
 .btn-primary {
-    background-color: @roadmunk-orange;
-    border-color: @light-orange;
+    @hex-hover-color : @roadmunk-orange;
+    @button-color : @table-blue;
+
+    background-color: @button-color;
+    border-color: @hex-hover-color;
     &:hover {
         .transition(all 0.1s linear);
-        background-color: darken(@roadmunk-orange, 10%);
+        background-color: darken(@button-color, 10%);
     }
     &:hover > .hex-alt-big {
         .transition(all 0.1s linear);
-        background: darken(@light-orange, 10%);
+        background: darken(@hex-hover-color, 10%);
     }
     &:hover > .hex-alt-big:before {
         .transition(all 0.1s linear);
-        border-right-color: darken(@light-orange, 10%);
+        border-right-color: darken(@hex-hover-color, 10%);
     }
     &:hover > .hex-alt-big:after {
         .transition(all 0.1s linear);
-        border-left-color: darken(@light-orange, 10%);
+        border-left-color: darken(@hex-hover-color, 10%);
     }
 }
 
@@ -353,6 +356,21 @@ a {
         padding-right: 55px;
         .hex-alt {
             right: -13px;
+        }
+    }
+}
+
+.btn-icon-left {
+    margin-left: 10px;
+    padding-left: 42px;
+    .hex-alt {
+        left: -10px;
+    }
+    &.btn-lg {
+        margin-left: 15px;
+        padding-left: 55px;
+        .hex-alt {
+            left: -13px;
         }
     }
 }
