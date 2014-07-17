@@ -1,7 +1,7 @@
 /* Top Bar Styling */
 @scroll-transition : 0.5s;
-@bg-color : @table-blue;
-@text-color : @light-font;
+@bg-color          : @table-blue;
+@text-color        : @light-font;
 
 
 #masthead {
@@ -22,19 +22,27 @@
     min-height: 70px;
     .box-shadow(0px 4px 0px rgba(26, 134, 160, 0.7));
     .navbar-nav > li > a {
-      .transition(all @scroll-transition);
-       padding-top: 23px;
-       padding-bottom: 23px;
+      @vertical-padding : 23px;
+
+       padding-top: @vertical-padding;
+       padding-bottom: @vertical-padding;
+
+       .transition(all @scroll-transition);
     }
     .navbar-brand {
+      @height : 70px; 
+
+      line-height : @height;
+      height      : @height;
+
       .transition(all @scroll-transition);
-       line-height : 70px;
-       height      : 70px;
     }
     .navbar-toggle {
+      @vertical-margin : 18px;
+
+      margin-top    : @vertical-margin;
+      margin-bottom : @vertical-margin;
       .transition(all @scroll-transition);
-      margin-top: 18px;
-      margin-bottom: 18px;
     }
   }
 
@@ -63,14 +71,16 @@
   }
 
   .navbar-nav > li > a {
-    color: @text-color;
-    font-size: 16px;
-    padding-top: 33px;
-    padding-bottom: 33px;
-    text-shadow: none;
-    font-style: normal;
-    font-weight: 400;
-    position: relative;
+    @vertical-padding : 33px;
+
+    color          : @text-color;
+    font-size      : 16px;
+    padding-top    : @vertical-padding;
+    padding-bottom : @vertical-padding;
+    text-shadow    : none;
+    font-style     : normal;
+    font-weight    : 400;
+    position       : relative;
     .transition(all @scroll-transition);
     &:hover {
       color: @text-color;
@@ -78,12 +88,14 @@
   }
 
   .nav>li>a:before {
+    @align : 20px;
+
     opacity          : 0;
     content          : "";
     position         : absolute;
     background-color : @text-color;
-    left             : 20px;
-    right            : 20px;
+    left             : @align;
+    right            : @align;
     height           : 2px;
     bottom           : 25%;
     .transition(all 0.2s);
@@ -105,10 +117,12 @@
   }
 
   .navbar-brand {
-    .transition(all @scroll-transition);
+    @height: 90px;
+
      padding     : 0;
-     line-height : 90px;
-     height      : 90px;
+     line-height : @height;
+     height      : @height;
+     .transition(all @scroll-transition);
      img {
         vertical-align: middle;
         max-height: 100%
@@ -116,23 +130,25 @@
   }
 
   .navbar-toggle .icon-bar {
-    position: absolute;
-    left: 50%;
-    margin-left: -11px;
-    margin-top: 0 !important;
+    position    : absolute;
+    left        : 50%;
+    margin-left : -11px;
+    margin-top  : 0 !important;
     .transform(rotate(0deg));
     .transition(all 0.2s);
     .transform-origin(50% 50% 50%);
   }
 
   .navbar-toggle {
+    @vertical-margin : 28px;
+
     width         : 44px;
     height        : 34px;
-    margin-top    : 28px;
-    margin-bottom : 28px;
+    margin-top    : @vertical-margin;
+    margin-bottom : @vertical-margin;
 
-    background: none;  
-    border: none;
+    background : none;  
+    border     : none;
     .border-radius(0);
     .box-shadow(none);
 
@@ -143,8 +159,8 @@
           top: 10px;
         }
         &:nth-child(3) {
-          opacity: 1;
-          top: 46%
+          opacity : 1;
+          top     : 46%
         }
         &:nth-child(4) {
           top: 22px;
@@ -214,8 +230,8 @@
     }
     &.navbar-scrolled {
       .navbar-nav > li > a {
-         padding-top: @vertical-padding;
-         padding-bottom: @vertical-padding;
+         padding-top    : @vertical-padding;
+         padding-bottom : @vertical-padding;
       }
     }
   }

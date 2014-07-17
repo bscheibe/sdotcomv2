@@ -1,11 +1,10 @@
 Current Bugs
 ================
 - [x] When you collapse the screen the menu becomes an 'x' instead of the triple bars. After clicking twice it becomes the triple bars. This is due to the fact that the collapsed class is not getting attached to the class after the screen is collapsed.
-- [ ] Remove the animate.css file and replace it with only the animations you are using from the file. Do once you have all animations finished.
 - [x] Only load the css needed by the select page? Or would it be better to just let it all load at once and have it cached? [Use only one to reduce http requests]
 - [x] Update crossBrowser.less so it contains all the browser prefixes not just some of them
 - [ ] Go through and make CSS as efficient as possible while still being easy to change
-- [ ] Go through CSS at end and have one main file which has the css used by more than one page
+- [x] Go through CSS at end and have one main file which has the css used by more than one page
 - [x] Get rid of 'image-row' class on features page and use col-md instead?
 - [ ] Compress images for the web (Photoshop) such as those icons on the first page etc.
 - [x] Don't use 'move-up' class for the button on pricing and TnC page 
@@ -31,6 +30,7 @@ Ones you can do after release
 ===============================
 - [ ] Have underline on the current page link
 - [ ] Changes transitions from all to only where needed
+- [ ] Remove the animate.css file and replace it with only the animations you are using from the file. Do once you have all animations finished.
 
 Ones to think on 
 =================

@@ -4,12 +4,15 @@
     .justify-content(flex-start);
 }
 
+@blog-header-color : @light-font;
+@blog-text-color   : @steel-lightest;
+@extra-color       : @light-font;
+@post-bg-color     : @steel-darkest;
+
 .grid-post {
 
-    &.white-black {
-        background  : @steel-darkest;
-        font-weight : 300;
-    }
+    background  : @post-bg-color;
+    font-weight : 300;
 
     .post-head,
     .post-body,
@@ -27,7 +30,7 @@
     .post-author,
     .post-date {
         font-style : italic;
-        color      : @steel-icon;
+        color      : @blog-header-color;
     }
 
     .post-head {
@@ -49,9 +52,9 @@
         font-size   : 24px;
         margin-bottom: 0;
         a {
-            color: @dialog-bg;
+            color: @blog-header-color;
             &:hover {
-                color: darken(@dialog-bg, 10%);
+                color: darken(@blog-header-color, 10%);
             }
         }
     }
@@ -90,14 +93,14 @@
             padding-bottom : 12px;
             height         : 50px;
             text-align     : center;
-            color          : @dialog-bg;
+            color          : @extra-color;
             
             font-size      : 18px;
             position       : relative;
             a {
-                color: @light-font;
+                color: @extra-color;
                 &:hover {
-                    color: darken(@light-font, 10%);
+                    color: darken(@extra-color, 10%);
                 }
             }
 
@@ -109,7 +112,7 @@
                 left        : 45%;
                 margin-left : -18%;
                 top         : 0;
-                background  : @dialog-bg;
+                background  : @extra-color;
             }
             &:after {
                 display: none;
@@ -141,15 +144,17 @@
         }
 
         .post-body {
-            position: relative;
-            margin-left: 8px;
+            position      : relative;
+            margin-left   : 8px;
             margin-bottom : 0;
-            color         : @steel-icon;
+            p {
+                color : @blog-text-color;
+            }
             .more-link {
-                display: block;
-                color: @dialog-bg;
+                display : block;
+                color   : @extra-color;
                 &:hover {
-                    color: darken(@dialog-bg, 10%);
+                    color: darken(@extra-color, 10%);
                 }
             }
         }

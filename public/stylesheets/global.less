@@ -173,7 +173,7 @@ a {
       height           : 2px;
       margin           : 0 auto;
       width            : 25%;
-      bottom           : -15%;
+      bottom           : -20%;
     }
     &.underline-left {
       &:before {
@@ -338,11 +338,6 @@ a {
     }
 }
 
-.center-images {
-    .flex-display();
-    .align-items(center);
-}
-
 //Small Hex
 .hex-alt {
     .hex(10px, 18px, 21px, 36px, @roadmunk-orange);
@@ -358,55 +353,345 @@ a {
     .hex(14px, 24px, 28px, 48px, #fff);
 }
 
+//Global Section Code
+
+.section-fill(@primary-color, @secondary-color) {
+  color : @secondary-color;
+  .decor {
+    fill   : @primary-color;
+    stroke : @secondary-color;
+  }
+  .background-overlay {
+    background : @primary-color;
+    &.blog {
+      background: rgba(0,0,0,0.7);
+    }
+  }
+
+  .underline {
+    &:before {
+      background-color : @secondary-color;
+    }
+  }
+}
+
+.section {
+  position : relative;
+  z-index  : 3;
+
+  &.blue {
+    .section-fill(@table-blue, @light-font);
+  }
+
+  &.grey {
+    .section-fill(#eef1f2, @steel-darkest);
+  }
+
+  &.white {
+    .section-fill(#fff, @steel-darkest);
+  }
+
+  .landing-text {
+    text-align: left !important;
+  }
+
+  .landing-image {
+    width: 500px;
+  }
+
+  &.section-xs {
+    padding: 45px;
+  }
+
+  &.section-short {
+    padding: 60px 0;
+    &.top-header {
+      padding-top: 90px;
+    }
+    &.extra-top-header {
+      padding-top: 150px;
+    }
+    &.landing-page {
+      padding-top: 160px;
+    }
+  }
+
+  &.section-normal {
+    padding: 90px 0;
+    &.top-header {
+      padding-top: 120px;
+    }
+    &.extra-top-header {
+      padding-top: 150px;
+    }
+    &.landing-page {
+      padding-top: 1600px;
+    }
+  }
+
+  &.section-large {
+    padding: 120px 0;
+    &.top-header {
+      padding-top: 130px;
+    }
+  }
+
+  &.section-xlarge {
+    padding: 160px 0;
+  }
+
+  .home-svg {
+    margin-top: 50px;
+  }
+
+  [class*="container"] {
+    z-index : 3;
+    .section-header {
+      position       : relative;
+      border-bottom  : 0;
+      padding-bottom : 0;
+      max-width      : 800px;
+      margin         : 0 auto 60px;
+      z-index        : 3;
+      font-size      : 18px;
+      &.small {
+        margin: 0 auto 15px;
+      }
+      &.blog {
+        margin: 0 auto;
+      }
+      .headline {
+        text-align    : center;
+        display       : inline-block;
+        border-bottom : 0;
+        position      : relative;
+        margin-bottom : 0;
+      }
+      .hairline {
+        font-weight : 300;
+      }
+      p {
+        margin-top    : 12px;
+        margin-bottom : 0;
+      }
+    }
+  }
+
+  .background-overlay,
+  .background-media {
+    position : absolute;
+    width    : 100%;
+    left     : 0;
+    top      : 0px;
+    bottom   : 0;
+  }
+
+  //If something goes wrong change z-index to 1 for background-media and 2 for background-overlay
+  .background-media {
+    background-position : 0 0;
+    background-repeat   : no-repeat;
+    z-index             : 1;
+    overflow            : hidden;
+    img.bg {
+      -webkit-filter : blur(1px);
+      filter         : blur(1px);
+      
+      /* Set rules to fill background */
+      min-width      : 1024px;
+      max-height     : 600px;
+      
+      /* Set up proportionate scaling */
+      width          : 100%;
+      //height       : auto;
+      
+      /* Set up positioning */
+      // Put fixed here if want parallax but currently broken with footer?
+      position       : absolute;
+      top            : 0px;
+      left           : 0;
+    }
+  }
+
+  .background-overlay {
+    z-index: 2;
+  }
+
+  [class*="decor-"] {
+    position : absolute;
+    width    : 100%;
+    height   : 60px;
+    left     : 0;
+  }
+
+  [class*="decor-"] svg {
+    height : 101%;
+  }
+
+  .decor-top {
+    bottom : 100%;
+  }
+  .decor-bottom {
+    top : 100%;
+  }
+
+  .decor {
+    display  : block;
+    position : relative;
+    margin   : 0 auto;
+  }
+}
+
+/* Circular Images */
+.box-round, .box-rect, .box-square, .box-hex {
+    display    : block;
+    text-align : center;
+    margin     : 0 auto 24px auto;
+    position   : relative;
+    z-index    : 100;
+    width      : 150px;
+    max-width  : 100%;
+}
+
+.box-dummy {
+    padding-top: 100%;
+}
+
+.box-inner {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    width    : 100%;
+    height   : 100%;
+    overflow : hidden;
+}
+
+.box-inner img {
+    max-width: 100%;
+}
+.box-round .box-inner {
+    .border-radius(50%);
+}
+
+
+
+
+
+//RWD for global site
 @media (max-width: 1200px) {
-    .underline {
-        &.underline-left {
-          &:before {
-            left   : 20px;
-            right  : 20px;
-            margin : 0 auto;
-            bottom : -3px;
-            width  : 40%;
-          }
+  .underline {
+      &.underline-left {
+        &:before {
+          left   : 20px;
+          right  : 20px;
+          margin : 0 auto;
+          bottom : -3px;
+          width  : 40%;
         }
-    }
-    .global-header-cta {
-        margin     : 20px auto 0 auto;
-        float      : none;
-        text-align : center;
-    }
-    h1 {
-        font-size : 26px;
-    }
+      }
+  }
+  .global-header-cta {
+      margin     : 20px auto 0 auto;
+      float      : none;
+      text-align : center;
+  }
+  h1 {
+      font-size : 26px;
+  }
 }
 
 @media (max-width: 1200px) {
-    .global-header-text {
-        text-align: center;
-        h1 {
-            padding-bottom: 10px;
-        }
+  .global-header-text {
+      text-align: center;
+      h1 {
+          padding-bottom: 10px;
+      }
+  }
+  .container {
+      .small-header {
+          margin         : 0 auto 10px;
+      }
+  }
+  .global-header-subheader {
+      text-align : center;
+      margin     : 10px auto;
+  }
+
+  .section {
+    [class*="container"] {
+      .section-header {
+        margin-bottom: 60px;
+      }
     }
-    .container {
-        .small-header {
-            margin         : 0 auto 10px;
-        }
+    .landing-text {
+      text-align: center !important;
     }
-    .global-header-subheader {
-        text-align : center;
-        margin     : 10px auto;
+    &.section-short {
+      &.landing-page {
+        padding-top: 120px;
+      }
     }
+  }
 }
 
 @media (max-width: 1000px) {
-    .go-top {
-    	display: none !important;
-    }
-    p {
-        &.get-smaller {
-            font-size: 16px;
+  .go-top {
+  	display: none !important;
+  }
+  .section {
+    [class*="container"] {
+      .section-header {
+        margin-bottom: 40px;
+        &.large-margin-bottom {
+          margin-bottom: 90px;
         }
+      }
     }
+    &.section-xs {
+      padding: 15px 0;
+    }
+    &.section-normal {
+      padding: 50px 0;
+    }
+    &.section-short {
+      padding: 30px 0;
+      &.extra-top-header {
+        padding-top: 120px;
+      }
+      &.landing-page {
+        padding-top: 110px;
+      }
+    }
+    &.section-large {
+      &.top-header {
+        padding-top: 100px;
+      }
+    }
+    .home-svg {
+      margin-top: 0;
+    }
+  }
+  p {
+      &.get-smaller {
+          font-size: 16px;
+      }
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    &.section-normal {
+      padding: 25px 0;
+    }
+    &.section-short {
+      padding: 15px 0;
+      &.extra-top-header {
+        padding-top: 100px;
+      }
+      &.landing-page {
+        padding-top: 100px;
+      }
+    }
+  }
 }
 
 /* Animations */
