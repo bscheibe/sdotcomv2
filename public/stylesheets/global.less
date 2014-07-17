@@ -72,7 +72,7 @@ a {
     &.go-top {
         color: #fff;
         &:hover {
-            color: @off-white;
+            color: @dialog-bg;
         }
     }
 }
@@ -112,7 +112,7 @@ a {
     text-align    : center;
     .transition(color 0.2s, background 0.2s;);
     &:hover {
-        color      : @off-white;
+        color      : @dialog-bg;
         background : @dark-orange;
         .transition(color 0.2s, background 0.2s;);
     }
@@ -182,6 +182,11 @@ a {
         height : 1px;
         left   : 0;
         bottom : -15px;
+      }
+      &.underline-landing {
+        &:before {
+            bottom: -25px;
+        }
       }
     }
     &.underline-404 {
@@ -298,7 +303,7 @@ a {
 
     span {
         line-height : 32px;
-        color       : @white;
+        color       : @light-font;
     }
 }
 
@@ -396,25 +401,6 @@ a {
 @media (max-width: 1000px) {
     .go-top {
     	display: none !important;
-    }
-    .text-xlarge {
-        font-size   : 56px;
-        line-height : 1;
-    }
-
-    .text-large {
-        font-size   : 42px;
-        line-height : 0.9;
-    }
-
-    .text-medium {
-        font-size   : 34px;
-        line-height : 0.9;
-    }
-
-    .text-small {
-        font-size   : 28px;
-        line-height : 0.8;
     }
     p {
         &.get-smaller {

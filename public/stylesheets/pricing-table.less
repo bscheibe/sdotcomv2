@@ -46,22 +46,35 @@
 			padding-top    : 7px;
 			color          : @steel-lightest;
 			.transition(all 0.2s ease-in-out);
+			&:hover {
+				color: @steel-lighter;
+			}
 		}
 		&.write {
 			color : @admin-green;
+			&:hover {
+				color: @admin-green;
+			}
 		}
 		&.grey {
 			color      : @steel-lightest;
 			background : none;
+			&:hover {
+				color: @steel-lighter;
+			}
 		}
 		&.right {
 			color : @table-blue;
+			&:hover {
+				color: @table-blue;
+			}
 		}
 	}
 
 	.switch-pill {
 		float            : left;
 		background-color : @admin-green;
+		cursor 			 : pointer;
 		position         : relative;
 		margin           : 0 13px;
 		width            : 70px;
