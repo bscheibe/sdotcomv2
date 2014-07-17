@@ -1,3 +1,9 @@
+.blog-list {
+    .flex-display();
+    .flex-wrap(wrap);
+    .justify-content(flex-start);
+}
+
 .grid-post {
     &.white-black {
         background: @steel-darkest;
@@ -22,7 +28,7 @@
     }
     .post-title {
         padding-top: 0;
-        font-size: 28px;
+        font-size: 24px;
     }
     .post-showinfo {
         margin-left: 0;
@@ -137,6 +143,7 @@
     .post {
         margin-bottom: 24px;
         position: relative;
+        //display: inline-block; // will make bottom fixed
     }
     .post-head {
         .no-title {
@@ -180,7 +187,7 @@
 }
 
 /* RWD for blog */
-@media (max-width: 979px) {
+@media (max-width: 1000px) {
     .grid-post {
         .post-showinfo {
             .post-head,
@@ -203,5 +210,11 @@
                 z-index: 100;
             }
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .blog-list {
+        margin-top: 25px;
     }
 }

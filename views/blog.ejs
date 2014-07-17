@@ -2,7 +2,7 @@
 	<div class="background-media"></div>
 	<div class="background-overlay"></div>
 	<div class="container">
-		<header class="section-header text-center">
+		<header class="section-header text-center large-margin-bottom">
 			<h1 class="headline text-medium hairline">Roadmunk Blog</h1>
 			<p>All The Latest News and Updates</p>
 		</header>
@@ -19,9 +19,9 @@
 			<div class="row med-margin-bottom">
 				<div class="col-md-12 text-default">
 					<div class="row">
-						<ul class="list-unstyled">
+						<ul class="list-unstyled blog-list">
 							<% blogData.blogs.forEach(function (blog) { %>
-								<li class="post-item col-md-4">
+								<li class="col-md-4">
 									<div class="grid-post white-black">
 										<article id="<%= blog.id %>" class="post post-showinfo">
 											<a href="/blog/<%= blog.url %>" title="<%= blog.title %>">
