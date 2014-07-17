@@ -34,7 +34,7 @@ var Data = function() {
 		title       : "Roadmunk's Terms and Conditions",
 		description : "Terms and Conditions Roadmunk Roadmap App",
 		author      : "Brent Scheibelhut",
-		content     : "termsandconditions",
+		content     : "terms-and-conditions",
 		filename    : true
 	}
 
@@ -43,7 +43,7 @@ var Data = function() {
 		title       : "Roadmunk's Privacy Policy",
 		description : "Privacy Policy for Roadmunk's Roadmap App",
 		author      : "Brent Scheibelhut",
-		content     : "privacypolicy",
+		content     : "privacy-policy",
 		filename    : true
 	}
 

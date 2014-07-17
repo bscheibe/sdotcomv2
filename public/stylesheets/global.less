@@ -1,30 +1,35 @@
 
 body {
-  font-family:  'OpenSans', "Helvetica Neue", Helvetica, Arial;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img.blur {
-    -webkit-filter : blur(3px) !important;
-    filter: blur(3px) !important;
-}
-
-img.blend {
-    opacity: 0.95;
-    .border-radius(6px);
+  font-family             :  'OpenSans', "Helvetica Neue", Helvetica, Arial;
+  -webkit-font-smoothing  : antialiased;
+  -moz-osx-font-smoothing : grayscale;
 }
 
 img {
     max-width: 100%;
+    &.blur {
+        -webkit-filter : blur(3px) !important;
+        filter         : blur(3px) !important;
+    }
+    &.blend {
+        opacity: 0.95;
+        .border-radius(6px);
+    }
 }
 
-p.callout {
-    color: #717171;
+p {
+    &.callout {
+        color: #717171;
+    }
+    &.features {
+        color: @steel-dark;
+    }
 }
 
-p.features {
-    color: @steel-dark;
+//Global header styles
+
+.global-header-cta {
+    float: right;
 }
 
 .global-header-text {
@@ -35,118 +40,18 @@ p.features {
     margin-top: 30px;
 }
 
+//End of global header styles
+
+//Used to position the zopim plugin on the bottom left of page
 .zopim {
-    left: 10px !important;
-    right: 0 !important;
-    bottom: 0 !important;
-}
-
-.text-left {
-	text-align: left !important;
-}
-
-.text-center {
-	text-align: center !important;
-}
-
-.text-right {
-	text-align: right !important;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.center {
-	float: none;
-	margin: 0 auto;
-}
-
-.text-xlarge {
-    font-size   : 86px;
-    line-height : 1;
-}
-
-.text-large {
-    font-size: 66px;
-    line-height: 0.9;
-}
-
-.text-medium {
-    font-size: 48px;
-    line-height: 0.9;
-}
-
-.text-small {
-    font-size: 32px;
-    line-height: 1;
-}
-
-.normal {
-    font-weight: 400 !important;
-}
-
-.thin {
-    font-weight: 300 !important;
-}
-
-.large-margin-bottom {
-    margin-bottom: 90px !important;
-}
-
-.med-margin-bottom {
-    margin-bottom: 60px !important;
-}
-
-.small-margin-bottom {
-    margin-bottom: 30px !important;
-}
-
-.xsmall-margin-bottom {
-    margin-bottom: 15px !important;
-}
-
-.lg-margin-top {
-    margin-top: 90px !important;
-}
-
-.med-margin-top {
-    margin-top: 60px !important;
-}
-
-.small-margin-top {
-    margin-top: 30px !important;
-}
-
-.xsmall-margin-top {
-    margin-top: 15px !important;
-}
-
-.move-up {
-    margin-top: -30px !important;
-}
-
-.font-normal {
-    font-weight: 400 !important;
-}
-
-/* Are these styles just used on home? */
-.box-list>li {
-    overflow: hidden;
-    padding-bottom: 24px;
+    left   : 10px !important;
+    right  : 0 !important;
+    bottom : 0 !important;
 }
 
 .image-list > li {
     //Centers the images
     text-align: center;
-}
-
-.align-middle {
-    vertical-align: middle;
 }
 
 /* End of those styles */
@@ -156,12 +61,12 @@ p.features {
 }
 
 a {
-    text-decoration: none;
-    color: @roadmunk-orange;
+    text-decoration : none;
+    color           : @roadmunk-orange;
     .transition(color 0.2s);
     &:hover {
-        text-decoration: none;
-        color: @dark-orange;
+        text-decoration : none;
+        color           : @dark-orange;
         .transition(color 0.2s);
     }
     &.go-top {
@@ -178,7 +83,7 @@ a {
       border-bottom  : 0;
       padding-bottom : 0;
       max-width      : 100%;
-      margin         : 0 auto 30px;
+      margin         : 0 auto 20px;
       z-index        : 4;
       font-size      : 18px;
       h1 {
@@ -186,18 +91,17 @@ a {
       }
     }
     .subheader {
-      margin: 30px auto 0 auto;
-      font-size: 18px;
+      margin    : 30px auto 0 auto;
+      font-size : 18px;
     }
     .body-subheader {
-      margin: 30px auto 0 auto;
-      font-size: 16px;
+      margin    : 30px auto 0 auto;
+      font-size : 16px;
     }
 }
 
 .cta {
-    //Use width instead of left/right padding so we can center the button easily
-    //with margin auto
+    //Use width instead of left/right padding so we can center the button easily with margin auto
     width         : 325px;
     padding       : 15px 0;
     background    : @roadmunk-orange;
@@ -208,16 +112,16 @@ a {
     text-align    : center;
     .transition(color 0.2s, background 0.2s;);
     &:hover {
-        .transition(color 0.2s, background 0.2s;);
-        color : @off-white;
+        color      : @off-white;
         background : @dark-orange;
+        .transition(color 0.2s, background 0.2s;);
     }
     &:before {
         content : "Build My Roadmap For Free";
     }
     &.learn-more {
-        width: 250px;
-        background: @admin-green;
+        width      : 250px;
+        background : @admin-green;
         &:hover {
             background : darken(@admin-green, 10%);
         }
@@ -230,26 +134,21 @@ a {
     }
 }
 
-.global-header-cta {
-    margin-top: -80px;
-    float: right;
-}
-
 .after-before() {
-    content: " ";
-    width: 0;
-    height: 0;
-    top: 0;
-    position: absolute;
+    content  : " ";
+    width    : 0;
+    height   : 0;
+    top      : 0;
+    position : absolute;
 }
 
 //Other button
 .btn, button {
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    text-shadow: none !important;
-    font-weight: normal;
+    outline     : 0;
+    border      : 0;
+    box-shadow  : none;
+    text-shadow : none !important;
+    font-weight : normal;
     .border-radius(0);
     .transition(background-color 0.1s linear);
     &:focus {
@@ -278,11 +177,11 @@ a {
     }
     &.underline-left {
       &:before {
-        margin: 0;
-        width: 40%;
-        height: 1px;
-        left: 0;
-        bottom : -35px;
+        margin : 0;
+        width  : 80%;
+        height : 1px;
+        left   : 0;
+        bottom : -15px;
       }
     }
     &.underline-404 {
@@ -292,10 +191,10 @@ a {
     }
     &.underline-company {
         &:before {
-            margin: 0;
-            width: 20%;
-            height: 1px;
-            left: 0;
+            margin : 0;
+            width  : 20%;
+            height : 1px;
+            left   : 0;
             bottom : -20px;
         }
     }
@@ -303,10 +202,10 @@ a {
 
 .btn-primary {
     @hex-hover-color : @roadmunk-orange;
-    @button-color : @table-blue;
-
-    background-color: @button-color;
-    border-color: @hex-hover-color;
+    @button-color    : @table-blue;
+    
+    background-color : @button-color;
+    border-color     : @hex-hover-color;
     &:hover {
         .transition(all 0.1s linear);
         background-color: darken(@button-color, 10%);
@@ -326,8 +225,8 @@ a {
 }
 
 .btn-lg {
-    padding-top: 12px;
-    padding-bottom: 13px;
+    padding-top    : 12px;
+    padding-bottom : 13px;
     span {
         font-size: 16px;
     }
@@ -339,10 +238,10 @@ a {
         .after-before();
     }
     .hex-alt {
-        display: block;
-        position: absolute;
-        top: 0;
-        z-index: 1;
+        display  : block;
+        position : absolute;
+        top      : 0;
+        z-index  : 1;
         [class^="icon-"],
         [class*=" icon-"] {
             display: inline-block;
@@ -351,14 +250,14 @@ a {
 }
 
 .btn-icon-right {
-    margin-right: 10px;
-    padding-right: 42px;
+    margin-right  : 10px;
+    padding-right : 42px;
     .hex-alt {
         right: -10px;
     }
     &.btn-lg {
-        margin-right: 15px;
-        padding-right: 55px;
+        margin-right  : 15px;
+        padding-right : 55px;
         .hex-alt {
             right: -13px;
         }
@@ -366,14 +265,14 @@ a {
 }
 
 .btn-icon-left {
-    margin-left: 10px;
-    padding-left: 42px;
+    margin-left  : 10px;
+    padding-left : 42px;
     .hex-alt {
         left: -10px;
     }
     &.btn-lg {
-        margin-left: 15px;
-        padding-left: 55px;
+        margin-left  : 15px;
+        padding-left : 55px;
         .hex-alt {
             left: -13px;
         }
@@ -384,35 +283,36 @@ a {
 
 //The button to go to the top of the page
 .go-top {
-    position: fixed !important;
-    display: block;
-    font-size: 16px;
-    width: 2em;
-    height: 2em;
-    background: @roadmunk-orange;
-    text-align: center;
-    bottom: -44px;
-    opacity: 1;
-    right: 12px;
+    position   : fixed !important;
+    display    : block;
+    font-size  : 16px;
+    width      : 2em;
+    height     : 2em;
+    background : @roadmunk-orange;
+    text-align : center;
+    bottom     : -44px;
+    opacity    : 1;
+    right      : 12px;
+    z-index    : 100;
     .transition(all 0.5s);
-    z-index: 100;
-}
-.go-top i {
-    line-height: 32px;
-    color: @white;
+
+    span {
+        line-height : 32px;
+        color       : @white;
+    }
 }
 
-
+//Creates the hex's found throughout the site
 .hex(@margin, @hex-size, @width, @height, @color) {
-    display: inline-block;
-    margin-left: @margin;
-    margin-right: @margin;
-    width: @width;
-    height: @height;
-    position: relative;
-    text-align: center;
-    line-height: @height;
-    background: @color;
+    display      : inline-block;
+    margin-left  : @margin;
+    margin-right : @margin;
+    width        : @width;
+    height       : @height;
+    position     : relative;
+    text-align   : center;
+    line-height  : @height;
+    background   : @color;
     .transition(all 0.1s linear);
 
     &:before, &:after {
@@ -420,16 +320,16 @@ a {
         .transition(all 0.1s linear);
     }
     &:before {
-        border-right: @margin solid @color;
-        border-top: @hex-size solid transparent;
-        border-bottom: @hex-size solid transparent;
-        left: -@margin;
+        border-right  : @margin solid @color;
+        border-top    : @hex-size solid transparent;
+        border-bottom : @hex-size solid transparent;
+        left          : -@margin;
     }
     &:after {
-        border-left: @margin solid @color;
-        border-top: @hex-size solid transparent;
-        border-bottom: @hex-size solid transparent;
-        right: -@margin;
+        border-left   : @margin solid @color;
+        border-top    : @hex-size solid transparent;
+        border-bottom : @hex-size solid transparent;
+        right         : -@margin;
     }
 }
 
@@ -453,34 +353,22 @@ a {
     .hex(14px, 24px, 28px, 48px, #fff);
 }
 
-.hidden {
-    visibility: hidden;
-}
-
-.visible {
-    visibility: visible;
-}
-
-.transparent {
-    opacity: 0;
-}
-
 @media (max-width: 1200px) {
     .underline {
         &.underline-left {
           &:before {
-            left             : 20px;
-            right            : 20px;
-            margin           : 0 auto;
-            bottom           : -15%;
-            width: 40%;
+            left   : 20px;
+            right  : 20px;
+            margin : 0 auto;
+            bottom : -3px;
+            width  : 40%;
           }
         }
     }
     .global-header-cta {
-        margin: 20px auto 0 auto;
-        float: none;
-        text-align: center;
+        margin     : 20px auto 0 auto;
+        float      : none;
+        text-align : center;
     }
     h1 {
         font-size : 26px;
@@ -500,8 +388,8 @@ a {
         }
     }
     .global-header-subheader {
-        text-align: center;
-        margin: 10px auto;
+        text-align : center;
+        margin     : 10px auto;
     }
 }
 
@@ -515,18 +403,18 @@ a {
     }
 
     .text-large {
-        font-size: 42px;
-        line-height: 0.9;
+        font-size   : 42px;
+        line-height : 0.9;
     }
 
     .text-medium {
-        font-size: 34px;
-        line-height: 0.9;
+        font-size   : 34px;
+        line-height : 0.9;
     }
 
     .text-small {
-        font-size: 28px;
-        line-height: 0.8;
+        font-size   : 28px;
+        line-height : 0.8;
     }
     p {
         &.get-smaller {

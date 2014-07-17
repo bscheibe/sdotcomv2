@@ -142,6 +142,9 @@ Adding a New Transition
 Best Practices
 ====================
 
+- When creating a new view, please use '-' to represent spaces
+- When creating a new less file please '-' to represent spaces
+
 EJS Templating
 ======================
 

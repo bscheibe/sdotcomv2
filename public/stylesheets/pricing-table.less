@@ -1,0 +1,324 @@
+@footer-height     : 60px;
+@seperator-color   : @steel-line;
+@cell-width        : 290px;
+@letter-spacing    : 0.5px;
+@thin			   : 300;
+
+.pricing-table-subheader {
+	@side-margin : 15px;
+
+	background    : inherit;
+	margin        : 30px auto 0 auto;
+	border-bottom : 1px solid @seperator-color;
+	padding-bottom: 10px;
+	font-weight   : @thin;
+
+	.price-title {
+		margin      : 0 0 0 @side-margin;
+		padding     : 0;
+		font-size   : 50px;
+		text-align  : left;
+		display     : inline-block;
+		color       : @steel-light;
+	}
+
+	.discount {
+		display   : inline-block;
+		position  : relative;
+		margin    : 36px @side-margin 0 0;
+		font-size : 16px;
+		color     : @steel-light;
+		float     : right;
+	}
+}
+
+.preview-switch {
+	float      : none;
+	margin-top : 40px;
+	span {
+		&.toggle-switch {
+			text-transform : uppercase;
+			letter-spacing : 1px;
+			font-weight    : 700;
+			cursor         : pointer;
+			float          : left;
+			font-size      : 14px;
+			padding-top    : 7px;
+			color          : @steel-lightest;
+			.transition(all 0.2s ease-in-out);
+		}
+		&.write {
+			color : @admin-green;
+		}
+		&.grey {
+			color      : @steel-lightest;
+			background : none;
+		}
+		&.right {
+			color : @table-blue;
+		}
+	}
+
+	.switch-pill {
+		float            : left;
+		background-color : @admin-green;
+		position         : relative;
+		margin           : 0 13px;
+		width            : 70px;
+		height           : 30px;
+		.transition(all 0.2s ease-in-out);
+		.border-radius(35px);
+
+		.switch {
+			background-color : @light-font;
+			position         : absolute;
+			top              : 3px;
+			left             : 3px;
+			width            : 24px;
+			height           : 24px;
+			.transition(all 0.2s ease-in-out);
+			.border-radius(12px);
+		}
+
+		&.right {
+			background-color : @table-blue;
+			.switch {
+				left : 43px;
+			}
+		}
+	}
+}
+
+.feature-table {
+	@table-width   : (@cell-width * 4) - 50;
+	@margin-top    : 50px;
+	@margin-bottom : 75px;
+
+	@starter-color      : #0ebee9;
+	@business-color     : #0DAAD1;
+	@professional-color : #0c96b9;
+	@enterprise-color   : #096f89;
+	
+	display      : block;
+	margin       : 0 auto;
+	width        : @table-width;
+	color        : @steel-dark;
+
+	.pricing-checkmark {
+		color : @admin-green;
+	}
+
+	//I don't think you need the x's b/c of the zebra stripes but they're here for now
+	.pricing-x {
+		color : lighten(@error-red, 5%);
+	}
+
+
+	td {
+		&.table-header {
+			padding    : 0px;
+			border     : none;
+			background : inherit;
+		}
+		.pricing-container {
+			@container-height : 140px;
+			@features-height  : 215px;
+			@border-radius    : 8px;
+			
+			color             : @dark-font;
+			margin            : auto;
+			width             : 100%;
+			height            : @container-height;
+			display           : inline-block;
+			margin            : 0px;
+			
+			.border {
+				width         : 75px;
+				display       : block;
+				border-bottom : 1px solid @light-font;
+				margin        : 2px auto 2px auto;
+			}
+
+			&#starter {
+				background-color       : @starter-color;
+				border-top-left-radius : @border-radius;
+			}
+
+			&#business {
+				background-color : @business-color;
+			}
+
+			&#professional {
+				background-color : @professional-color;
+			}
+
+			&#enterprise {
+				background-color        : @enterprise-color;
+				border-top-right-radius : @border-radius;
+			}
+
+			.title {
+				margin-top: 12px;
+				color: @light-font;
+				letter-spacing: 0.7px;
+				font-weight: @thin;
+				font-size: 28px;
+				p {
+					margin-bottom : 0;
+				}
+			}
+
+			.cost {
+				color: @light-font;
+				font-size: 25px;
+				font-weight: 400;
+				.price {
+					font-size: 400;
+					display: inline-block;
+					&.monthly {
+						display: none;
+					}
+				}
+				.contact {
+					font-size: 32px;
+					display: block;
+				}
+
+				.subheader1 {
+					font-size: 14px;
+					font-weight: 400;
+					text-transform: uppercase;
+					display: block;
+				}
+				.subheader2 {
+					font-size: 10px;
+					font-weight: 400;
+					display: block;
+					&.monthly {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	table, th, tr, td {
+		margin-top      : 0px;
+		border-collapse : collapse;
+	}
+	table {
+		text-align    : center;
+		margin-bottom : @margin-bottom;
+		margin-top    : @margin-top;
+		font-size     : 14px;
+		//margin-left   : 80px;
+	}
+	td {
+		@padding: 8px;
+
+		width       : @cell-width;
+		padding     : @padding 0px;
+		font-weight : 400;
+		background  : @dialog-bg;
+		border      : 1px solid @steel-line;
+
+		&.button-row {
+			background: inherit;
+			border: none;
+			height: 80px;
+			.button {
+				display: block;
+				width: 150px;
+				padding: 15px 0;
+				margin: 0 auto;
+				color: @light-font;
+				font-weight: 600;
+				font-size: 16px;
+				text-align: center;
+				.border-radius(4px);
+				background-color: @table-blue;
+
+				&:hover {
+					background-color: @table-dark-blue;
+					cursor: pointer;
+				}
+
+				&.starter {
+					background-color: @starter-color;
+					&:hover {
+						background-color: @table-dark-blue;
+						cursor: pointer;
+					}
+				}
+
+				&.business {
+					background-color: @business-color;
+					&:hover {
+						background-color: @table-dark-blue;
+						cursor: pointer;
+					}
+				}
+
+				&.professional {
+					background-color: @professional-color;
+					&:hover {
+						background-color: @table-blue;
+						cursor: pointer;
+					}
+				}
+
+				&.enterprise {
+					background-color: @enterprise-color;
+					&:hover {
+						background-color: @table-blue;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	th {
+
+		font-weight    : @thin;
+		letter-spacing : @letter-spacing;
+		width          : @cell-width - 50;
+		border-bottom  : 1px solid @steel-line;
+		text-align     : right;
+		padding-right  : 15px;
+		&.top {
+			border-top: 1px solid @steel-line;
+		}
+	}
+
+	//Zebra striping
+	tr {
+		&:nth-child(even) {
+			td {
+				background: @light-font;
+			}
+		}
+	}
+}
+
+.asterisk {
+	display       : block;
+	font-size     : 12px;
+	font-weight   : 400;
+	color         : @dark-font;
+	position      : relative;
+	bottom        : 0px;
+	right         : 0px;
+	text-align    : right;
+	margin-bottom : 5px;
+	label {
+		margin-right : 15px;
+	}
+}
+
+@media (max-width: 550px) {
+	.pricing-table-subheader {
+		.price-title {
+			font-size   : 35px;
+		}
+	}
+}

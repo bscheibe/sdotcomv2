@@ -35,7 +35,7 @@ blogData.blogs.forEach(function (blog) {
 });
 
 /* GET Company page. */
-router.get('/styleguide', function(req, res) {
+router.get('/style-guide', function(req, res) {
   res.render('layout', data.styleguide);
 });
 
@@ -45,7 +45,7 @@ router.get('/company', function(req, res) {
 });
 
 /* GET Privacy Policy page. */
-router.get('/privacypolicy', function(req, res) {
+router.get('/privacy-policy', function(req, res) {
   res.render('layout', data.privacypolicy);
 });
 
@@ -60,7 +60,7 @@ router.get('/support', function(req, res) {
 });
 
 /* GET Terms and Conditions page. */
-router.get('/termsandconditions', function(req, res) {
+router.get('/terms-and-conditions', function(req, res) {
   res.render('layout', data.termsandconditions);
 });
 
