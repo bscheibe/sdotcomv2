@@ -22,10 +22,11 @@
     min-height: 70px;
     .box-shadow(0px 4px 0px rgba(26, 134, 160, 0.7));
     .navbar-nav > li > a {
-      @vertical-padding : 23px;
+      @padding-top : 30px;
+      @padding-bottom : 23px;
 
-       padding-top: @vertical-padding;
-       padding-bottom: @vertical-padding;
+       padding-top: @padding-top;
+       padding-bottom: @padding-bottom;
 
        .transition(all @scroll-transition);
     }
@@ -43,6 +44,10 @@
       margin-top    : @vertical-margin;
       margin-bottom : @vertical-margin;
       .transition(all @scroll-transition);
+    }
+    .small-header-links {
+      .transition(all @scroll-transition);
+      top : 5px;
     }
   }
 
@@ -71,12 +76,13 @@
   }
 
   .navbar-nav > li > a {
-    @vertical-padding : 33px;
+    @padding-top: 40px;
+    @padding-bottom : 33px;
 
     color          : @text-color;
     font-size      : 16px;
-    padding-top    : @vertical-padding;
-    padding-bottom : @vertical-padding;
+    padding-top    : @padding-top;
+    padding-bottom : @padding-bottom;
     text-shadow    : none;
     font-style     : normal;
     font-weight    : 400;
@@ -183,6 +189,27 @@
       }
     }
   }
+
+  .small-header-links {
+    font-size : 12px;
+    position  : fixed;
+    top       : 10px;
+    right     : 65px;
+    .transition(all @scroll-transition);
+    a {
+      color: @light-font;
+      &:hover {
+        color: darken(@light-font, 10%);
+      }
+    }
+    .sign-in {
+      margin-right: 10px;
+      //border-right: 1px solid @light-font;
+    }
+    .help {
+      margin-left: 10px;
+    }
+  }
 }
 
 .dropdown-menu {
@@ -233,6 +260,10 @@
          padding-top    : @vertical-padding;
          padding-bottom : @vertical-padding;
       }
+    }
+
+    .small-header-links {
+      display: none;
     }
   }
 }
