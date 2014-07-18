@@ -1,5 +1,33 @@
 .home {
 
+  .init-clock {
+    position: relative;
+    &:hover {
+      .clock-hand {
+        .animation(2s rotate-origin-minute infinite linear);
+      }
+      .hour-clock-hand {
+        //Find out why I have to put top and right here
+        top: 2px;
+        right: 135px;
+        .animation(24s rotate-origin-hour infinite linear);
+      }
+    }
+  }
+
+  .clock-hand {
+    position: absolute;
+    top: 40.5px;
+    right: 144px;
+  }
+
+  .hour-clock-hand {
+    position: absolute;
+    top: 8px;
+    right: 125px;
+    .transform(rotate(225deg))
+  }
+
   .init-dl:hover {
     .download {
       .animation(1s download infinite linear);
