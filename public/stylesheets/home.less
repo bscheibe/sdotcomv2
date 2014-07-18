@@ -1,12 +1,58 @@
 .home {
 
+  .init-clock {
+    position: relative;
+    &:hover {
+      .clock-hand {
+        .animation(2s rotate-origin-minute infinite linear);
+      }
+      .hour-clock-hand {
+        //Find out why I have to put top and right here
+        top: 2px;
+        right: 135px;
+        .animation(24s rotate-origin-hour infinite linear);
+      }
+    }
+  }
+
+  .clock-hand {
+    position: absolute;
+    top: 40.5px;
+    right: 144px;
+  }
+
+  .hour-clock-hand {
+    position: absolute;
+    top: 8px;
+    right: 125px;
+    .transform(rotate(225deg))
+  }
+
+  .init-dl:hover {
+    .download {
+      .animation(1s download infinite linear);
+    }
+  }
+
   .download {
     font-size: 60px;
     opacity: 0.8;
     color: @admin-green;
+  }
+
+  .home-svg {
+    margin-top: 35px;
     &:hover {
-      .animation(1s download infinite linear);
+      .animation(2s rotate infinite linear);
     }
+  }
+
+  .landing-text {
+    text-align: left !important;
+  }
+
+  .landing-image {
+    width: 500px;
   }
 
   .browser {
@@ -167,11 +213,18 @@
 }
 
 @media (max-width: 1200px) {
-  //Insert code here
+  .home {
+    .landing-text {
+      text-align: center !important;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
   .home {
+    .home-svg {
+      margin-top: 0;
+    }
     .feature-controls {
         margin-top: 25%
     }

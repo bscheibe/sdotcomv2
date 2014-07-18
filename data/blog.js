@@ -8,7 +8,7 @@ var blogData = {
 	//Home Page Data
 	blogs : [
 		//This is one blog post
-		{
+		/*{
 			title       : "Roadmunk's First Blog Post", //
 			postImage   : "/images/blog/blog-image2.jpg", //
 			image       : "default", //
@@ -44,7 +44,7 @@ var blogData = {
 			id          : '0',
 			content     : "/blog/blog-layout",
 			filename    : true
-		},
+		},*/
 		//Roadmunk Launch Blog Post
 		{
 			title       : "Roadmunk Launch!",

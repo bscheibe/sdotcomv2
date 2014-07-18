@@ -10,8 +10,8 @@ Current Bugs
 - [x] Don't use 'move-up' class for the button on pricing and TnC page 
 - [ ] Rename landing page class to something better
 - [x] For filenames use only '_' or '-' but not both. Specify which one in the guide
-- [ ] Fix the top header issue (ie. figure out a better way then `header` classes)
-- [ ] What's with the error handling in app.js
+- [x] Fix the top header issue (ie. figure out a better way then `header` classes)
+- [x] What's with the error handling in app.js
 - [ ] Use bootstrap on the footer columns
 - [x] Have webkit font-smoothing on the body?
 - [ ] Clean up image folder
