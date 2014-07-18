@@ -375,6 +375,7 @@ a {
   }
 }
 
+/* Custom Animations */
 @-webkit-keyframes rotate {
   from {
     .transform(rotate(0deg));
@@ -414,11 +415,13 @@ a {
     .transform(translateY(25px));
   }
 }
+/* End of animations */
 
 .section {
   position : relative;
   z-index  : 3;
 
+  //Different colored containers
   &.blue {
     .section-fill(@table-blue, @light-font);
   }
@@ -431,60 +434,28 @@ a {
     .section-fill(#fff, @steel-darkest);
   }
 
-  .landing-text {
-    text-align: left !important;
-  }
-
-  .landing-image {
-    width: 500px;
-  }
-
   &.section-xs {
     padding: 45px;
   }
 
   &.section-short {
     padding: 60px 0;
-    &.top-header {
-      padding-top: 90px;
-    }
-    &.extra-top-header {
-      padding-top: 150px;
-    }
-    &.landing-page {
-      padding-top: 160px;
-    }
   }
 
   &.section-normal {
     padding: 90px 0;
-    &.top-header {
-      padding-top: 120px;
-    }
-    &.extra-top-header {
-      padding-top: 150px;
-    }
-    &.landing-page {
-      padding-top: 1600px;
-    }
   }
 
-  &.section-large {
-    padding: 120px 0;
-    &.top-header {
-      padding-top: 130px;
-    }
+  &.section-features {
+    padding: 110px 0 50px;
+  }
+
+  &.section-global {
+    padding: 130px 0;
   }
 
   &.section-xlarge {
-    padding: 160px 0;
-  }
-
-  .home-svg {
-    margin-top: 35px;
-    /*&:hover {
-      .animation(2s rotate infinite linear);
-    }*/
+    padding: 160px 0 70px;
   }
 
   [class*="container"] {
@@ -520,6 +491,7 @@ a {
     }
   }
 
+  //Used for coloring containers and parallax scrolling
   .background-overlay,
   .background-media {
     position : absolute;
@@ -529,12 +501,13 @@ a {
     bottom   : 0;
   }
 
-  //If something goes wrong change z-index to 1 for background-media and 2 for background-overlay
   .background-media {
     background-position : 0 0;
     background-repeat   : no-repeat;
     z-index             : 1;
     overflow            : hidden;
+
+    //Used on the blog background
     img.bg {
       -webkit-filter : blur(1px);
       filter         : blur(1px);
@@ -548,7 +521,7 @@ a {
       //height       : auto;
       
       /* Set up positioning */
-      // Put fixed here if want parallax but currently broken with footer?
+      // Put 'fixed' here if you want parallax scrolling - otherwise use absolute
       position       : absolute;
       top            : 0px;
       left           : 0;
@@ -559,6 +532,7 @@ a {
     z-index: 2;
   }
 
+  //Used for the svg dividers between containers
   [class*="decor-"] {
     position : absolute;
     width    : 100%;
@@ -616,9 +590,6 @@ a {
 }
 
 
-
-
-
 //RWD for global site
 @media (max-width: 1200px) {
   .underline {
@@ -665,13 +636,14 @@ a {
         margin-bottom: 60px;
       }
     }
-    .landing-text {
-      text-align: center !important;
+    &.section-global {
+      padding: 110px 0 70px;
     }
-    &.section-short {
-      &.landing-page {
-        padding-top: 120px;
-      }
+    &.section-features {
+      padding: 110px 0;
+    }
+    &.section-xlarge {
+      padding: 110px 0 50px;
     }
   }
 }
@@ -692,25 +664,20 @@ a {
     &.section-xs {
       padding: 15px 0;
     }
+    &.section-short {
+      padding: 30px 0;
+    }
     &.section-normal {
       padding: 50px 0;
     }
-    &.section-short {
-      padding: 30px 0;
-      &.extra-top-header {
-        padding-top: 120px;
-      }
-      &.landing-page {
-        padding-top: 110px;
-      }
+    &.section-global {
+      padding: 90px 0 65px;
     }
-    &.section-large {
-      &.top-header {
-        padding-top: 100px;
-      }
+    &.section-features {
+      padding: 110px 0 90px;
     }
-    .home-svg {
-      margin-top: 0;
+    &.section-xlarge {
+      padding: 100px 0 40px;
     }
   }
   p {
@@ -725,16 +692,14 @@ a {
     &.section-normal {
       padding: 25px 0;
     }
-    &.section-short {
+    &.section-global {
+      padding: 100px 0 60px;
+    }
+    &.section-features {
       padding: 15px 0;
-      &.extra-top-header {
-        padding-top: 100px;
-      }
-      &.landing-page {
-        padding-top: 100px;
-      }
+    }
+    &.section-xlarge {
+      padding: 90px 0 30px;
     }
   }
 }
-
-/* Animations */

@@ -7,6 +7,10 @@ var business_annually = "29";
 var professional_monthly = "60";
 var professional_annually = "49";
 
+$("#starterPrice").html(starter_annually);
+$("#businessPrice").html(business_annually);
+$("#professionalPrice").html(professional_annually);
+
 function monthly () {
     $("#monthly").removeClass("grey");
     $("#monthly").addClass("selected");

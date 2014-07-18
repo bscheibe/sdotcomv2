@@ -9,6 +9,21 @@
     }
   }
 
+  .home-svg {
+    margin-top: 35px;
+    /*&:hover {
+      .animation(2s rotate infinite linear);
+    }*/
+  }
+
+  .landing-text {
+    text-align: left !important;
+  }
+
+  .landing-image {
+    width: 500px;
+  }
+
   .browser {
     width     : 100%;
     max-width : 857px;
@@ -167,11 +182,18 @@
 }
 
 @media (max-width: 1200px) {
-  //Insert code here
+  .home {
+    .landing-text {
+      text-align: center !important;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
   .home {
+    .home-svg {
+      margin-top: 0;
+    }
     .feature-controls {
         margin-top: 25%
     }
