@@ -1,6 +1,8 @@
-var http = require('http'),
-	app = require('./app');
+var http = require('http');
+var app  = require('./app');
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+var port = process.env.PORT || 3030;
+
+http.createServer(app).listen(port, function() {
+	console.log('http://0.0.0.0:' + port);
 });
