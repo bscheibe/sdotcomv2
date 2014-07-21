@@ -13,7 +13,11 @@
 			</div>
 			<div class="col-md-6 small-margin-top">
 				<a title="Create my roadmap for free" href="https://app.roadmunk.com/login/#/signup">
-					<div class="cta global-header-cta"></div>
+					<% if (content == "pricing") { %>
+						<div class="cta free-trial global-header-cta"></div>
+					<% } else { %>
+						<div class="cta global-header-cta"></div>
+					<% } %>
 				</a>
 			</div>
 		</div>
