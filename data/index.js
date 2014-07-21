@@ -1,97 +1,76 @@
 var blogData = require('./blog');
 
-var Data = function() {
-	
-	//Home Page Data
-	this.home = {
+module.exports = [
+	//Landing Page Data
+	{
 		title       : "Roadmunk Landing Page",
-		description : "Create Brilliant Roadmaps with Roadmunk",
+		description : "Create Brilliant Roadmaps with Roadmunk. Product and software roadmapping to ease the process of development",
 		author      : "Brent Scheibelhut",
-		content     : "home",
-		filename    : true
-	}
+		content     : "home"
+	},
 
 	//Features Page Data
-	this.features = {
+	{
 		title       : "Roadmunk Features",
-		description : "Roadmunk Features Help Build Brilliant Roadmaps",
+		description : "Roadmunk Features Help Build Brilliant Roadmaps. Product and software roadmapping to ease the process of development",
 		author      : "Brent Scheibelhut",
-		content     : "features",
-		filename    : true
-	}
+		content     : "features"
+	},
 
 	//Pricing Page Data
-	this.pricing = {
+	{
 		title       : "Roadmunk Pricing",
-		description : "Pricing for the Roadmunk Roadmap App",
+		description : "Pricing for the Roadmunk Roadmap App. Product and software roadmapping to ease the process of development",
 		author      : "Brent Scheibelhut",
-		content     : "pricing",
-		filename    : true
-	}
+		content     : "pricing"
+	},
 
 	//Terms and Conditions Page Data
-	this.termsandconditions = {
+	{
 		title       : "Roadmunk's Terms and Conditions",
-		description : "Terms and Conditions Roadmunk Roadmap App",
+		description : "Terms and Conditions Roadmunk Roadmap App. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
-		content     : "terms-and-conditions",
-		filename    : true
-	}
+		content     : "terms-and-conditions"
+	},
 
 	//Privacy Policy Page Data
-	this.privacypolicy = {
+	{
 		title       : "Roadmunk's Privacy Policy",
-		description : "Privacy Policy for Roadmunk's Roadmap App",
+		description : "Privacy Policy for Roadmunk's Roadmap App. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
-		content     : "privacy-policy",
-		filename    : true
-	}
+		content     : "privacy-policy"
+	},
 
 	//Security Page Data
-	this.security = {
+	{
 		title       : "Roadmunk's Security Offering",
-		description : "Security offered by Roadmunk's Roadmap App",
+		description : "Security offered by Roadmunk's Roadmap App. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
-		content     : "security",
-		filename    : true
-	}
+		content     : "security"
+	},
 
-	//Security Page Data
-	this.company = {
+	//Company Page Data
+	{
 		title       : "About Roadmunk and the Company",
-		description : "Learn what behind the team at the ever popular Roadmunk App",
+		description : "Learn what behind the team at the ever popular Roadmunk App. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
-		content     : "company",
-		filename    : true
-	}
+		content     : "company"
+	},
 
-	//404 Page Data
-	this.styleguide = {
+	//Style Guide Page Data
+	{
 		title       : "Roadmunk's Style Guide'",
-		description : "All you would ever need to know about the styling for the incredibly popular Roadmunk roadmapping app",
+		description : "All you would ever need to know about the styling for the incredibly popular Roadmunk roadmapping app. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
-		content     : "style-guide",
-		filename    : true
-	}
-
-	//404 Page Data
-	this.fourohfour = {
-		title       : "Roadmunk 404",
-		description : "Roadmunk 404 - Page Not Found",
-		author      : "Brent Scheibelhut",
-		content     : "404",
-		filename    : true
-	}
+		content     : "style-guide"
+	},
 
 	//Roadmunk Blog Page Data
-	this.blog = {
+	{
 		title       : "Roadmunk Blog",
-		description : "Get all the latest updates and new on the Roadmunk App",
+		description : "Get all the latest updates and new on the Roadmunk App. Product and software roadmapping to ease the process of product or sofware development",
 		author      : "Brent Scheibelhut",
 		content     : "blog",
-		blogData    : blogData,
-		filename    : true
+		blogData    : blogData
 	}
-};
-
-module.exports = Data;
+];

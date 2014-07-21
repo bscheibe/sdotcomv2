@@ -202,12 +202,18 @@
         color: darken(@light-font, 10%);
       }
     }
-    .sign-in {
-      margin-right: 10px;
-      //border-right: 1px solid @light-font;
+    .login {
+      border: 1px solid @light-font;
+      padding: 1px 7px 3px 10px;
+      .transition(all @scroll-transition);
+      .border-radius(2px);
+      &:hover {
+        .transition(all @scroll-transition);
+        border-color: darken(@light-font, 10%);
+      }
     }
     .help {
-      margin-left: 10px;
+      margin-left: 12px;
     }
   }
 }
