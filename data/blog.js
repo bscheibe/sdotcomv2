@@ -21,12 +21,12 @@ var defaultBlog = {
 var latifBlogPost = _.defaults(defaultBlog, { author : authorData.latif });
 
 var blogData = module.exports = {
-	
+
 	blogs : [
 		//Roadmunk Launch Blog Post
 		_.defaults({
 			title       : "Roadmunk Launch!",
-			postImage   : "/images/blog/roadmunk-launch.png",		
+			postImage   : "/images/blog/roadmunk-launch.png",
 			icon        : "plane",
 			date        : "June 20, 2014",
 			description : "Blog post regarding Roadmunk's launch of their popular roadmapping app out of beta",
@@ -72,7 +72,7 @@ var blogData = module.exports = {
 			description : "Roadmunk Release Notes from January 20, 2014. Explains how to publish and share your roadmap! Now the whole company can easily be involved in your product or software roadmapping.",
 			partial     : "Have you ever wanted to share your roadmap privately with your team or clients? Now you can! Users can publish and share their roadmap via URL through the export menu."
 		}, latifBlogPost),
-		//Roadmunk Release November 25th 
+		//Roadmunk Release November 25th
 		_.defaults({
 			title       : "Color Roadmaps on Roadmunk",
 			postImage   : "/images/blog/color-item.png",
@@ -80,7 +80,7 @@ var blogData = module.exports = {
 			description : "Roadmunk Release Notes from November 25th, 2013. Color and personalize your personal roadmap with palettes handpicked by designers. Create your roadmap with style",
 			partial     : "Design is at the center of Roadmunk and we want to create the greatest visual experience for our users. Therefore, we’ve introduced the capability to color items using three beautifully designed palettes. Simply select a field to Color by (eg. status), and assign the different values to a color to create the perfect roadmap."
 		}, latifBlogPost),
-		//Productivity Tools for Product Managers 
+		//Productivity Tools for Product Managers
 		_.defaults({
 			title       : "Productivity Tools for Product Managers",
 			postImage   : "/images/blog/productivity.png",
@@ -100,8 +100,8 @@ var blogData = module.exports = {
 };
 
 _.forEachRight(blogData.blogs, function(post, index) {
-	post.url = S(post.title).decodeHTMLEntities().slugify().s;	
+	post.url = S(post.title).decodeHTMLEntities().slugify().s;
 	if (blogData.blogs[index+1]) {
-		post.nextBlogURL = blogData.blogs[index+1].url
+		post.nextBlogURL = blogData.blogs[index+1].url;
 	}
 });

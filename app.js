@@ -15,13 +15,11 @@ var limits_config = {
 	enable        : true,
 	file_uploads  : true,
 	post_max_size : 1048580 //1MB
-}
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// MUSTDO: change routes to use unique view names and erase next line
-app.set('view cache', false);
 
 app.use(favicon(path.join(__dirname, 'public/images/favicon.ico')));
 app.use(logger('dev'));
@@ -41,7 +39,7 @@ app.use('/', routes);
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
 	res.status(err.status || 500);
 	res.render('error', {
 		message: err.message,

@@ -1,17 +1,17 @@
-var express    = require('express');
-var path       = require('path');
-var pageData   = require('../data/index');
-var blogData   = require('../data/blog');
-var router     = express.Router();
+var express  = require('express');
+var pageData = require('../data/index');
+var blogData = require('../data/blog');
+var router   = express.Router();
 
 pageData.forEach( function (objData) {
   if (objData.content == "home") {
     router.get('/', function(req, res) {
-      res.render(objData.content, objData); // key instead of 'layout'
+      res.render(objData.content, objData);
     });
-  } else {
-    router.get(path.join('/', objData.content), function(req, res) {
-      res.render(objData.content, objData); // key instead of 'layout'
+  }
+  else {
+    router.get('/' + objData.content, function(req, res) {
+      res.render(objData.content, objData);
     });
   }
 });
@@ -24,20 +24,19 @@ router.get('/sitemap.xml', function(req, res) {
 /* Create all the blog routes */
 blogData.blogs.forEach(function (blog) {
   /* GET Blog page. */
-  console.log(blog.url);
-  router.get(path.join('/blog/', blog.url), function(req, res) {
+  router.get('/blog/' + blog.url, function(req, res) {
     res.render('blog/' + blog.url, blog);
   });
 });
 
 router.get('*', function (req, res) {
-  res.render('layout', 
+  res.render('404',
   {
     title       : "Roadmunk 404",
     description : "Roadmunk 404 - Page Not Found. Product and software roadmapping at its best",
     author      : "Brent Scheibelhut",
     content     : "404"
-  })
+  });
 });
 
 module.exports = router;
