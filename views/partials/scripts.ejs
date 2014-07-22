@@ -37,22 +37,57 @@
 
 <!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-$.src='//v2.zopim.com/?2GxMCMGRFtWEbHrnHUk8G3yrcSlXuyIK';z.t=+new Date;$.
-type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+	$.src='//v2.zopim.com/?2GxMCMGRFtWEbHrnHUk8G3yrcSlXuyIK';z.t=+new Date;$.
+	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script>
 <!--End of Zopim Live Chat Script-->
 
 <!-- Google Anayltics -->
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-37519519-1', 'auto');
-ga('send', 'pageview');
+	ga('create', 'UA-37519519-1', 'auto');
+	ga('require', 'linkid', 'linkid.js');
+	ga('send', 'pageview');
 </script>
+
+<!-- Event tracking code on buttons -->
+<script>
+	//All CTA button clicks
+	$('.cta').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'cta');
+	});
+
+	//If a user clicks on the learn more button
+	$('.learn-more').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'learn-more');
+	});
+
+	//If a user clicks on the free-trial button 
+	$('.free-trial').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'free-trial');
+	});
+
+	//If a user clicks on the small-cta button 
+	$('.small-cta').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'small-cta');
+	});
+
+	//If a user clicks on the general cta button 
+	$('.general').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'general');
+	});
+
+	//If a user clicks on the general cta button 
+	$('#landing-button').on('click', function() {
+	  ga('send', 'event', 'button', 'click', 'landing-button');
+	});
+</script>
+
 <!-- End of Google Analytics Script -->
