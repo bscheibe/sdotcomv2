@@ -10,18 +10,36 @@
 <!-- Schema.org markup for Google+ --> 
 <meta itemprop="name" content="<%= title %>"> 
 <meta itemprop="description" content="<%= description %>"> 
-<meta itemprop="image" content=" http://www.example.com/image.jpg"> <!-- Fill in image here -->
+<meta itemprop="image" content="/images/macbook-header-live.png">
 
 <!-- Open Graph data --> 
 <meta property="og:title" content="<%= title %>" /> 
 <meta property="og:type" content="website" /> 
 <meta property="og:url" content=" http://roadmunk.com/" />
-<meta property="og:image" content=" http://example.com/image.jpg" /> <!-- Fill in image here -->
+<meta property="og:image" content="/images/macbook-header-live.png" />
 <meta property="og:description" content="<%= description %>" /> 
 <meta property="og:site_name" content="Roadmunk" />
+<!--<meta property="fb:admins" content="Facebook numberic ID" />--> <!-- If we get a facebook page place ID here -->
+
+<!-- Twitter Card data --> 
+<meta name="twitter:card" content="summart_large_image"> 
+<meta name="twitter:site" content="@roadmunkapp"> 
+<meta name="twitter:title" content="<%= title %>"> 
+<meta name="twitter:description" content="<%= description %>"> 
+<meta name="twitter:creator" content="@roadmunkapp"> 
+
+<% if (content != "blogPost") { %>	
+	<!-- Twitter summary card with large image must be at least 280x150px --> 
+	<meta name="twitter:image:src" content="/images/macbook-header-live.png">
+<% } %>
+
 
 <!-- Google Webmaster Tools Site Verification -->
 <meta name="google-site-verification" content="nzLNaEA5MdfrWobfulEXwk5ITa91r0vLbv310WIWw8w" />
 
 <!-- Bing and Yahoo Webmaster Tools Site Verification -->
 <meta name="msvalidate.01" content="265FEA508A77F04EA22701FB2AC5A915" />
+
+<!-- Google Authorship and Publisher Markup --> 
+<link rel="author" href="https://plus.google.com/+Roadmunkgoogleplus/posts"/>
+<link rel="publisher" href="https://plus.google.com/+Roadmunkgoogleplus/"/>
