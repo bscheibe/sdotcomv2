@@ -1,3 +1,4 @@
+<% include start %>
 <section class="section blue section-xlarge">
 	<div class="background-media"></div>
 	<div class="background-overlay"></div>
@@ -15,7 +16,7 @@
 <article>
 	<section class="section white section-normal has-top">
 		<div class="decor-top">
-			<% include bottom-triangle-angle %>
+			<% include ./partials/bottom-triangle-angle %>
 		</div>
 		<div class="background-media"></div>
 		<div class="background-overlay"></div>
@@ -27,7 +28,7 @@
 							<% blogData.blogs.forEach(function (blog) { %>
 								<li class="col-md-4">
 									<div class="grid-post">
-										<article id="<%= blog.id %>" class="post post-showinfo">
+										<article class="post post-showinfo">
 											<a href="/blog/<%= blog.url %>" title="<%= blog.title %>">
 											<div class="post-media overlay">
 												<%if (blog.postImage != "none") { %>
@@ -95,4 +96,5 @@
 	</section>
 </article>
 <!-- Putting here instead of in scripts due to collsion with the blog page otherwise -->
-<% include comment-count %>
+<% include ./partials/comment-count %>
+<% include end %>

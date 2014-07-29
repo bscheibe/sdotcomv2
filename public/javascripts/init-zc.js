@@ -1,13 +1,8 @@
-// Configure the root ZeroClipboard object
-ZeroClipboard.setDefaults({
-  
-  moviePath: "/vendor/zeroclipboard/ZeroClipboard.swf"
-
-});
-
 $(document).ready(function() {
 
-  var clip = new ZeroClipboard($(".clip_button"));
+  var clip = new ZeroClipboard($(".clip_button"), {
+    moviePath: "/vendor/zeroClipboard/ZeroClipboard.swf"
+  });
 
   clip.on("load", function (client) {
     //debugstr("Flash movie loaded and ready.");

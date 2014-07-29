@@ -1,3 +1,4 @@
+<% include start %>
 <div class="home">
 	<section class="section blue section-xlarge">
 		<div class="background-media"></div>
@@ -11,13 +12,13 @@
 					</header>
 				</div>
 				<div class="col-lg-6 text-center"> <!-- animated fadeInRight -->
-					<img class="landing-image" src="/images/macbook-header-live.png">
+					<img class="landing-image" src="/images/macbook-header-live.png" alt="Custom roadmap software">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-12 small-margin-top small-margin-bottom">
 					<a title="Create my roadmap for free" href="https://app.roadmunk.com/login/#/signup">
-						<div class="cta center"></div>
+						<div id="landing-button" class="cta general center"></div>
 					</a>
 				</div>
 			</div>
@@ -25,9 +26,6 @@
 	</section>
 	<article>
 		<section class="section white section-short has-top">
-			<!--<div class="decor-top">
-				<% include top-triangle-angle %>
-			</div>-->
 			<div class="background-media"></div>
 			<div class="background-overlay"></div>
 			<div class="container">
@@ -38,7 +36,7 @@
 					<div class="col-md-12 text-default">
 						<ul class="list-unstyled image-list">
 							<li class="col-md-4 small-margin-top">
-								<img src="/images/icon-clock-cogs.png" width="200" height="200">
+								<img src="/images/icon-clock-cogs.png" width="200" height="200" alt="Quickly Create Roadmap">
 								<!--<span class="init-clock">
 									<img src="/images/icon-clock-cogs-no-hands2.png" width="200" height="200">
 									<img class="clock-hand" src="/images/icon-clock-hand.png" height="3.5px">
@@ -51,7 +49,7 @@
 								</div>
 							</li>
 							<li class="col-md-4 small-margin-top">
-								<img class="home-svg" src="/images/pencils.svg" width="165" height="165">
+								<img class="home-svg" src="/images/pencils.svg" alt="Tools to design roadmap in minutes" width="165" height="165">
 								<div class="row">
 									<div class="col-md-10 center">
 										<h3 class="text-center font-normal text-get-smaller">Color And style to match your brand</h3>
@@ -59,7 +57,7 @@
 								</div>
 							</li>
 							<li class="col-md-4 small-margin-top">
-								<img src="/images/icon-imac-roadmap-live.png" width="200" height="200">
+								<img src="/images/icon-imac-roadmap-live.png" alt="Presentation ready roadmap" width="200" height="200">
 								<!--<span class="init-dl">
 									<img src="/images/icon-imac-roadmap-live.png" width="200" height="200">
 									<span class="glyphicon glyphicon-arrow-down download"></span>
@@ -76,7 +74,7 @@
 				<div class="row">
 					<div class="col-md-10 small-margin-top xsmall-margin-bottom center">
 						<a title="Create my roadmap for free" href="https://app.roadmunk.com/login/#/signup">
-							<div class="cta center"></div>
+							<div class="cta free-trial center"></div>
 						</a>
 					</div>
 				</div>
@@ -96,9 +94,11 @@
 								<!--<img class="bg" src="/images/browser.jpg">-->
 								<img class="bg" src="/images/browser-roadmunk.jpg">
 								<!--<p class="url">https://app.roadmunk.com</p>-->
-								<img id="sprintImg" class="screen selected-img" src="/images/sprint-roadmap2.png">
-								<img id="projectImg" class="screen" src="/images/project-roadmap2.png">
-								<img id="releaseImg" class="screen" src="/images/release-roadmap2.png">
+								<img id="sprintImg" class="screen selected-img" src="/images/sprint-roadmap2.png" itemprop="screenshot" alt="Sprint Product Roadmap">
+								<img id="sprintImg" class="screen selected-img" src="/images/sprint-roadmap2.png" itemprop="screenshot"alt="Sprint Product Roadmap">
+								<img id="projectImg" class="screen" src="/images/project-roadmap2.png" alt="Project Roadmap for Product Managers">
+								<img id="sprintImg" class="screen selected-img" src="/images/sprint-roadmap2.png" itemprop="screenshot"alt="Sprint Product Roadmap">
+								<img id="releaseImg" class="screen" src="/images/release-roadmap2.png" alt="Release Roadmap">
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -161,21 +161,21 @@
 						<ul class="list-unstyled row image-list">
 							<li class="col-md-3 small-margin-top">
 							<!-- a that goes to feature -->
-								<img src="/images/binder.svg" width="225" height="225">
+								<img src="/images/binder.svg" width="225" height="225" alt="Slick Tools to help create perfect product roadmap">
 								<h3 class="text-center font-normal">Idea Management</h3>
 								<div class="col-sm-10 center">
 									<p class="callout">Import, create and priortize items in a slick UI.</p>
 								</div>
 							</li>
 							<li class="col-md-3 small-margin-top">
-								<img src="/images/microscope.svg" width="225" height="225">
+								<img src="/images/microscope.svg" width="225" height="225" alt="Custom Roadmap View with drag and drop tools">
 								<h3 class="text-center font-normal">Custom Roadmap Views</h3>
 								<div class="col-sm-10 center">
 									<p class="callout">Single-click creation and powerful drag-and-drop tools.</p>
 								</div>
 							</li>
 							<li class="col-md-3 small-margin-top">
-								<img src="/images/utensils.svg" width="225" height="225">
+								<img src="/images/utensils.svg" width="225" height="225" alt="Custom software with branding tools for product roadmaps">
 								<h3 class="text-center font-normal">Color Palettes &#38; Branding</h3>
 								<div class="col-sm-10 center">
 									<p class="callout">Create the deep impact on your audience.</p>
@@ -202,7 +202,7 @@
 		</section>
 		<!--<section class="section white section-short has-top">
 			<div class="decor-top">
-				<% include top-triangle-angle %>
+				<% include ./partials/top-triangle-angle %>
 			</div>
 			<div class="background-media"></div>
 			<div class="background-overlay"></div>
@@ -298,7 +298,7 @@
 				<div class="row">
 					<div class="col-lg-12 xsmall-margin-top">
 						<a title="Create my roadmap for free" href="https://app.roadmunk.com/login/#/signup">
-							<div class="cta center"></div>
+							<div class="cta general center"></div>
 						</a>
 					</div>
 				</div>
@@ -306,3 +306,4 @@
 		</section>
 	</article>
 </div>
+<% include end %>

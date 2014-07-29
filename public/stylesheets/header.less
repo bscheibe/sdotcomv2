@@ -202,12 +202,19 @@
         color: darken(@light-font, 10%);
       }
     }
-    .sign-in {
-      margin-right: 10px;
-      //border-right: 1px solid @light-font;
+    .login {
+      border      : 1px solid @light-font;
+      padding     : 1px 7px 3px 7px;
+      margin-left : 12px;
+      .transition(all @scroll-transition);
+      .border-radius(2px);
+      &:hover {
+        border-color: darken(@light-font, 10%);
+        .transition(all @scroll-transition);
+      }
     }
     .help {
-      margin-left: 10px;
+      //start writing here
     }
   }
 }

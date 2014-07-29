@@ -1,13 +1,15 @@
-<article>
-	<% include global-header %>
+<% include start %>
+<article itemscope itemtype="https://schema.org/PaymentChargeSpecification">
+	<% include ./partials/global-header %>
 	<section class="section white section-normal has-top">
 		<div class="decor-top">
-			<% include top-triangle-angle %>
+			<% include ./partials/top-triangle-angle %>
 		</div>
 		<div class="background-media"></div>
 		<div class="background-overlay"></div>
 		<div class="container">
-			<% include pricing-table %>
+			<% include ./partials/pricing-table %>
 		</div>
 	</section>
 </article>
+<% include end %>

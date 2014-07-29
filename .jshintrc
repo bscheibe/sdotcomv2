@@ -1,0 +1,36 @@
+{
+  // Details: https://github.com/victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+  // Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  // Documentation: http://www.jshint.com/docs/
+  "browser"      : true,
+  "esnext"       : true,
+  "globalstrict" : false,
+  "quotmark"     : false,
+  "smarttabs"    : true,
+  "trailing"     : true,
+  "undef"        : true,
+  "unused"       : true,
+  "nonew"        : true,
+  "maxparams"    : 5,
+  "maxdepth"     : 5,
+  "eqnull"       : true,
+  "lastsemic"    : true,
+  "expr"         : true,
+  "sub"          : true,
+  "globals"      : {
+    "global"     : false,
+    "requirejs"  : false,
+    "require"    : false,
+    "define"     : false,
+    "module"     : false,
+    "console"    : false,
+    "exports"    : false,
+    "describe"   : false,
+    "it"         : false,
+    "beforeEach" : false,
+    "afterEach"  : false,
+    "process"    : false,
+    "__filename" : false,
+    "__dirname"  : false
+  }
+}

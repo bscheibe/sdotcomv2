@@ -129,6 +129,16 @@ a {
             content : "Learn More";
         }
     }
+    &.free-trial {
+        width: 275px;
+        background : @admin-green;
+        &:hover {
+            background : darken(@admin-green, 10%);
+        }
+        &:before {
+            content : "Start 14 Day Free Trial";
+        }
+    }
     &.small-cta {
         width: 275px;
     }
@@ -704,6 +714,14 @@ a {
       padding: 110px 0 50px;
     }
   }
+
+  .underline {
+    &.underline-404 {
+      &:before {
+        bottom: 80px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -751,13 +769,16 @@ a {
       padding: 25px 0;
     }
     &.section-global {
-      padding: 100px 0 60px;
+      padding: 100px 0 80px;
     }
     &.section-features {
       padding: 15px 0;
     }
     &.section-xlarge {
-      padding: 90px 0 30px;
+      padding: 100px 0 30px;
     }
+  }
+  .zopim {
+    display: none !important;
   }
 }

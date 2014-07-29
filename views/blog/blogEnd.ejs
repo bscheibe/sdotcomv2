@@ -1,48 +1,6 @@
-<!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Blog" lang="en">
-	<head>
-		<% include ../meta %>
-		<% include ../stylesheets %>
-	</head>
-
-	<body>
-		<% include ../header %> <!-- The top bar for the site -->
-		<div class="blog-post">	
-			<section class="section grey section-xlarge">
-				<div class="background-media">
-					<% if (image == "default") { %>
-						<img src="/images/blog/default.png" class="bg blur">
-					<% } else if (image != "none") { %>
-						<img src="<%= image %>" class="bg">
-					<% } %>
-				</div>
-				<div class="background-overlay blog">
-				</div>
-
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 center">
-							<header class="section-header blog text-left">
-								<h1 class="blog-title"><%= title %></h1>
-								<p class="author"><%= author.name %></p>
-								<p class="date"><%= date %></p>
-							</header>
-						</div>
-					</div>
-				</div>
-			</section>
-			<article class="page">
-				<section class="section white section-normal has-top">
-					<div class="background-media"></div>
-					<div class="background-overlay"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 text-default center">
-								<div class="blog-content">
-									<% include url %>
 								</div>
 								<%if (banner != false) { %>
-									<a href="#">
+									<a href="/">
 										<img src="/images/<%= bannerURL %>">
 									</a>
 								<% } %>
@@ -95,10 +53,10 @@
 											<span class="icon-googleplus"></span>
 										</a>
 									</div>
-									<% if (id != 1) { %>
+									<% if (nextBlogURL) { %>
 										<div class="col-md-4">
-											<a href="/blog/<%= nextBlog %>" class="btn btn-primary btn-lg btn-icon-right right" title="Home Page">
-												Next Blog
+											<a href="/blog/<%= nextBlogURL %>" class="btn btn-primary btn-lg btn-icon-right right" title="Home Page">
+												Next Post
 												<div class="hex-alt hex-alt-big">
 													<span class="glyphicon glyphicon-chevron-right"></span>
 												</div>
@@ -106,18 +64,18 @@
 										</div>
 									<% } %>
 								</div>
-								<% include ../disqus-script %>
+								<% include ../partials/disqus-script %>
 							</div>
 						</div>
 					</div>
 				</section>
 			</article>
 		</div>
-		<% include ../go-top %> <!-- includes the content variable layout -->
+		<% include ../partials/go-top %> <!-- includes the content variable layout -->
 
-		<% include ../footer %> <!-- The footer for the site -->
+		<% include ../partials/footer %> <!-- The footer for the site -->
 	</body>
 
-	<% include ../scripts %> <!-- The javascript needed by the site -->
+	<% include ../partials/scripts %> <!-- The javascript needed by the site -->
 
 </html>

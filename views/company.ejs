@@ -1,4 +1,5 @@
-<div class="company">
+<% include start %>
+<div itemscope itemtype="https://schema.org/AboutPage" class="company">
 	<section class="section blue section-xlarge">
 		<div class="background-media"></div>
 		<div class="background-overlay"></div>
@@ -12,7 +13,7 @@
 	<article>
 		<section class="section white section-short has-top">
 			<div class="decor-top">
-				<% include top-triangle-angle %>
+				<% include ./partials/top-triangle-angle %>
 			</div>
 			<div class="background-media"></div>
 			<div class="background-overlay"></div>
@@ -36,7 +37,7 @@
 		<section class="section grey section-short has-top">
 			<div class="background-media"></div>
 			<div class="background-overlay"></div>
-			<div class="container-fluid">
+			<div class="container">
 				<header class="section-header small text-center underline">
 					<h1 class="headline text-medium xsmall-margin-bottom hairline">Partners and Investors</h1>
 				</header>
@@ -45,27 +46,35 @@
 						<ul class="list-unstyled center-images partners">
 							<li class="text-center small-margin-top">
 								<a title="Communitech" href="http://www.communitech.ca/">
-									<img src="/images/communitech.png" width="300px">
+									<img src="/images/communitech.png" width="300px" alt="Communitech">
 								</a>
 							</li>
 							<li class="text-center small-margin-top">
-								<a title="Business Devleopment Bank of Canada" href="http://www.bdc.ca/EN/Pages/home.aspx">
-									<img src="/images/bdc.png" width="150px">
+								<a title="Business Development Bank of Canada" href="http://www.bdc.ca/EN/Pages/home.aspx">
+									<img src="/images/bdc.png" width="150px" alt="Business Development Bank of Canada">
 								</a>
 							</li>
+							
 							<li class="text-center small-margin-top">
-								<a title="Hyperdrive" href="http://hyperdrive.communitech.ca/">
-									<img src="/images/hyperdrive.png" width="300px">
+								<a title="Ontario Centres of Excellence" href="http://www.oce-ontario.org/">
+									<img src="/images/oce-trans.png" width="300px" alt="Ontario Centres of Excellence">
+								</a>
+							</li>
+						</ul>
+						<ul class="list-unstyled center-images partners">
+							<li class="text-center small-margin-top">
+								<a title="Digital Media Zone" href="http://digitalmediazone.ryerson.ca/">
+									<img src="/images/dmz-highres.png" width="300px" alt="Digital Media Zone">
 								</a>
 							</li>
 							<li class="text-center small-margin-top">
 								<a title="Canrock Ventures" href="http://www.canrockventures.com/">
-									<img src="/images/canrock-ventures.png" width="150px">
+									<img src="/images/canrock-ventures.png" width="150px" alt="Canrock Ventures">
 								</a>
 							</li>	
 							<li class="text-center small-margin-top">
-								<a title="Digital Media Zone" href="http://digitalmediazone.ryerson.ca/">
-									<img src="/images/dmz-highres.png" width="300px" alt="Digital Media Zone">
+								<a title="Hyperdrive" href="http://hyperdrive.communitech.ca/">
+									<img src="/images/hyperdrive.png" width="300px" alt="Hyperdrive">
 								</a>
 							</li>
 						</ul>
@@ -99,3 +108,4 @@
 		</section>
 	</article>
 </div>
+<% include end %>
