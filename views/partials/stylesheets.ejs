@@ -1,16 +1,14 @@
-<% if (content != "style-guide") { %>
+<!-- Stylesheets -->
+<link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+<link rel='stylesheet' href='/stylesheets/fonts.css' />
+<!--<link rel='stylesheet' href='/stylesheets/animate.css' />--> <!-- Currently not using -->
+<link rel='stylesheet' href='/stylesheets/style.css' />
 
-	<!-- Stylesheets -->
-	<link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
-	<link rel='stylesheet' href='/stylesheets/fonts.css' />
-	<!--<link rel='stylesheet' href='/stylesheets/animate.css' />--> <!-- Currently not using -->
-	<link rel='stylesheet' href='/stylesheets/style.css' />
-
-	<!-- Custom GMaps Styling -->
-	<link rel='stylesheet' href='/vendor/customGmaps/css/style.css' />
+<!-- Custom GMaps Styling -->
+<link rel='stylesheet' href='/vendor/customGmaps/css/style.css' />
 
 
-<% } else  { %>
+<% if (content == "style-guide") { %>
 
 	<link rel='stylesheet' href='/stylesheets/style-guide.css' />
 

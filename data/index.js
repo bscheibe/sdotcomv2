@@ -3,7 +3,7 @@ var blogData = require('./blog');
 module.exports = [
 	//Landing Page Data
 	{
-		title       : "Roadmunk - Create Brilliant Product Roadmaps",
+		title       : "Roadmunk | Create Brilliant Product Roadmaps",
 		description : "Create brilliant roadmaps with Roadmunk.",
 		author      : "Brent Scheibelhut",
 		content     : "home"
@@ -11,7 +11,7 @@ module.exports = [
 
 	//Features Page Data
 	{
-		title       : "Roadmunk Features - Learn about our product roadmapping software",
+		title       : "Roadmunk Features | Learn about our product roadmapping software",
 		description : "Roadmunk Features Help Build Brilliant Roadmaps.",
 		author      : "Brent Scheibelhut",
 		content     : "features"
@@ -19,7 +19,7 @@ module.exports = [
 
 	//Pricing Page Data
 	{
-		title       : "Roadmunk Pricing - Find out the prices for our product roadmapping software",
+		title       : "Roadmunk Pricing | Find out the prices for our product roadmapping software",
 		description : "Pricing for the Roadmunk Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "pricing"
@@ -27,7 +27,7 @@ module.exports = [
 
 	//Terms and Conditions Page Data
 	{
-		title       : "Roadmunk's Terms and Conditions - Create Brilliant Product Roadmaps",
+		title       : "Roadmunk's Terms and Conditions | Create Brilliant Product Roadmaps",
 		description : "Terms and Conditions Roadmunk Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "terms-and-conditions"
@@ -35,7 +35,7 @@ module.exports = [
 
 	//Privacy Policy Page Data
 	{
-		title       : "Roadmunk's Privacy Policy - Create Brilliant Product Roadmaps",
+		title       : "Roadmunk's Privacy Policy | Create Brilliant Product Roadmaps",
 		description : "Privacy Policy for Roadmunk's Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "privacy-policy"
@@ -43,7 +43,7 @@ module.exports = [
 
 	//Security Page Data
 	{
-		title       : "Roadmunk's Security Offering - Create Brilliant Product Roadmaps",
+		title       : "Roadmunk's Security Offering | Create Brilliant Product Roadmaps",
 		description : "Security offered by Roadmunk's Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "security"
@@ -51,7 +51,7 @@ module.exports = [
 
 	//Company Page Data
 	{
-		title       : "About Roadmunk and the Company - What makes our roadmap tick",
+		title       : "About Roadmunk and the Company | What makes our roadmap tick",
 		description : "Learn what behind the team at the ever popular Roadmunk sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "company"
@@ -59,7 +59,7 @@ module.exports = [
 
 	//Style Guide Page Data
 	{
-		title       : "Roadmunk's Style Guide - The design that influences are product roadmapping software",
+		title       : "Roadmunk's Style Guide | The design that influences are product roadmapping software",
 		description : "All you would ever need to know about the styling for the incredibly popular Roadmunk roadmapping sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "style-guide"
@@ -67,7 +67,7 @@ module.exports = [
 
 	//Roadmunk Blog Page Data
 	{
-		title       : "Roadmunk Blog - All the new around our product roadmapping software",
+		title       : "Roadmunk Blog | All the new around our product roadmapping software",
 		description : "Get all the latest updates and new on the Roadmunk sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "blog",

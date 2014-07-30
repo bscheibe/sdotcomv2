@@ -3,19 +3,19 @@ var _          = require('lodash');
 var S          = require('string');
 
 var defaultBlog = {
-	title       : "Default Title",	// this is what title does'
-	postImage   : "none", //If you don't want to have a header image, then set image to none
-	image       : "default",
-	icon        : "star", //You can choose from any of the bootstrap icons
-	bioOn       : false,
-	date        : "May 4, 1994",
-	description : "A blog post regarding the popular product roadmapping software by Roadmunk",
-	partial     : "A blog post regarding the Roadmunk prodcut roadmapping software",
-	url         : false,
-	nextBlogURL : false,
-	banner      : false,
-	bannerURL   : 'banner.png',
-	content     : "blogPost"
+	title       : "Default Title",	// The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post
+	postImage   : "none", //The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
+	image       : "default", //The image you want to use in the top header. 
+	icon        : "star", //The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
+	bioOn       : false, //Whether you want the biography on or off at the bottom of the page
+	date        : "May 4, 1994", //The date the blog post was published.
+	description : "A blog post regarding the popular product roadmapping software by Roadmunk", //The META description of the blog post
+	partial     : "A blog post regarding the Roadmunk prodcut roadmapping software", //The short partial on the main blog page describing the blog post
+	url         : false, //The URL of the blog post. This is generated automatically.
+	nextBlogURL : false, //The URL of the next blog post. This is generated automatically. 
+	banner      : false, //Whether to use a banner at the end of you blog post
+	bannerURL   : 'banner.png', //The default image for the blog banner
+	content     : "blogPost" //What type of post this is. Used for some control flow 
 };
 
 var latifBlogPost = _.defaults(defaultBlog, { author : authorData.latif });

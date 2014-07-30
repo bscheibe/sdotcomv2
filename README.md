@@ -82,43 +82,39 @@ Adding a New Blog Post
     -Open up `data/blog/authors.js`
     -Copy Data from a previous author and fill in the required fields. Remember to change the name from say `latif` to your name
     -SHOULDDO: Create a different image for an author
-3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it the name of the URL you want to see after `roadmunk.com/blog/`.
+3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it to the title of the blog, except with '-' instead of spaces. This is the url you will see after `roadmunk.com/blog/`. 
 4. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
 5. Type your blog post in the blog content div using HTML. Refer to this page for the formatting tags: http://www.w3schools.com/html/html_formatting.asp. Always remember to close your tag after your are done formatting the text you want. Ignore the banner if statement. Save your changes with `Cmd+S`
-6. Open up `data/blog/blog.js`. Save your changes with `Cmd+S`. 
-    - Copy over a previous blog post's data (located between the `{...}`) and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
+6. Open up `data/blog/blog.js`.
+    - Copy over a previous blog post's data (from `_.defaults` to `latifBlogPost)` and and paste it below it. **Remember to add commas after each blog post like so`{...},` except for the last one**
+    - The blog has a default object at the top of of `blog.js`. These fields will be used as defaults and will be overwritten if you overwrite them in your specific post. For example if you wanted to overwrite the default 'star' icon then include `icon: youIconHere,` in the new blog post.
     - Fill in the blog post data. Each are described below:
-        - **title**: The title of the blog post that will be display to the reads
+        - **title**: The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post. **So be sure to name the blog file the same as the output of the slugified title.**
+        - **postImage** : The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
         - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `roadmunkWebsite/images/` directory and refer to 3.3 above
         - **icon** : The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
+        - **bioOn** : whether you would like the short biography at the bottom of the post. This is good for guest posts. It will pull data from the author object.
         - **author** : Put your author data here. It will be of the form `authorData.YOURNAME`
         - **date** : The date you publish your post
         - **description** : The META description field for the post. Keep it less than 50 words. 
         - **partial** : The text you want to have display in the partial blog post displayed on the blog page
-        - **content** : The url of the blog post. Only change the name after `/blog/` and use the same name as you named your blog post file.
+        - **content** : What kind of blogPost this is. Used in some controlFlow.
         - **banner** : Put this to true if you want to use a CTA banner in your post. Put this to false if you do not want to.
         - **bannerURL** : The name of the banner image you want to use. It is assumed you have placed the file in the `/images/` directory
-        - **id** : Increase this by one from the last post
-        - **filename** : Keep this as true
+        - **url** : The url of the blog post. This is generated automatically from the title of the blog post.
+        - **nextBlogURL** : The url of the new blog. This is also generated automatically.
+    - Save your changes with `Cmd+S`. 
 7. Follow steps 4-8 of adding code to the repo above to push your change live. 
 
 Adding a New Page
 ====================
 1. Create the new `.ejs` with the appropiate prefix in the views folder
-2. Add the route to the new file in the under `routes/index.js`
-    - Copy and paste an existing route
-    - Add appropiate comment at the top
-    - Replace the link in quotes `''` on the first line with the route you want to occur on the site (typically the ejs file name)
-    - Replace the text after `data.` to the name of the ejs file you created
-3. Head over to `data/index.js` to add the meta and other data for the new page
+2. Head over to `data/index.js` to add the meta and other data for the new page
     - Copy and paste an existing data file 
     - Update the title, description, author with the correct data for the page
     - Replace the current content text with the name of the ejs file you created in the view folder
 
 That's it. Run node server.js and your new page is live!
-
-###Note
-**Do not call you page content.ejs, otherwise it will use this page for all routes instead of the content variable route**
 
 Adding a New Stylesheet
 =========================
@@ -148,15 +144,6 @@ Best Practices
 EJS Templating
 ======================
 
-EJS templating is very similar to `PHP` templating. It allows you to use cut and dry html but helps you adhere to the DRY (Don't Repeat Yourself) pricinple. Our main layout file is currently stored under the views folder as `layout.ejs` this layout includes the head, the header (top-bar), footer, and scripts (javascripts needed by the page).
+EJS templating is very similar to `PHP` templating. It allows you to use cut and dry html but helps you adhere to the DRY (Don't Repeat Yourself) pricinple. Our two main layout files are currently stored under the views folder as `start.ejs` and `end.ejs`. `start.ejs` contains the header (top-bar), meta, and stylesheets. The `end.ejs` contains the footer, go-top button, and scripts (javascripts needed by the page).
 
 What you need to know is that you don't need to include the html, head, or body tags and can get right into the content you want on the page.
-
-## Note
-To allow block contenting of pages similar to Jade we have used this pull request which has currently not been pulled into the main repo yet.
-
-Here is the pull request - it's a minor one only adding a few lines:
-
-https://github.com/visionmedia/ejs/pull/156/files
-
-This allows the variable 'content' to be used as a variable to hold which body content should be added to the layout file. This saves us from using a control flow mechanism.
