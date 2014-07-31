@@ -59,7 +59,7 @@ module.exports = [
 
 	//Style Guide Page Data
 	{
-		title       : "Roadmunk's Style Guide | The design that influences are product roadmapping software",
+		title       : "Roadmunk's Style Guide | The design that influences our product roadmapping software",
 		description : "All you would ever need to know about the styling for the incredibly popular Roadmunk roadmapping sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "style-guide"
