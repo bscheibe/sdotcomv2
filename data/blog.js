@@ -23,6 +23,17 @@ var latifBlogPost = _.defaults(defaultBlog, { author : authorData.latif });
 var blogData = module.exports = {
 
 	blogs : [
+	/*
+		//Roadmunk Release August 12
+		_.defaults({
+			title       : "Horizontal Headers",
+			postImage   : "/images/blog/roadmunk-launch.png",
+			icon        : "plane",
+			date        : "August 12, 2014",
+			description : "Roadmunk's Release Notes from August 12th release. Rotate Headers on Timeline View.",
+			partial     : "Having trouble viewing all the text on Timeline’s vertical headers? No sweat. Try out our new ‘Horizontal Headers’ feature."
+		}, latifBlogPost),	
+*/
 		//Roadmunk Release August 5
 		_.defaults({
 			title       : "Fit to PowerPoint and Download to HTML",
