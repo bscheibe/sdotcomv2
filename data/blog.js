@@ -37,7 +37,7 @@ var blogData = module.exports = {
 		//Roadmunk Release August 5
 		_.defaults({
 			title       : "Fit to PowerPoint and Download to HTML",
-			postImage   : "/images/blog/roadmunk-launch.png",
+			postImage   : "/images/blog/fit-to-powerpoint.png",
 			icon        : "plane",
 			date        : "August 5, 2014",
 			description : "Roadmunk's Release Notes from August 5th release. Fit and download to PowerPoint and Keynote. Download and Publish to HTML.",
