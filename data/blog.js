@@ -37,8 +37,8 @@ var blogData = module.exports = {
 		//Roadmunk Release August 5
 		_.defaults({
 			title       : "Fit to PowerPoint and Download to HTML",
-			postImage   : "/images/blog/roadmunk-launch.png",
-			icon        : "plane",
+			postImage   : "/images/blog/fit-to-powerpoint-final.png",
+			icon        : "star",
 			date        : "August 5, 2014",
 			description : "Roadmunk's Release Notes from August 5th release. Fit and download to PowerPoint and Keynote. Download and Publish to HTML.",
 			partial     : "Product managers are challenged by balancing content and design on their roadmap slides, especially when they’re trying to condense it onto a presentation slide."
