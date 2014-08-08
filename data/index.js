@@ -3,7 +3,7 @@ var blogData = require('./blog');
 module.exports = [
 	//Landing Page Data
 	{
-		title       : "Roadmunk | Create Beautiful Roadmap Quickly",
+		title       : "Roadmunk | Create Beautiful Roadmaps Quickly",
 		description : "Create brilliant roadmaps with Roadmunk.",
 		author      : "Brent Scheibelhut",
 		content     : "home"
@@ -27,7 +27,7 @@ module.exports = [
 
 	//Terms and Conditions Page Data
 	{
-		title       : "Roadmunk's Terms and Conditions | Create Beautiful Roadmap Quickly",
+		title       : "Roadmunk's Terms and Conditions | Create Beautiful Roadmaps Quickly",
 		description : "Terms and Conditions Roadmunk Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "terms-and-conditions"
@@ -35,7 +35,7 @@ module.exports = [
 
 	//Privacy Policy Page Data
 	{
-		title       : "Roadmunk's Privacy Policy | Create Beautiful Roadmap Quickly",
+		title       : "Roadmunk's Privacy Policy | Create Beautiful Roadmaps Quickly",
 		description : "Privacy Policy for Roadmunk's Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "privacy-policy"
@@ -43,7 +43,7 @@ module.exports = [
 
 	//Security Page Data
 	{
-		title       : "Roadmunk's Security Offering | Create Beautiful Roadmap Quickly",
+		title       : "Roadmunk's Security Offering | Create Beautiful Roadmaps Quickly",
 		description : "Security offered by Roadmunk's Roadmap sofware.",
 		author      : "Brent Scheibelhut",
 		content     : "security"
