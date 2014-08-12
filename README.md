@@ -31,44 +31,28 @@ Changing Text/Code/Image
 2. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
 3. You have two options of how to change text/code/image
 
-    **3.1.** The code is layed out in clear and concise manner allowing you to find pages easily
+  **3.1.** The code is layed out in clear and concise manner allowing you to find pages easily
+    1. Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
+    2. Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
+    3. Make your changes and save the file though `Cmd+S`
+    4. Refresh your local broswer the changes should be displayed
 
-        1. Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
-        
-        2. Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
-        
-        3. Make your changes and save the file though `Cmd+S`
-        
-        4. Refresh your local broswer the changes should be displayed
-    
-    **3.2.** If you want to change some text/code but don't know the location press `command+shift+f`
+  **3.2.** If you want to change some text/code but don't know the location press `command+shift+f`
+    1. In the find column type some of the text/code/image that you want to change
+    2. In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
+    3. Click find (**don't click replace**)
+    4. A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
+    5. Change what needs changing. Then save the file through `Cmd+S`
+    6. Refresh your local browser. The changes should be displayed
 
-        1. In the find column type some of the text/code/image that you want to change
-        
-        2. In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
-        
-        3. Click find (**don't click replace**)
-        
-        4. A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
-        
-        5. Change what needs changing. Then save the file through `Cmd+S`
-        
-        6. Refresh your local browser. The changes should be displayed
+  **3.3.** If you want to change and image:
+    1. Open up Finder and navigate to `~/Documents/roadmunkWebsite/public/image`
+    2. Copy over the image your new image into this folder and remember it's name
+    3. Follow the steps in 2.2 (to locate the old image) and in the find box type the URL of the image. You can find this URL by inspecting the element in your local browser.
+    4. Update the URL of the image after the `/images/` to the name of the image you just recently added
+    5. Save the file through `Cmd+S`
+    6. Regresh your local broser. The changes should be displayed
 
-    **3.3.** If you want to change and image:
-
-        1. Open up Finder and navigate to `~/Documents/roadmunkWebsite/public/image`
-        
-        2. Copy over the image your new image into this folder and remember it's name
-        
-        3. Follow the steps in 2.2 (to locate the old image) and in the find box type the URL of the image. You can find this URL by inspecting the element in your local browser.
-        
-        4. Update the URL of the image after the `/images/` to the name of the image you just recently added
-        
-        5. Save the file through `Cmd+S`
-        
-        6. Regresh your local broser. The changes should be displayed
-        
 4. Once all your changes are finished open Terminal
 5. Type `cd ~/Documents/roadmunkWebsite`
 6. Type `git add -A`
@@ -144,6 +128,17 @@ Best Practices
 EJS Templating
 ======================
 
-EJS templating is very similar to `PHP` templating. It allows you to use cut and dry html but helps you adhere to the DRY (Don't Repeat Yourself) pricinple. Our two main layout files are currently stored under the views folder as `start.ejs` and `end.ejs`. `start.ejs` contains the header (top-bar), meta, and stylesheets. The `end.ejs` contains the footer, go-top button, and scripts (javascripts needed by the page).
+EJS templating is very similar to `PHP` templating. It allows you to use cut and dry html but helps you adhere to the DRY (Don't Repeat Yourself) principle. Our two main layout files are currently stored under the views folder as `start.ejs` and `end.ejs`. `start.ejs` contains the header (top-bar), meta, and stylesheets. The `end.ejs` contains the footer, go-top button, and scripts (javascripts needed by the page).
 
 What you need to know is that you don't need to include the html, head, or body tags and can get right into the content you want on the page.
+
+Releasing To Production
+=============================
+1. Commit all changes to release to your local repo.
+2. Push your repo to Github.
+3. Mount your production key TrueCrypt file located on your USB key. (Colin has this figured out on OSX)
+4. Mount the roadmunk42.tc TrueCrypt file located Google Drive/Roadmunk/Product Management/Certificates/roadmunk42.tc
+5. ssh to roadmunk.com (using the credentials in the roadmunk42.tc vault)
+6. type: `cd /var/www/roadmunk`
+7. type: `git pull` (will prompt you for your github credentials)
+8. if the pull goes well (ie. no conflicts are reported), type: `forever restart server.js`

@@ -5,10 +5,15 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var limits       = require('limits');
+var mcapi        = require('./node_modules/mailchimp-api/mailchimp');
 
 var routes = require('./routes/index');
+var mailchimp  = require('./routes/mailchimp')
 
 var app = express();
+
+// set MailChimp API key here
+mc = new mcapi.Mailchimp('354d8ae81598b622bcdf9ec29aa454b3-us3');
 
 //Limits configuration
 var limits_config = {
@@ -31,6 +36,7 @@ app.use(limits(limits_config)); // limit size of uploads to lessen the impact of
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.post('/lists/:id/subscribe', mailchimp.subscribe);
 app.use('/', routes);
 
 // We do use this error handler. The other one we don't have dev env set up so it's currently not in use
