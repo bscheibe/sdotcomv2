@@ -5,7 +5,8 @@ var S          = require('string');
 var defaultBlog = {
 	title       : "Default Title",	// The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post
 	postImage   : "none", //The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
-	image       : "default", //The image you want to use in the top header. 
+	image       : "default", //The image you want to use in the top header.
+	category    : "ReleaseNotes", //The category of the blog post. Currently choose from ReleaseNotes, Startups & General
 	icon        : "star", //The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
 	bioOn       : false, //Whether you want the biography on or off at the bottom of the page
 	date        : "May 4, 1994", //The date the blog post was published.
@@ -47,6 +48,7 @@ var blogData = module.exports = {
 		_.defaults({
 			title       : "Roadmunk Launch!",
 			postImage   : "/images/blog/roadmunk-launch.png",
+			category    : "General",
 			icon        : "plane",
 			date        : "June 20, 2014",
 			description : "Blog post regarding Roadmunk's launch of their popular roadmapping software out of beta",
@@ -104,6 +106,7 @@ var blogData = module.exports = {
 		_.defaults({
 			title       : "Productivity Tools for Product Managers",
 			postImage   : "/images/blog/productivity.png",
+			category    : "General",
 			date        : "February 11, 2013",
 			description : "Tips for practical software tools for product managers to keep us productive. Roadmunk's roadmaps also go a long way with product development",
 			partial     : "People love talking about latest software on the market. Whether you can touch your iPhone and have a song created by the pulse of your heart or visualize the layers of code on a browser page via Firefox 3D view, we just have to try it."
@@ -112,6 +115,7 @@ var blogData = module.exports = {
 		_.defaults({
 			title       : "Building a Start-up, Take Two",
 			postImage   : "/images/blog/take-2.png",
+			category    : "Startups",
 			date        : "January 14, 2013",
 			description : "Tips on how building a startup from the ground up - written by the founders of Roadmunk, the incredibly popular product and software roadmapping software",
 			partial     : "I did this once before. It was 2006 and I was 22. I was surrounded by four of my best friends and we shot for the moon. Problem was, our ambition was met with a lack of knowledge about product development and design that put us out of orbit."

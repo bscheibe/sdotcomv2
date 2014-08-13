@@ -25,9 +25,20 @@
 				<div class="row medium-margin-bottom">
 					<div class="col-md-12 text-default">
 						<div class="row">
-							<ul class="list-unstyled blog-list">
+							<div class="col-md-12">
+								<!-- Would be sweet if you could generate this list from the blogs and hook up click function automatically somehow -->
+								<ul class="categories list-unstyled small-margin-bottom">
+									<li id="allFilter" class="selected">All</li>
+									<li id="releaseNotesFilter">Release Notes</li>
+									<li id="startupsFilter">Startups</li>
+									<li id="generalFilter">General</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<ul id="listOfBlogs" class="list-unstyled blog-list">
 								<% blogData.blogs.forEach(function (blog) { %>
-									<li class="col-md-4">
+									<li class="col-md-4 <%= blog.category %>">
 										<div class="grid-post">
 											<article class="post post-showinfo">
 												<a href="/blog/<%= blog.url %>" title="<%= blog.title %>">
