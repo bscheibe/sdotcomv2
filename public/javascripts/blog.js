@@ -1,9 +1,7 @@
-/*$( document ).ready(function() {
-	$("#listOfBlogs > li" ).each(function() {
-		//var id = $(this).attr("id");
-		//alert(id);
-		$(this).attr("id", $(this).attr("id").replace(/\s/g, ''));
-	});
+/*$("#listOfBlogs > li" ).each(function() {
+	//var id = $(this).attr("id");
+	//alert(id);
+	$(this).attr("id", $(this).attr("id").replace(/\s/g, ''));
 });*/
 
 function switchSelected(clickedElement) {
@@ -19,13 +17,13 @@ function filterBlogs(category) {
 		$(".Startups").show();
 		$(".General").show();
 	} else if (category == "release") {
-		$(".ReleaseNotes").show();
 		$(".Startups").hide();
 		$(".General").hide();
+		$(".ReleaseNotes").show();
 	} else if (category == "startups") {
 		$(".ReleaseNotes").hide();
-		$(".Startups").show();
 		$(".General").hide();
+		$(".Startups").show();
 	} else if (category == "general") {
 		$(".ReleaseNotes").hide();
 		$(".Startups").hide();

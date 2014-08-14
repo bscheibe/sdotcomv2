@@ -6,7 +6,7 @@ var defaultBlog = {
 	title       : "Default Title",	// The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post
 	postImage   : "none", //The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
 	image       : "default", //The image you want to use in the top header.
-	category    : "ReleaseNotes", //The category of the blog post. Currently choose from ReleaseNotes, Startups & General
+	category    : "ReleaseNotes", //The category of the blog post. Currently choose from ReleaseNotes, Startups & General. You can attach multiple just put a space in between them
 	icon        : "star", //The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
 	bioOn       : false, //Whether you want the biography on or off at the bottom of the page
 	date        : "May 4, 1994", //The date the blog post was published.
@@ -106,7 +106,7 @@ var blogData = module.exports = {
 		_.defaults({
 			title       : "Productivity Tools for Product Managers",
 			postImage   : "/images/blog/productivity.png",
-			category    : "General",
+			category    : "General Startups",
 			date        : "February 11, 2013",
 			description : "Tips for practical software tools for product managers to keep us productive. Roadmunk's roadmaps also go a long way with product development",
 			partial     : "People love talking about latest software on the market. Whether you can touch your iPhone and have a song created by the pulse of your heart or visualize the layers of code on a browser page via Firefox 3D view, we just have to try it."
