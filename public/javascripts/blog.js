@@ -1,8 +1,4 @@
-/*$("#listOfBlogs > li" ).each(function() {
-	//var id = $(this).attr("id");
-	//alert(id);
-	$(this).attr("id", $(this).attr("id").replace(/\s/g, ''));
-});*/
+var categories = [];
 
 function switchSelected(clickedElement) {
 	if ($('.selected').attr("id") != clickedElement) {
@@ -11,42 +7,44 @@ function switchSelected(clickedElement) {
     } 
 }
 
-function filterBlogs(category) {
-	if (category == "all") {
-		$(".ReleaseNotes").show();
-		$(".Startups").show();
-		$(".General").show();
-	} else if (category == "release") {
-		$(".Startups").hide();
-		$(".General").hide();
-		$(".ReleaseNotes").show();
-	} else if (category == "startups") {
-		$(".ReleaseNotes").hide();
-		$(".General").hide();
-		$(".Startups").show();
-	} else if (category == "general") {
-		$(".ReleaseNotes").hide();
-		$(".Startups").hide();
-		$(".General").show();
+//Have to do the selected category last to allow for multiple category tags
+function filterBlogs(filter) {
+	if (filter == "ReleaseNotesFilter") {
+		categories.forEach(function (category) {
+			if (category != "releasenotes") {
+				$("." + category).hide();
+			}
+		})
+		$(".releasenotes").show();
+	} else if (filter == "StartupsFilter") {
+		categories.forEach(function (category) {
+			if (category != "startups") {
+				$("." + category).hide();
+			}
+		})
+		$(".startups").show();
+	} else if (filter == "GeneralFilter") {
+		categories.forEach(function (category) {
+			if (category != "general") {
+				$("." + category).hide();
+			}
+		})
+		$(".general").show();
+	} else {
+		categories.forEach(function (category) {
+			$("." + category).show();
+		})
 	}
 }
 
-$('#allFilter').on('click', function () {
-    switchSelected(this);
-    filterBlogs("all");
-});
-
-$('#releaseNotesFilter').on('click', function () {
-	switchSelected(this);
-	filterBlogs("release");
-});
-
-$('#startupsFilter').on('click', function () {
-	switchSelected(this);
-	filterBlogs("startups");
-});
-
-$('#generalFilter').on('click', function () {
-	switchSelected(this);
-	filterBlogs("general");
+//Goes though the categories and sets up on clicks events for all of them
+$("#categories > li" ).each(function() {
+	$(this).on('click', function () {
+		switchSelected(this);
+		filterBlogs($(this).attr('id'));
+	});
+	var category = $(this).text().replace(/\s/g, '').toLowerCase();
+	if (category != "all") {
+		categories.push(category);
+	}
 });

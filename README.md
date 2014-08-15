@@ -113,6 +113,18 @@ Adding a New Section
 2. If the above section is black (excluding a top section) then use the class `black-white` and similarily if the above section is white use the class `white-black` on the classes attached to the section.
 3. You want to alternate the SVG row so copy over the correct one and past in just below the section header (SHOULDO: Hook up a javascript binding that does this for us)
 
+Changing Prices
+=========================
+1. Go to `/public/javascripts/pricing.js` file and change the pricing variables at the top of the page.
+
+Adding a New Category
+=============================
+1. Go to `/data/blog` and in the `categories` array add a comma at the end of the last element and make a new line. Type the new category you want on this line. This name will show as the category on the blog page.
+2. Go to `/public/javascripts/blog.js`. In the function filterBlogs add a new else if by copy and pasting lines between an `}` and the next `}` but not both. 
+3. Change the ... text in the `filter == ...` to say the name of your new category you made in 1 + the word 'Filter'
+4. Change the ... and xxx text in `category != ...` and `$(.xxx).show()` to the name of the filter you made in 1 except with all lower case letters.
+5. Add the filter to your post in all lowercase letters!
+
 Adding a New Transition
 =========================
 1. Add the class `hidden` to the element you want to transition in (this makes sure you don't get the brief transition as it goes off screen)

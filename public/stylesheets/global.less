@@ -1,3 +1,4 @@
+@transition-speed : 0.1s;
 
 body {
   font-family             :  'OpenSans', "Helvetica Neue", Helvetica, Arial;
@@ -186,11 +187,13 @@ a {
 
 .underline {
     &:before {
+      @align : 20px;
+
       opacity          : 1;
       content          : "";
       position         : absolute;
-      left             : 20px;
-      right            : 20px;
+      left             : @align;
+      right            : @align;
       height           : 2px;
       margin           : 0 auto;
       width            : 25%;
@@ -227,25 +230,25 @@ a {
 }
 
 .btn-primary {
-    @hex-hover-color : @roadmunk-orange;
-    @button-color    : @table-blue;
+    @hex-hover-color  : @roadmunk-orange;
+    @button-color     : @table-blue;
     
     background-color : @button-color;
     border-color     : @hex-hover-color;
     &:hover {
-        .transition(all 0.1s linear);
+        .transition(all @transition-speed linear);
         background-color: darken(@button-color, 10%);
     }
     &:hover > .hex-alt-big {
-        .transition(all 0.1s linear);
+        .transition(all @transition-speed linear);
         background: darken(@hex-hover-color, 10%);
     }
     &:hover > .hex-alt-big:before {
-        .transition(all 0.1s linear);
+        .transition(all @transition-speed linear);
         border-right-color: darken(@hex-hover-color, 10%);
     }
     &:hover > .hex-alt-big:after {
-        .transition(all 0.1s linear);
+        .transition(all @transition-speed linear);
         border-left-color: darken(@hex-hover-color, 10%);
     }
 }
@@ -339,11 +342,11 @@ a {
     text-align   : center;
     line-height  : @height;
     background   : @color;
-    .transition(all 0.1s linear);
+    .transition(all @transition-speed linear);
 
     &:before, &:after {
         .after-before();
-        .transition(all 0.1s linear);
+        .transition(all @transition-speed linear);
     }
     &:before {
         border-right  : @margin solid @color;

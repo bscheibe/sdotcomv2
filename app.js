@@ -55,7 +55,7 @@ app.use(function(err, req, res) {
 
 // development error handler
 // will print stacktrace
-/*if (app.get('env') === 'development') {
+if (app.get('env') === 'development') {
 	app.use(function(err, req, res, next) {
 		res.status(err.status || 500);
 		res.render('error', {
@@ -63,7 +63,7 @@ app.use(function(err, req, res) {
 			error: err
 		});
 	});
-}*/
+}
 
 // Have a catch all on the route page so this one isn't needed
 /// catch 404 and forward to error handler

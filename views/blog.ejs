@@ -26,12 +26,14 @@
 					<div class="col-md-12 text-default">
 						<div class="row">
 							<div class="col-md-12">
-								<!-- Would be sweet if you could generate this list from the blogs and hook up click function automatically somehow -->
-								<ul class="categories list-unstyled small-margin-bottom">
-									<li id="allFilter" class="selected">All</li>
-									<li id="releaseNotesFilter">Release Notes</li>
-									<li id="startupsFilter">Startups</li>
-									<li id="generalFilter">General</li>
+								<ul id="categories" class="categories list-unstyled small-margin-bottom">
+									<% blogData.categories.forEach(function (category) { %>
+										<li id="<%= category.replace(/\s/g, '') + 'Filter' %>"
+											<% if (category == "All") { %>
+												class="selected"
+											<% } %>
+										><%= category %></li>
+									<% }); %>
 								</ul>
 							</div>
 						</div>
