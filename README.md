@@ -163,31 +163,37 @@ Setup TrueCrypt on Mac
 3. Open the downloaded .dmg
 4. Ctrl+Click on the .mpkg, select Open, follow install prompts
 5. Create a script ~/mount-truecrypt.sh with the following contents, swapping in your own filenames for CORSAIR and roadmunk-colin.tc
-```#!/bin/bash
 
-echo "mounting stage 1"
-/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount /Volumes/CORSAIR/roadmunk-colin.tc /Volumes/PROD_STAGE1 -k "" --mount-options=ro --protect-hidden=no
+ ```
+ #!/bin/bash
+ 
+ echo "mounting stage 1"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount /Volumes/CORSAIR/roadmunk-colin.tc /Volumes/PROD_STAGE1 -k "" --mount-options=ro --protect-hidden=no
 
-echo "mounting stage 2"
-/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount ~/Google\ Drive/roadmunk42.tc /Volumes/SSH_KEYS -k /VOLUMES/PROD_STAGE1/roadmunk.key -p "" --protect-hidden=no
-
-echo "unmounting stage 1"
-/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d /Volumes/CORSAIR/roadmunk-colin.tc
-```
+ echo "mounting stage 2"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount ~/Google\ Drive/roadmunk42.tc /Volumes/SSH_KEYS -k /VOLUMES/PROD_STAGE1/roadmunk.key -p "" --protect-hidden=no
+ 
+ echo "unmounting stage 1"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d /Volumes/CORSAIR/roadmunk-colin.tc
+ ```
 
 6. Create a script ~/unmount-truecrypt.sh with the following contents, again swapping in your own filenames
-```#!/bin/bash
 
-/Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d
-diskutil umount /Volumes/CORSAIR
-```
+ ```
+ #!/bin/bash
+ 
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d
+ diskutil umount /Volumes/CORSAIR
+ ```
 
 7. Edit ~/.ssh/config and add the following
-```Host production-web
-        User ubuntu
-        HostName roadmunk.com
-        IdentityFile /Volumes/SSH_KEYS/roadmunk-key-production.pem
-```
+
+ ```
+ Host production-web
+         User ubuntu
+         HostName roadmunk.com
+         IdentityFile /Volumes/SSH_KEYS/roadmunk-key-production.pem
+ ```
 
 8. To access the production server:
   1. Insert USB key
