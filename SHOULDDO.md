@@ -6,7 +6,7 @@ Current Bugs
 - [x] Go through and make CSS as efficient as possible while still being easy to change
 - [x] Go through CSS at end and have one main file which has the css used by more than one page
 - [x] Get rid of 'image-row' class on features page and use col-md instead?
-- [ ] Compress images for the web (Photoshop) such as those icons on the first page etc.
+- [x] Compress images for the web (Photoshop) such as those icons on the first page etc.
 - [x] Don't use 'move-up' class for the button on pricing and TnC page 
 - [x] Rename landing page class to something better
 - [x] For filenames use only '_' or '-' but not both. Specify which one in the guide
@@ -14,7 +14,7 @@ Current Bugs
 - [x] What's with the error handling in app.js
 - [ ] Use bootstrap on the footer columns (Meghan)
 - [x] Have webkit font-smoothing on the body?
-- [ ] Clean up image folder
+- [x] Clean up image folder
 - [x] Have colors stated at top [Not worth it with so few colors in the palette]
 - [x] Add markup to blog for ease of use [should be solved via Bootstrap]
 - [x] Wrap each page in it's own div if you haven't done so already

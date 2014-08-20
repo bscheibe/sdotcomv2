@@ -137,12 +137,20 @@ Updating Bower and Node Packages
 
 From time to time be sure to run `npm update --save` and `bower update --save` when in the roadmunkWebsite directory in the terminal. This will update the packages that are being used by the site.
 
+Optimizing Images
+============================
+
+When adding images to the site use https://kraken.io/web-interface to optimize them. It's **incredibly easy** and saves a ton of space. 
+
+Since Latif uploads his own blog images try and optimize the images from the blog every so often. Figure out which ones have been added recently by sorting by date modified in Finder (or whatever file explorer you use).
+
 Best Practices
 ====================
 
 - When creating a new view, please use '-' to represent spaces
 - When creating a new less file please '-' to represent spaces
 - Try and use '-' when writng CSS classes and use camelCase for JavaScript variables etc. 
+- When adding images (that are being used directly on the site and not in the blog) try to include a `.PSD` file along with it for easy editing.
 
 EJS Templating
 ======================

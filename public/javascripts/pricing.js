@@ -11,12 +11,16 @@ $("#starterPrice").html(starter_annually);
 $("#businessPrice").html(business_annually);
 $("#professionalPrice").html(professional_annually);
 
+function toggleStyles()  {
+    $("#monthly").toggleClass("grey");
+    $("#monthly").toggleClass("selected");
+    $("#annually").toggleClass("right");
+    $("#annually").toggleClass("selected");
+    $(".switch-pill").toggleClass("right");
+}
+
 function monthly () {
-    $("#monthly").removeClass("grey");
-    $("#monthly").addClass("selected");
-    $("#annually").removeClass("right");
-    $("#annually").removeClass("selected");
-    $(".switch-pill").removeClass("right");
+    toggleStyles();
 
     $("#starterPrice").html(starter_monthly);
     $("#businessPrice").html(business_monthly);
@@ -25,11 +29,7 @@ function monthly () {
 }
 
 function annually () {
-    $("#annually").addClass("right");
-    $("#annually").addClass("selected");
-    $("#monthly").addClass("grey");
-    $("#monthly").removeClass("selected");
-    $(".switch-pill").addClass("right");
+    toggleStyles();
 
     $("#starterPrice").html(starter_annually);
     $("#businessPrice").html(business_annually);
