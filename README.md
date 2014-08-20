@@ -177,9 +177,57 @@ Releasing To Production
 =============================
 1. Commit all changes to release to your local repo.
 2. Push your repo to Github.
-3. Mount your production key TrueCrypt file located on your USB key. (Colin has this figured out on OSX)
+3. Mount your production key TrueCrypt file located on your USB key.
 4. Mount the roadmunk42.tc TrueCrypt file located Google Drive/Roadmunk/Product Management/Certificates/roadmunk42.tc
 5. ssh to roadmunk.com (using the credentials in the roadmunk42.tc vault)
 6. type: `cd /var/www/roadmunk`
 7. type: `git pull` (will prompt you for your github credentials)
 8. if the pull goes well (ie. no conflicts are reported), type: `forever restart server.js`
+9. Unmount the TrueCrypt drives and remove USB key
+
+Setup TrueCrypt on Mac
+====================
+1. Configure Google Drive to mount on your computer
+2. Download TrueCrypt 7.2 from http://truecrypt.sourceforge.net/OtherPlatforms.html (bottom of page)
+3. Open the downloaded .dmg
+4. Ctrl+Click on the .mpkg, select Open, follow install prompts
+5. Create a script ~/mount-truecrypt.sh with the following contents, swapping in your own filenames for CORSAIR and roadmunk-colin.tc
+
+ ```
+ #!/bin/bash
+ 
+ echo "mounting stage 1"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount /Volumes/CORSAIR/roadmunk-colin.tc /Volumes/PROD_STAGE1 -k "" --mount-options=ro --protect-hidden=no
+
+ echo "mounting stage 2"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount ~/Google\ Drive/roadmunk42.tc /Volumes/SSH_KEYS -k /VOLUMES/PROD_STAGE1/roadmunk.key -p "" --protect-hidden=no
+ 
+ echo "unmounting stage 1"
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d /Volumes/CORSAIR/roadmunk-colin.tc
+ ```
+
+6. Create a script ~/unmount-truecrypt.sh with the following contents, again swapping in your own filenames
+
+ ```
+ #!/bin/bash
+ 
+ /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d
+ diskutil umount /Volumes/CORSAIR
+ ```
+
+7. Edit ~/.ssh/config and add the following
+
+ ```
+ Host production-web
+         User ubuntu
+         HostName roadmunk.com
+         IdentityFile /Volumes/SSH_KEYS/roadmunk-key-production.pem
+ ```
+
+8. To access the production server:
+  1. Insert USB key
+  2. Run `~/mount-truecrypt.sh`
+  3. Run `ssh production-web`
+  4. Do whatever you need to do on production
+  5. Run `~/unmount-truecrypt.sh`
+  6. Remove USB key
