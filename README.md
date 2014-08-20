@@ -75,6 +75,7 @@ Adding a New Blog Post
     - Fill in the blog post data. Each are described below:
         - **title**: The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post. **So be sure to name the blog file the same as the output of the slugified title.**
         - **postImage** : The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
+        - **category** : Which category the blog should be placed into. The default is releasenotes. Be sure when adding a category to write in all lowercase and without spaces.
         - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `roadmunkWebsite/images/` directory and refer to 3.3 above
         - **icon** : The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
         - **bioOn** : whether you would like the short biography at the bottom of the post. This is good for guest posts. It will pull data from the author object.
@@ -131,11 +132,17 @@ Adding a New Transition
 2. In the local javascript file utilize the document scroll function found on another or the one currently in use. Use control flow to initate the transition at the correct location on the screen.
 3. Get the class by its ID using jquery and add class `animated` as well as the name of animation class you want to use. Please see http://daneden.github.io/animate.css/ for the animations possible
 
+Updating Bower and Node Packages
+====================================
+
+From time to time be sure to run `npm update --save` and `bower update --save` when in the roadmunkWebsite directory in the terminal. This will update the packages that are being used by the site.
+
 Best Practices
 ====================
 
 - When creating a new view, please use '-' to represent spaces
 - When creating a new less file please '-' to represent spaces
+- Try and use '-' when writng CSS classes and use camelCase for JavaScript variables etc. 
 
 EJS Templating
 ======================
@@ -143,6 +150,28 @@ EJS Templating
 EJS templating is very similar to `PHP` templating. It allows you to use cut and dry html but helps you adhere to the DRY (Don't Repeat Yourself) principle. Our two main layout files are currently stored under the views folder as `start.ejs` and `end.ejs`. `start.ejs` contains the header (top-bar), meta, and stylesheets. The `end.ejs` contains the footer, go-top button, and scripts (javascripts needed by the page).
 
 What you need to know is that you don't need to include the html, head, or body tags and can get right into the content you want on the page.
+
+Releasing To Testing
+===========================
+
+It is always a best practice to go through the site once (click-through) on testing to make sure everything is working correctly online. It also let you have the ability to share new changes with other before pushing live.
+
+If you don't have a heroku account:
+
+1. Sign up for a heroku account at http://heroku.com and install the heroku toolbelt https://toolbelt.heroku.com/ (if you already have git you can just install the heroku client).
+2. Login to heroku via the terminal by typing `heroku login` and then entering your credentials. This should also prompt you to create a new key.
+3. If any problems arise during releasing - you probably don't have your rsa keys set up correctly. Follow https://devcenter.heroku.com/articles/keys to add your key to heroku 
+
+If you don't already have the heroku remote added:
+
+1. In terminal type `cd ~/Documents/roadmunkWebsite` (or the path to the repo) and press enter
+2. Type `git remote add heroku git@heroku.com:roadmunk-testing.git` 
+
+To push to testing:
+
+1. Add and commit all changes you want to go live.
+2. In terminal type `cd ~/Documents/roadmunkWebsite` (or the path to the repo) and press enter
+3. Type `git push heroku master` and let it run. Once a new command prompt appears everything is up on testing
 
 Releasing To Production
 =============================

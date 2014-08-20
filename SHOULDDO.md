@@ -12,10 +12,10 @@ Current Bugs
 - [x] For filenames use only '_' or '-' but not both. Specify which one in the guide
 - [x] Fix the top header issue (ie. figure out a better way then `header` classes)
 - [x] What's with the error handling in app.js
-- [ ] Use bootstrap on the footer columns
+- [ ] Use bootstrap on the footer columns (Meghan)
 - [x] Have webkit font-smoothing on the body?
 - [ ] Clean up image folder
-- [ ] Have colors stated at top
+- [x] Have colors stated at top [Not worth it with so few colors in the palette]
 - [x] Add markup to blog for ease of use [should be solved via Bootstrap]
 - [x] Wrap each page in it's own div if you haven't done so already
 - [x] Change all border-radiuses to .border-radius()

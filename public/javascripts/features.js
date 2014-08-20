@@ -1,5 +1,7 @@
-jQuery(window).load(function () {
-	$(window).scroll(function() {
+$( document ).ready(function() {
+    $('#featuresNav').addClass('on');
+
+	/*$(window).scroll(function() {
         if ($(document).scrollTop() > 0) {
             $('#feature_1_text').addClass("animated fadeInLeftBig");
             $('#feature_1_img').addClass("animated fadeInRightBig");
@@ -28,5 +30,5 @@ jQuery(window).load(function () {
             $('#feature_7_text').addClass("animated fadeInLeftBig");
             $('#feature_7_img').addClass("animated fadeInRightBig");
         }
-    });
+    });*/
 });

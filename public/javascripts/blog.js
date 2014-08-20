@@ -1,3 +1,5 @@
+$('#blogNav').addClass('on');
+
 var categories = [];
 
 function switchSelected(clickedElement) {
