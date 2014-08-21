@@ -278,11 +278,13 @@ section {
 
 //Should be centered and not just left by some number of pixels
 #d_debug { 
+	@width: 165px;
+
 	display       : none;
 	position      : fixed;
-	width         : 165px;
-	top           : 540px;
-	left          : 950px;
+	width         : @width;
+	top           : 50%;
+	left          : 50%;
 	background    : #6BC37E; /* Old browsers */
 	border        : 1px solid #41a056;
 	color         : #eeeeee;
