@@ -75,23 +75,23 @@
 													</span>
 													<span class="right">
 														<a title="Share On Facebook" target="_blank" onclick="
-															return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= blog.url %>">
+															shareWindow(this.href, 'Facebook', '640' , '300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= blog.url %>">
 															<span class="icon-facebook"></span>
 														</a>
 														<a title="Share On Twitter"
-														   onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+														   onclick="shareWindow(this.href, 'Twitter', '640' , '300')"
 														   href="https://twitter.com/share?url=http://roadmunk.com/blog/<%= blog.url %>&text=<%= blog.title %>"
 														>
 															<span class="icon-twitter"></span>
 														</a>
 														<a title="Share On Linked In" target="_blank"
-														   onclick="return !window.open(this.href, 'Linked In', 'width=640,height=500')"
+														   onclick="rshareWindow(this.href, 'Linked In', '640' , '500')"
 														   href="http://www.linkedin.com/shareArticle?mini=true&url=http://roadmunk.com/blog/<%= blog.url %>&title=<%= blog.title %>&summary=<%= blog.description %>&source=roadmunk.com"
 														>
 															<span class="icon-linkedin"></span>
 														</a>
 														<a title="Share On Google Plus"
-														   onclick="return !window.open(this.href, 'Google Plus', 'width=640,height=500')"
+														   onclick="shareWindow(this.href, 'Google Plus', '640' , '500')"
 														   href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= blog.url %>"
 														>
 															<span class="icon-googleplus"></span>

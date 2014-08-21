@@ -31,16 +31,16 @@
 									</div>
 									<div class="col-md-4 social-shares">
 										<a title="Share On Facebook" target="_blank" onclick="
-											return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= url %>">
+											shareWindow(this.href, 'Facebook', '640' , '300')" href="http://www.facebook.com/sharer/sharer.php?u=http://roadmunk.com/blog/<%= url %>">
 											<span class="icon-facebook"></span>
 										</a>
 										<a title="Share On Twitter" onclick="
-											return !window.open(this.href, 'Twitter', 'width=640,height=300')" href="
+											shareWindow(this.href, 'Twitter', '640' , '300')"  href="
 											https://twitter.com/share?url=http://roadmunk.com/blog/<%= url %>&text=<%= title %>">
 											<span class="icon-twitter"></span>
 										</a>
 										<a title="Share On Linked In" target="_blank" onclick="
-											return !window.open(this.href, 'Linked In', 'width=640,height=500')"
+											shareWindow(this.href, 'Linked In', '640' , '500')" 
 										href="http://www.linkedin.com/shareArticle?mini=true
 										&url=http://roadmunk.com/blog/<%= url %>
 										&title=<%= title %>
@@ -49,7 +49,7 @@
 											<span class="icon-linkedin"></span>
 										</a>
 										<a title="Share On Google Plus" target="_blank" onclick="
-											return !window.open(this.href, 'Google Plus', 'width=640,height=500')" href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= url %>">
+											shareWindow(this.href, 'Google Plus', '640' , '500')"  href="https://plus.google.com/share?url=www.roadmunk.com/blog/<%= url %>">
 											<span class="icon-googleplus"></span>
 										</a>
 									</div>
@@ -77,5 +77,6 @@
 	</body>
 
 	<% include ../partials/scripts %> <!-- The javascript needed by the site -->
+	<script src="/javascripts/popups.js"></script>
 
 </html>
