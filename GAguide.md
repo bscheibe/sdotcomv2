@@ -27,19 +27,27 @@ Important Stats
 ===================
 
 **Sessions** – Number of visits to the site from users (distinct visits to the site)
+
 **Users** – Number of distinct visitors
+
 **Pageviews** – Number of distinct page views during a user’s session
+
 **Pages / Session** – Pagesviews divided by session (anything  >1.5 is good)
+
 **Avg. Session Duration** – How long users spent on the site
+
 **Bounce rate** – % of users who started a session (travelled from somewhere else & viewed your page) and left without viewing anymore pages. You’d like around 50% bounce rate, anything less than that is great. It’s indicator of many things, but most importantly, it answer the question of if viewers are seeing what they expect to see when they first arrive at your site.
+
 **% New Session** – The number of sessions in the timeframe that were from new users (users who hadn’t visited the site before) 
 
 **Acquistion:** Find out where you acquiring the traffic to your site from. The overview tab has a nice pie-chart to indicate which streams the traffic is coming from:
-**Organic:** Users arrives from one of the major search engines to your page
-**Referral:** Users arrives from another domain other than your domain (that is not social)
-**Social:** Users arrives from a social media site (Facebook, Twitter, etc.)
-**Direct:** Direct to your site, no use of search engines
-**Paid Search:** User arrives via paid advertisement (usually Google AdWords)
+
+- **Organic:** Users arrives from one of the major search engines to your page
+- **Referral:** Users arrives from another domain other than your domain (that is not social)
+- **Social:** Users arrives from a social media site (
+    Facebook, Twitter, etc.)
+- **Direct:** Direct to your site, no use of search engines
+- **Paid Search:** User arrives via paid advertisement (usually Google AdWords)
 
 These are very basic descriptions. If you’d like more information see the GA Academy resource at the top.
 
