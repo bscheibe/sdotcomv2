@@ -5,7 +5,7 @@ var fs    = require('fs');
 
 var ports   = {};
 ports.http  = process.env.PORT || 3030;
-ports.https = ports.http == 80 ? 443 : ports.http + 1;
+ports.https = ports.http + 1;
 
 var environment = process.env.NODE_ENV || "development";
 
@@ -34,9 +34,11 @@ http.createServer(function(req, res) {
 		res.end('bad host header');
 		return;
 	}
+	host = host[0].substr(0, 4) == 'www.' ? host[0].substr(4) : host[0];
+	var port = host[1] == ports.http ? ports.https : 443;
 
 	res.statusCode = 301;
-	res.setHeader('Location', 'https://' + host[0] + ':' + ports.https + req.url);
+	res.setHeader('Location', 'https://' + host + ':' + '443' + req.url);
 	res.end();
 }).listen(ports.http);
 
