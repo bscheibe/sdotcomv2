@@ -162,6 +162,8 @@ What you need to know is that you don't need to include the html, head, or body 
 Releasing To Testing
 ===========================
 
+**Testing with Heroku is currently broken since the release of the https server**
+
 It is always a best practice to go through the site once (click-through) on testing to make sure everything is working correctly online. It also let you have the ability to share new changes with other before pushing live.
 
 If you don't have a heroku account:

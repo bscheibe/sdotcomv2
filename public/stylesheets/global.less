@@ -504,16 +504,25 @@ a {
   z-index  : 3;
 
   //Different colored containers
+
+  &:nth-child(odd) {
+    .section-fill(@primary-bg, @steel-darkest);
+  }
+
+  &:nth-child(even) {
+    .section-fill(@secondary-bg, @steel-darkest);
+  }
+
   &.blue {
     .section-fill(@table-blue, @light-font);
   }
 
   &.grey {
-    .section-fill(#eef1f2, @steel-darkest);
+    .section-fill(@secondary-bg, @steel-darkest);
   }
 
   &.white {
-    .section-fill(#fff, @steel-darkest);
+    .section-fill(@primary-bg, @steel-darkest);
   }
 
   &.section-xs {
