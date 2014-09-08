@@ -1,7 +1,7 @@
 @transition-speed : 0.1s;
 
 body {
-  font-family             :  'OpenSans', "Helvetica Neue", Helvetica, Arial;
+  font-family             :  'Lato', Calibri, Arial, sans serif;
   -webkit-font-smoothing  : antialiased;
   -moz-osx-font-smoothing : grayscale;
 }
@@ -156,14 +156,6 @@ a {
     }
 }
 
-.after-before() {
-    content  : " ";
-    width    : 0;
-    height   : 0;
-    top      : 0;
-    position : absolute;
-}
-
 //Other button
 .btn, button {
     outline     : 0;
@@ -182,6 +174,77 @@ a {
     span {
         font-size: 14px;
     }
+}
+
+.color(@primary-color, @secondary-color) {
+  background: @primary-color;  
+  .box-shadow(0 6px @secondary-color); 
+
+  &:hover {
+    .box-shadow(0 4px @secondary-color);
+  } 
+
+  &:active {
+    .box-shadow(0 0 @secondary-color);
+  }
+}
+
+.cta2 {
+  cursor         : pointer;
+  display        : inline-block;
+  text-transform : uppercase;
+  letter-spacing : 1px;
+  font-weight    : 700;
+  outline        : none;
+  position       : relative;
+  color          : @white;
+  .transition(none);
+  .border-radius(20px);
+
+  &.hire {
+    padding : 20px 80px;
+    &:before {
+      content : "Hire Me";
+    }
+  }
+
+  &.contact {
+    padding : 20px 40px;
+    &:before {
+      content : "Contact Info";
+    }
+  }
+
+  &.blue1 {
+    .color(@dark-blue, @darker-blue);
+  }
+
+  &.blue2 {
+    .color(@secondary-blue, @secondary-dark-blue);
+  }
+
+  &:hover {
+    top : 2px;   
+  }
+
+  &:active {
+    top : 6px;
+  }
+
+  &:after {
+    content  : '';
+    position : absolute;
+    z-index  : -1;
+    .transition(all 0.3s);
+  } 
+}
+
+.after-before() {
+    content  : " ";
+    width    : 0;
+    height   : 0;
+    top      : 0;
+    position : absolute;
 }
 
 
