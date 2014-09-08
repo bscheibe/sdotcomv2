@@ -1,3 +1,7 @@
+Newer Current Bugs
+===================
+
+
 Current Bugs
 ================
 - [x] When you collapse the screen the menu becomes an 'x' instead of the triple bars. After clicking twice it becomes the triple bars. This is due to the fact that the collapsed class is not getting attached to the class after the screen is collapsed.

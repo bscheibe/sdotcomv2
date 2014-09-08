@@ -38,18 +38,8 @@
 	<script type="text/javascript" src="/javascripts/init-zc.js"></script>
 <% } %>
 
-<!--Start of Zopim Live Chat Script-->
-<script type="text/javascript">
-	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-	$.src='//v2.zopim.com/?2GxMCMGRFtWEbHrnHUk8G3yrcSlXuyIK';z.t=+new Date;$.
-	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-</script>
-<!--End of Zopim Live Chat Script-->
-
 <!-- Google Anayltics -->
-<script>
+<!--<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -58,10 +48,10 @@
 	ga('create', 'UA-37519519-1', 'auto');
 	ga('require', 'linkid', 'linkid.js');
 	ga('send', 'pageview');
-</script>
+</script>-->
 
 <!-- Event tracking code on buttons -->
-<script>
+<!--<script>
 	//All CTA button clicks
 	$('.cta').on('click', function() {
 	  ga('send', 'event', 'button', 'click', 'cta');
@@ -91,21 +81,5 @@
 	$('#landing-button').on('click', function() {
 	  ga('send', 'event', 'button', 'click', 'landing-button');
 	});
-</script>
+</script>-->
 <!-- End of Google Analytics Script -->
-
-<!-- Basic KISS Metrics Script -->
- <script type="text/javascript">var _kmq = _kmq || [];
-	var _kmk = _kmk || '97a80da014dd5a88e3e92914a8342e28828ff3ef';
-	function _kms(u){
-	  setTimeout(function(){
-	    var d = document, f = d.getElementsByTagName('script')[0],
-	    s = d.createElement('script');
-	    s.type = 'text/javascript'; s.async = true; s.src = u;
-	    f.parentNode.insertBefore(s, f);
-	  }, 1);
-	}
-	_kms('//i.kissmetrics.com/i.js');
-	_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
-</script>
-<!-- End of KISS Metrics Script -->

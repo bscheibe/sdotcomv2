@@ -1,17 +1,17 @@
-/*jQuery(window).load(function () {
+jQuery(window).load(function () {
 	$(window).scroll(function() {
         var startingPoint; //Should I use this?
-        if ($(document).scrollTop() > 2350) {
+        if ($(document).scrollTop() > 3000) {
         	$('#testimonial1').addClass("animated flipInX");
         }
-        if ($(document).scrollTop() > 2500) {
+        if ($(document).scrollTop() > 3200) {
             $('#testimonial2').addClass("animated flipInX");;
         }
-        if ($(document).scrollTop() > 2600) {
+        if ($(document).scrollTop() > 3350) {
             $('#testimonial3').addClass("animated flipInX");
         }
     });
-});*/
+});
 
 $("#subscribe").submit(function(event) 
 {
