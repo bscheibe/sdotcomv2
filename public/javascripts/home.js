@@ -1,16 +1,40 @@
 jQuery(window).load(function () {
 	$(window).scroll(function() {
         var startingPoint; //Should I use this?
-        if ($(document).scrollTop() > 3000) {
+        if ($(document).scrollTop() > 800) {
         	$('#testimonial1').addClass("animated flipInX");
         }
-        if ($(document).scrollTop() > 3200) {
+        if ($(document).scrollTop() > 1050) {
             $('#testimonial2').addClass("animated flipInX");;
         }
-        if ($(document).scrollTop() > 3350) {
+        if ($(document).scrollTop() > 1300) {
             $('#testimonial3').addClass("animated flipInX");
         }
     });
+});
+
+$('.companies').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows : false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 570,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 $("#subscribe").submit(function(event) 
