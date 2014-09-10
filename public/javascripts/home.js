@@ -1,23 +1,38 @@
 jQuery(window).load(function () {
 	$(window).scroll(function() {
         var startingPoint; //Should I use this?
-        if ($(document).scrollTop() > 800) {
+        if ($(document).scrollTop() > 1850) {
         	$('#testimonial1').addClass("animated flipInX");
         }
-        if ($(document).scrollTop() > 1050) {
+        if ($(document).scrollTop() > 2100) {
             $('#testimonial2').addClass("animated flipInX");;
         }
-        if ($(document).scrollTop() > 1300) {
+        if ($(document).scrollTop() > 2350) {
             $('#testimonial3').addClass("animated flipInX");
         }
     });
+});
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });
 
 $('.companies').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2500,
   arrows : false,
   pauseOnHover : false,
   responsive: [

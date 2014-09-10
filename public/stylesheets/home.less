@@ -42,9 +42,18 @@
   }
 
   .skill {
-    img {
-      opacity: 0.95;
-      .border-radius(6px);
+    ul {
+      font-size : 16px;
+      color : @light-grey;
+      margin-top: 5px;
+    }
+    a {
+      color : @white;
+      text-decoration: underline;
+      &:hover {
+        color : @blue;
+        .transition(color 0.2s);
+      }
     }
     p {
       color : @light-grey;
