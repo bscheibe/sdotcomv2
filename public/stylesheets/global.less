@@ -142,7 +142,7 @@ a {
     }
     &.subscribe{
         width      : 150px;
-        padding: 9px 0;
+        padding    : 9px 0;
         background : @blue;
         &:hover {
             background : darken(@blue, 10%);
@@ -215,12 +215,34 @@ a {
     }
   }
 
+  &.subscribe {
+    padding    : 10px 25px;
+    top: -6px;
+    .border-radius(7px);
+
+    &:hover {
+      top : -4px;   
+    }
+
+    &:active {
+      top : 0px;
+    }
+
+    &:before {
+        content : "Subscribe";
+    }
+  }
+
   &.blue1 {
     .color(@dark-blue, @darker-blue);
   }
 
   &.blue2 {
     .color(@secondary-blue, @secondary-dark-blue);
+  }
+
+  &.yellow {
+    .color(@dark-yellow, @darker-yellow); 
   }
 
   &:hover {
@@ -586,6 +608,14 @@ a {
 
   &.green {
     .section-fill(@green, @light-font);
+  }
+
+  &.yellow {
+    .section-fill(@yellow, @light-font);
+  }
+
+  &.red {
+    .section-fill(@red, @light-font);
   }
 
   &.grey {

@@ -41,6 +41,26 @@
     color: @green;
   }
 
+  .skill {
+    img {
+      opacity: 0.95;
+      .border-radius(6px);
+    }
+    p {
+      color : @light-grey;
+    }
+    .features-text-right {
+      text-align: right;
+    }
+    .features-text-left {
+      text-align: left;
+    }
+
+    .features-right {
+      float: right;
+    }
+  }
+
   input.subscribe {
     width: 65%;
     display : inline-block;
@@ -196,7 +216,7 @@
 
     p {
       font-size   : 18px;
-      font-weight : lighter;
+      font-weight : 400;
       line-height : 1.5em;
       &:before {
         content: '"';
