@@ -626,6 +626,10 @@ a {
     .section-fill(@primary-bg, @steel-darkest);
   }
 
+  &.section-footer {
+    padding : 40px 0 15px 0;
+  }
+
   &.section-xs {
     padding: 45px;
   }
@@ -865,6 +869,9 @@ a {
         }
       }
     }
+    &.section-footer {
+      padding : 25px 0 10px 0;
+    }
     &.section-xs {
       padding: 15px 0;
     }
@@ -908,5 +915,17 @@ a {
   }
   .zopim {
     display: none !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .cta2 {
+    &.hire {
+      padding : 10px 40px;
+    }
+
+    &.contact {
+      padding : 10px 30px;
+    }
   }
 }

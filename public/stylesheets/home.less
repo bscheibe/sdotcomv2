@@ -206,7 +206,7 @@
       font-size     : 18px;
       line-height   : 2em;
       margin-bottom : 24px;
-      font-weight   : bold;
+      font-weight   : 600;
       font-style    : italic;
     }
 
@@ -220,12 +220,16 @@
     }
   }
 
+  .testimonial-right {
+    float : right;
+  }
+
   blockquote {
     z-index : 4;
 
     p {
       font-size   : 18px;
-      font-weight : 400;
+      font-weight : 300;
       line-height : 1.5em;
       &:before {
         content: '"';
@@ -270,6 +274,9 @@
     .landing-text {
       text-align: center !important;
     }
+    .landing-ctas {
+      text-align : center;
+    }
   }
 }
 
@@ -281,8 +288,53 @@
     .feature-controls {
         margin-top: 25%
     }
+    .landing-ctas {
+      margin-top : 50px;
+    }
     .text-get-smaller {
       font-size: 20px;
+    }
+    .landing-text {
+      font-size : 50px;
+    }
+    .skill {
+      h1 {
+        text-align: center;
+      }
+      .feature-img {
+        float : none;
+        text-align: center;
+      }
+    }
+    .testimonial-right {
+      float : none;
+    }
+    .fancy-blockquote {
+      p, small {
+        font-weight  : 400;
+        margin-left  : 25px;
+        margin-right : 25px;
+        text-align: left;
+      }
+    }
+    input.subscribe {
+      width : 100%;
+    }
+    form#subscribe {
+      text-align : center;
+      button {
+        display: block;
+        margin: 20px auto 0 auto;
+        padding : 12px 40px;
+      }
+    }
+  }
+}
+
+@media (max-width : 767px) {
+  .home {
+    input.subscribe {
+      width : 75%;
     }
   }
 }
@@ -291,6 +343,12 @@
   .home {
     .landing-image {
       width: 350px;
+    }
+    .landing-text {
+      font-size : 44px;
+    }
+    input.subscribe {
+      width : 90%;
     }
   }
 }
