@@ -1,6 +1,32 @@
 jQuery(window).load(function () {
 	$(window).scroll(function() {
         var startingPoint; //Should I use this?
+
+        //Skills section start
+        if ($(document).scrollTop() > 400) {
+            $('#skillsNav').addClass('on');
+        }
+
+        if ($(document).scrollTop() < 400 || $(document).scrollTop() > 1450) {
+            $('#skillsNav').removeClass('on');
+        }
+
+        //Company section start
+        if ($(document).scrollTop() > 1450) {
+            $('#companiesNav').addClass('on');
+        }
+
+        //Company section ends
+        if ($(document).scrollTop() > 1800 || $(document).scrollTop() < 1450) {
+            $('#companiesNav').removeClass('on');
+        }
+
+        //Testimonial section starts
+        if ($(document).scrollTop() > 1800) {
+            $('#testimonialNav').addClass('on');
+        }
+
+        //Testimonials
         if ($(document).scrollTop() > 1850) {
         	$('#testimonial1').addClass("animated flipInX");
         }
@@ -10,8 +36,26 @@ jQuery(window).load(function () {
         if ($(document).scrollTop() > 2350) {
             $('#testimonial3').addClass("animated flipInX");
         }
+
+        //Testimonial section ends
+        if ($(document).scrollTop() > 3200 || $(document).scrollTop() < 1800) {
+            $('#testimonialNav').removeClass('on');
+        }
     });
 });
+
+function removeUnderline () {
+    $('#skillsNav').removeClass('on');
+    $('#companiesNav').removeClass('on');
+    $('#testimonialNav').removeClass('on');
+    if (this.hash == "#skills") {
+        $('#skillsNav').addClass('on');
+    } else if (this.hash == "#companies") {
+        $('#companiesNav').addClass('on');
+    } else {
+        $('#testimonialNav').addClass('on');
+    }
+}
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
