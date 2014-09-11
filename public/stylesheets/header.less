@@ -58,6 +58,34 @@
             margin-right: 35px;
           }
         }
+
+        & > .open > a {
+          color : @white;
+          background-color : @blue;
+        }
+
+        & > li > a:focus {
+          color : @white;
+        }
+
+        & > li > .dropdown-menu {
+          margin-top: -25px;
+          margin-right : 10px;
+          background: @dark-blue;
+          .border-radius(6px);
+
+          .divider {
+            background-color: @light-grey
+          }
+
+          & > li > a {
+            color : @white;
+
+            &:hover, &:focus {
+              background-color : @darker-blue;
+            }
+          }
+        }
     }
   }
 
