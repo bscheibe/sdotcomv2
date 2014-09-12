@@ -16,7 +16,7 @@ Current Bugs
 - [x] For filenames use only '_' or '-' but not both. Specify which one in the guide
 - [x] Fix the top header issue (ie. figure out a better way then `header` classes)
 - [x] What's with the error handling in app.js
-- [ ] Use bootstrap on the footer columns (Meghan)
+- [x] Use bootstrap on the footer columns
 - [x] Have webkit font-smoothing on the body?
 - [x] Clean up image folder
 - [x] Have colors stated at top [Not worth it with so few colors in the palette]
@@ -29,3 +29,8 @@ Current Bugs
 - [x] Uninstall flexslider if not working
 - [x] Split up Meta and stylesheets
 - [x] Put some assets in the gitignore so they do not included with the site. [Were not going to be using heroku for hosting so this shouldn' be an issues]
+
+New Bugs
+===============
+- [ ] Get RWD Cleaned up for maps
+- [ ] Google map working on modal?

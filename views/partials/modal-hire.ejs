@@ -1,0 +1,43 @@
+<!-- Modal -->
+<div class="modal fade" id="hireMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="x" aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Freelance Work</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/images/imac-hire.png" width="300px">
+          </div>
+          <div class="col-md-4">
+            <h4>Request for Work</h4>
+            <form>
+              <label>Name</label>
+              <input id="fname" name="fname" pattern="alpha" required type="text">
+              <!--<small class="error">A valid first name is required.</small>-->
+
+              <label>Phone</label>
+              <input id="phone" name="phone" type="tel">
+
+              <label>Email</label>
+              <input id="email" name="email" pattern="email" required type="text">
+              <!--<small class="error">A valid email address is required.</small>-->
+
+              <label>Description</label>
+              <textarea id="description" name="description" placeholder="Very Basic Description of Freelance Work Needed"></textarea>
+
+              <input class="" name="Submit" type="submit" value="Submit">
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>

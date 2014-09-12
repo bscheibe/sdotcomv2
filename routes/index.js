@@ -21,6 +21,16 @@ router.get('/sitemap.xml', function(req, res) {
     res.sendfile('./sitemap.xml');
 });
 
+//Send resume
+router.get('/resume', function(req, res) {
+    res.sendfile('./public/pdfs/resume.pdf');
+});
+
+//Send C.V.
+router.get('/cv', function(req, res) {
+    res.sendfile('./public/pdfs/cv.pdf');
+});
+
 /* Create all the blog routes */
 blogData.blogs.forEach(function (blog) {
   /* GET Blog page. */

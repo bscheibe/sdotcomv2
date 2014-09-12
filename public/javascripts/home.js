@@ -2,6 +2,32 @@ jQuery(window).load(function () {
 	$(window).scroll(function() {
         var startingPoint; //Should I use this?
 
+        //Skill Images
+
+        if ($(document).scrollTop() > 400) {
+          $('#feature_1_img').addClass("animated rubberBand");
+        }
+        if ($(document).scrollTop() > 700) {
+            $('#feature_2_img').addClass("animated bounce");;
+        }
+        if ($(document).scrollTop() > 950) {
+            $('#feature_3_img').addClass("animated swing");
+        }
+
+
+        //Testimonials
+        if ($(document).scrollTop() > 1850) {
+        	$('#testimonial1').addClass("animated flipInX");
+        }
+        if ($(document).scrollTop() > 2100) {
+            $('#testimonial2').addClass("animated flipInX");;
+        }
+        if ($(document).scrollTop() > 2350) {
+            $('#testimonial3').addClass("animated flipInX");
+        }
+
+        //Highlighter
+
         //Skills section start
         if ($(document).scrollTop() > 400) {
             $('#skillsNav').addClass('on');
@@ -26,17 +52,6 @@ jQuery(window).load(function () {
             $('#testimonialNav').addClass('on');
         }
 
-        //Testimonials
-        if ($(document).scrollTop() > 1850) {
-        	$('#testimonial1').addClass("animated flipInX");
-        }
-        if ($(document).scrollTop() > 2100) {
-            $('#testimonial2').addClass("animated flipInX");;
-        }
-        if ($(document).scrollTop() > 2350) {
-            $('#testimonial3').addClass("animated flipInX");
-        }
-
         //Testimonial section ends
         if ($(document).scrollTop() > 3200 || $(document).scrollTop() < 1800) {
             $('#testimonialNav').removeClass('on');
@@ -44,19 +59,8 @@ jQuery(window).load(function () {
     });
 });
 
-function removeUnderline () {
-    $('#skillsNav').removeClass('on');
-    $('#companiesNav').removeClass('on');
-    $('#testimonialNav').removeClass('on');
-    if (this.hash == "#skills") {
-        $('#skillsNav').addClass('on');
-    } else if (this.hash == "#companies") {
-        $('#companiesNav').addClass('on');
-    } else {
-        $('#testimonialNav').addClass('on');
-    }
-}
 
+//Smooth scrolling
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

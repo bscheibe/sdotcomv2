@@ -72,17 +72,21 @@
           margin-top: -25px;
           margin-right : 10px;
           background: @dark-blue;
+          border : 1px solid fade(@darker-blue, 50%);
           .border-radius(6px);
+          .transition(all 0.3s);
 
           .divider {
-            background-color: @light-grey
+            background-color: fade(@darker-blue, 50%);
           }
 
           & > li > a {
             color : @white;
+            .transition(background-color 0.2s);
 
             &:hover, &:focus {
               background-color : @darker-blue;
+              .transition(background-color 0.2s);
             }
           }
         }

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 	//set your google maps parameters
-	var latitude = 43.656940,
-		longitude = -79.380527,
+	var latitude = 43.649423,
+		longitude = -79.515999,
 		map_zoom = 14;
 
 	//google map custom marker icon - .png fallback for IE11
@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 		
 	//define the basic color of your map, plus a value for saturation and brightness
 	//var	main_color = '#2d313f',
-	var	main_color = '#0DAAD1',
+	var	main_color = '#4593E3',
 		saturation_value= -20,
 		brightness_value= 5;
 

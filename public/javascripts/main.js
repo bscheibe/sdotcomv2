@@ -3,9 +3,11 @@ jQuery(window).load(function () {
         if ($(document).scrollTop() > 150) {
             $('#masthead').addClass("navbar-scrolled");
             $('.go-top').css('bottom', '12px');
+            $('.dropdown-menu').css('margin-top', '-15px');
         } else {
             $('#masthead').removeClass("navbar-scrolled");
             $('.go-top').css('bottom', '-44px');
+            $('.dropdown-menu').css('margin-top', '-25px');
         }
     });
 });
