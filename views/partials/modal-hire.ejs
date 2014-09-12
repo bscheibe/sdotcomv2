@@ -12,23 +12,28 @@
             <img src="/images/imac-hire.png" width="300px">
           </div>
           <div class="col-md-4">
-            <h4>Request for Work</h4>
-            <form>
-              <label>Name</label>
-              <input id="fname" name="fname" pattern="alpha" required type="text">
-              <!--<small class="error">A valid first name is required.</small>-->
+            <form role="form" id="registrationForm" method="post" class="form-horizontal" action="...">
+              <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" class="form-control" id="name" placeholder="Full Name">
+              </div>
 
-              <label>Phone</label>
-              <input id="phone" name="phone" type="tel">
+              <div class="form-group">
+                <!-- <label for="phone">Phone</label> -->
+                <input type="tel" class="form-control" id="phone" placeholder="Phone">
+              </div>
 
-              <label>Email</label>
-              <input id="email" name="email" pattern="email" required type="text">
-              <!--<small class="error">A valid email address is required.</small>-->
+              <div class="form-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
 
-              <label>Description</label>
-              <textarea id="description" name="description" placeholder="Very Basic Description of Freelance Work Needed"></textarea>
+              <div class="form-group">
+                <!-- <label for="description">Description</label> -->
+                <textarea type="text" class="form-control" id="description" placeholder="Very Basic Description of Freelance Work Needed"></textarea>
+              </div>
 
-              <input class="" name="Submit" type="submit" value="Submit">
+              <input type="submit" class="btn btn-default" placeholder="Hire Me">
 
             </form>
           </div>
