@@ -11,8 +11,8 @@ Setup
 1. Open terminal
 2. type cd `~/Documents` (change directory to your documents)
 3. type `git init` (intialize git repository on local disk)
-4. type `git clone https://github.com/latifnanji/sdotcomv2.git` (copies files from repo to local disk) and enter credentials if needed
-5.. type `git remote add production https://github.com/latifnanji/sdotcomv2.git ` (adds a remote to the repo so you can add code)
+4. type `git clone https://github.com/bscheibe/sdotcomv2.git` (copies files from repo to local disk) and enter credentials if needed
+5.. type `git remote add production https://github.com/bscheibe/sdotcomv2.git ` (adds a remote to the repo so you can add code)
 6. type `cd sdotcomv2` (takes you into the repo you just cloned on your local disk)
 7. type `node server.js` (runs the server on your local host)
 8. copy and paste `http://localhost:3030` into your browser and your good to go
