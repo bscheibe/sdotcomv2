@@ -1,26 +1,28 @@
-Roadmunk Consumer Facing Site
+Brent Scheibelhut Dot Com 
 ================================
+
+http://brentscheibelhut.com
 
 Setup
 ========
 0. Installs
-    - Install Git via http://git-scm.com/book/en/Getting-Started-Installing-Git and have acces rights to repo https://github.com/latifnanji/roadmunkWebsite
+    - Install Git via http://git-scm.com/book/en/Getting-Started-Installing-Git and have acces rights to repo https://github.com/bscheibe/sdotcomv2
     - Install Node via http://nodejs.org/
 1. Open terminal
 2. type cd `~/Documents` (change directory to your documents)
 3. type `git init` (intialize git repository on local disk)
-4. type `git clone https://github.com/latifnanji/roadmunkWebsite.git` (copies files from repo to local disk) and enter credentials if needed
-5.. type `git remote add production https://github.com/latifnanji/roadmunkWebsite.git ` (adds a remote to the repo so you can add code)
-6. type `cd roadmunkWebsite` (takes you into the repo you just cloned on your local disk)
+4. type `git clone https://github.com/latifnanji/sdotcomv2.git` (copies files from repo to local disk) and enter credentials if needed
+5.. type `git remote add production https://github.com/latifnanji/sdotcomv2.git ` (adds a remote to the repo so you can add code)
+6. type `cd sdotcomv2` (takes you into the repo you just cloned on your local disk)
 7. type `node server.js` (runs the server on your local host)
 8. copy and paste `http://localhost:3030` into your browser and your good to go
-    - Imagine as if `http://localhost:3030` represented `http://roadmunk.com` and all the routes were the same off the link
+    - Imagine as if `http://localhost:3030` represented `http://brentscheibelhut.com` and all the routes were the same off the link
     - So `http://localhost:3030/pricing` would go to our pricing page
 
 Accessing On Subsequent Visits
 =================================
 1. Open terminal (or if already open type `cd`)
-2. Type `cd ~/Documents/roadmunkWebsite` (just changing directories to where the files are located)
+2. Type `cd ~/Documents/sdotcomv2` (just changing directories to where the files are located)
 3. Type `git pull production` **(Do this step only if you want to update your local code with the code from the online repo)**
 4. Type `node server.js` (runs the server on your local host)
 5. copy and paste `http://localhost:3030` into your browser and you good to go
@@ -28,25 +30,25 @@ Accessing On Subsequent Visits
 Changing Text/Code/Image
 =======================
 1. Install Sublime Text: http://www.sublimetext.com/3 and have the local hosted site up on `http://localhost:3030`
-2. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
+2. Open your Documents folder and locate the folder called `sdotcomv2` and drag it onto the SublimeText Launcher Icon
 3. You have two options of how to change text/code/image
 
   **3.1.** The code is layed out in clear and concise manner allowing you to find pages easily
-    1. Specific webpages such as `www.roadmunk.com/pricing` are found in `views` with the names of the webpages being identical to their url (ie. `www.roadmunk.com/pricing` is named `pricing.ejs`)
+    1. Specific webpages such as `www.brentscheibelhut.com/design` are found in `views` with the names of the webpages being identical to their url (ie. `www.brentscheibelhut.com/pricing` is named `pricing.ejs`)
     2. Styling is found under `public/stylesheets` with the name of styling for the page identical to their url. 
     3. Make your changes and save the file though `Cmd+S`
     4. Refresh your local broswer the changes should be displayed
 
   **3.2.** If you want to change some text/code but don't know the location press `command+shift+f`
     1. In the find column type some of the text/code/image that you want to change
-    2. In the where columns put `~/Documents/roadmunkWebsite` (you should only have to place this once)
+    2. In the where columns put `~/Documents/sdotcomv2` (you should only have to place this once)
     3. Click find (**don't click replace**)
     4. A new file should appear with locations of where the find text was found. Click on the white box surrounding the correct location - this will open up the correct file.
     5. Change what needs changing. Then save the file through `Cmd+S`
     6. Refresh your local browser. The changes should be displayed
 
   **3.3.** If you want to change and image:
-    1. Open up Finder and navigate to `~/Documents/roadmunkWebsite/public/image`
+    1. Open up Finder and navigate to `~/Documents/sdotcomv2/public/image`
     2. Copy over the image your new image into this folder and remember it's name
     3. Follow the steps in 2.2 (to locate the old image) and in the find box type the URL of the image. You can find this URL by inspecting the element in your local browser.
     4. Update the URL of the image after the `/images/` to the name of the image you just recently added
@@ -54,19 +56,19 @@ Changing Text/Code/Image
     6. Regresh your local broser. The changes should be displayed
 
 4. Once all your changes are finished open Terminal
-5. Type `cd ~/Documents/roadmunkWebsite`
+5. Type `cd ~/Documents/sdotcomv2`
 6. Type `git add -A`
 7. Type `git commit -m "YOUR COMMIT MESSAGE GOES HERE"`
 8. Type `git push production master` and enter your credentials if needed 
 
 Adding a New Blog Post
 =======================
-1. Open your Documents folder and locate the folder called `roadmunkWebsite` and drag it onto the SublimeText Launcher Icon
+1. Open your Documents folder and locate the folder called `sdotcomv2` and drag it onto the SublimeText Launcher Icon
 2. If you do not already have a writer account then:
     -Open up `data/blog/authors.js`
     -Copy Data from a previous author and fill in the required fields. Remember to change the name from say `latif` to your name
     -SHOULDDO: Create a different image for an author
-3. Go to Finder and open up the folder `~/Documents/roadmunkWebsite/views/blog`. Duplicate any file in the folder and rename it to the title of the blog, except with '-' instead of spaces. This is the url you will see after `roadmunk.com/blog/`. 
+3. Go to Finder and open up the folder `~/Documents/sdotcomv2/views/blog`. Duplicate any file in the folder and rename it to the title of the blog, except with '-' instead of spaces. This is the url you will see after `brentscheibelhut.com/blog/`. 
 4. Go back to Sublime Text and navigate to the file under `views/blog`. Open it up. 
 5. Type your blog post in the blog content div using HTML. Refer to this page for the formatting tags: http://www.w3schools.com/html/html_formatting.asp. Always remember to close your tag after your are done formatting the text you want. Ignore the banner if statement. Save your changes with `Cmd+S`
 6. Open up `data/blog/blog.js`.
@@ -74,9 +76,9 @@ Adding a New Blog Post
     - The blog has a default object at the top of of `blog.js`. These fields will be used as defaults and will be overwritten if you overwrite them in your specific post. For example if you wanted to overwrite the default 'star' icon then include `icon: youIconHere,` in the new blog post.
     - Fill in the blog post data. Each are described below:
         - **title**: The title of the blog post that will be display to the readers. This will also be converted to be used as the url of the blog post. **So be sure to name the blog file the same as the output of the slugified title.**
-        - **postImage** : The image you want to use in the http://roadmunk.com/blog/ meta page that holds all the posts. This can be the same as image or different.
+        - **postImage** : The image you want to use in the http://brentscheibelhut.com/blog/ meta page that holds all the posts. This can be the same as image or different.
         - **category** : Which category the blog should be placed into. The default is releasenotes. Be sure when adding a category to write in all lowercase and without spaces.
-        - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `roadmunkWebsite/images/` directory and refer to 3.3 above
+        - **image**: The image you want to use in the top header. If you don't want to use one just put 'none'. If you do put in a image remember to place it in the `sdotcomv2/images/` directory and refer to 3.3 above
         - **icon** : The icon you want to use on the main blog page. You can choose from any of the ones found here: http://getbootstrap.com/components/#glyphicons. All you need to do is add the name of the icon following `gylphicon-`
         - **bioOn** : whether you would like the short biography at the bottom of the post. This is good for guest posts. It will pull data from the author object.
         - **author** : Put your author data here. It will be of the form `authorData.YOURNAME`
@@ -135,7 +137,7 @@ Adding a New Transition
 Updating Bower and Node Packages
 ====================================
 
-From time to time be sure to run `npm update --save` and `bower update --save` when in the roadmunkWebsite directory in the terminal. This will update the packages that are being used by the site.
+From time to time be sure to run `npm update --save` and `bower update --save` when in the sdotcomv2 directory in the terminal. This will update the packages that are being used by the site.
 
 Optimizing Images
 ============================
@@ -162,8 +164,6 @@ What you need to know is that you don't need to include the html, head, or body 
 Releasing To Testing
 ===========================
 
-**Testing with Heroku is currently broken since the release of the https server**
-
 It is always a best practice to go through the site once (click-through) on testing to make sure everything is working correctly online. It also let you have the ability to share new changes with other before pushing live.
 
 If you don't have a heroku account:
@@ -174,70 +174,11 @@ If you don't have a heroku account:
 
 If you don't already have the heroku remote added:
 
-1. In terminal type `cd ~/Documents/roadmunkWebsite` (or the path to the repo) and press enter
-2. Type `git remote add heroku git@heroku.com:roadmunk-testing.git` 
+1. In terminal type `cd ~/Documents/sdotcomv2` (or the path to the repo) and press enter
+2. Type `git remote add heroku git@heroku.com:brentscheibelhut-testing.git` 
 
 To push to testing:
 
 1. Add and commit all changes you want to go live.
-2. In terminal type `cd ~/Documents/roadmunkWebsite` (or the path to the repo) and press enter
+2. In terminal type `cd ~/Documents/sdotcomv2` (or the path to the repo) and press enter
 3. Type `git push heroku master` and let it run. Once a new command prompt appears everything is up on testing
-
-Releasing To Production
-=============================
-1. Commit all changes to release to your local repo.
-2. Push your repo to Github.
-3. Mount your production key TrueCrypt file located on your USB key.
-4. Mount the roadmunk42.tc TrueCrypt file located Google Drive/Roadmunk/Product Management/Certificates/roadmunk42.tc
-5. ssh to roadmunk.com (using the credentials in the roadmunk42.tc vault)
-6. type: `cd /var/www/roadmunk`
-7. type: `git pull` (will prompt you for your github credentials)
-8. if the pull goes well (ie. no conflicts are reported), type: `forever restart server.js`
-9. Unmount the TrueCrypt drives and remove USB key
-
-Setup TrueCrypt on Mac
-====================
-1. Configure Google Drive to mount on your computer
-2. Download TrueCrypt 7.2 from http://truecrypt.sourceforge.net/OtherPlatforms.html (bottom of page)
-3. Open the downloaded .dmg
-4. Ctrl+Click on the .mpkg, select Open, follow install prompts
-5. Create a script ~/mount-truecrypt.sh with the following contents, swapping in your own filenames for CORSAIR and roadmunk-colin.tc
-
- ```
- #!/bin/bash
- 
- echo "mounting stage 1"
- /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount /Volumes/CORSAIR/roadmunk-colin.tc /Volumes/PROD_STAGE1 -k "" --mount-options=ro --protect-hidden=no
-
- echo "mounting stage 2"
- /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t --mount ~/Google\ Drive/roadmunk42.tc /Volumes/SSH_KEYS -k /VOLUMES/PROD_STAGE1/roadmunk.key -p "" --protect-hidden=no
- 
- echo "unmounting stage 1"
- /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d /Volumes/CORSAIR/roadmunk-colin.tc
- ```
-
-6. Create a script ~/unmount-truecrypt.sh with the following contents, again swapping in your own filenames
-
- ```
- #!/bin/bash
- 
- /Applications/TrueCrypt.app/Contents/MacOS/TrueCrypt -t -d
- diskutil umount /Volumes/CORSAIR
- ```
-
-7. Edit ~/.ssh/config and add the following
-
- ```
- Host production-web
-         User ubuntu
-         HostName roadmunk.com
-         IdentityFile /Volumes/SSH_KEYS/roadmunk-key-production.pem
- ```
-
-8. To access the production server:
-  1. Insert USB key
-  2. Run `~/mount-truecrypt.sh`
-  3. Run `ssh production-web`
-  4. Do whatever you need to do on production
-  5. Run `~/unmount-truecrypt.sh`
-  6. Remove USB key
