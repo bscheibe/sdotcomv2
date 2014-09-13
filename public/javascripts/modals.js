@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $('#registrationForm').bootstrapValidator({
+    $('.freelance-form').bootstrapValidator({
+        message: 'This value is not valid',
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -11,7 +12,7 @@ $(document).ready(function() {
                 message: 'This name is not valid',
                 validators: {
                     notEmpty: {
-                        message: 'Name is required and cannot be empty'
+                        message: 'Your name is required'
                     },
                     /*stringLength: {
                         min: 6,
@@ -19,7 +20,7 @@ $(document).ready(function() {
                         message: 'The username must be more than 6 and less than 30 characters long'
                     },*/
                     regexp: {
-                        regexp: /^[a-zA-Z]+$/,
+                        regexp: /^[a-zA-Z/ ]+$/,
                         message: 'You name can only consist of alphabetical letters'
                     },
                     /*different: {
@@ -30,9 +31,13 @@ $(document).ready(function() {
             },
             phone: {
                 validators: {
-                    tel: {
-                        format: 'YYYY/MM/DD',
-                        message: 'The date of birth is not valid'
+                    //Doesn't have working for Canada
+                    /*phone: {
+                        message: 'The phone number is not valid'
+                    }*/
+                    regexp: {
+                        regexp: /^[0-9/-]+$/,
+                        message: 'This phone number is not valid'
                     }
                 }
             },

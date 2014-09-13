@@ -8,6 +8,7 @@ var limits       = require('limits');
 var mcapi        = require('./node_modules/mailchimp-api/mailchimp');
 
 var routes = require('./routes/index');
+var email  = require('./routes/email');
 var mailchimp  = require('./routes/mailchimp')
 
 var app = express();
@@ -37,6 +38,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/lists/:id/subscribe', mailchimp.subscribe);
+app.post('/email/freelance', email.inquiry);
 app.use('/', routes);
 
 // We do use this error handler. The other one we don't have dev env set up so it's currently not in use

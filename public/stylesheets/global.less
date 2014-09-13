@@ -215,6 +215,14 @@ a {
     }
   }
 
+  &.send {
+    padding : 15px 30px;
+    border : none;
+    &:before {
+      content : "Send";
+    }
+  }
+
   &.subscribe {
     padding    : 10px 25px;
     top: -6px;
@@ -239,6 +247,10 @@ a {
 
   &.blue2 {
     .color(@secondary-blue, @secondary-dark-blue);
+  }
+
+  &.blue3 {
+    .color(@third-blue, @third-dark-blue);
   }
 
   &.yellow {
@@ -821,6 +833,18 @@ a {
       .align-items(center);
       .justify-content(space-around);
     }
+  }
+
+  .form-horizontal {
+    .has-feedback {
+      .form-control-feedback {
+        right : 0px;
+      }
+    }
+  }
+
+  textarea.description {
+    height : 175px;
   }
 }
 
