@@ -218,6 +218,7 @@ a {
   &.send {
     padding : 15px 30px;
     border : none;
+    .border-radius(10px);
     &:before {
       content : "Send";
     }
@@ -803,49 +804,6 @@ a {
 }
 .box-round .box-inner {
     .border-radius(50%);
-}
-
-//Modals
-
-.modal-content {
-  background-color : @secondary-blue;
-  color : @light-font;
-  .modal-header, .modal-footer {
-    border : none;
-  }
-  .modal-header {
-    text-align: center;
-
-    //working but not working
-    .x {
-      color : @light-font;
-    }
-
-    h4 {
-      font-size : 36px;
-    }
-  }
-  .modal-body {
-    font-size: 16px;
-
-    .row {
-      .flex-display();
-      .align-items(center);
-      .justify-content(space-around);
-    }
-  }
-
-  .form-horizontal {
-    .has-feedback {
-      .form-control-feedback {
-        right : 0px;
-      }
-    }
-  }
-
-  textarea.description {
-    height : 175px;
-  }
 }
 
 

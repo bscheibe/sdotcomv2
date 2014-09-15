@@ -34,3 +34,4 @@ New Bugs
 ===============
 - [ ] Get RWD Cleaned up for maps
 - [ ] Google map working on modal?
+- [ ] Figure out why the form is being bound twice after adding the function (http://stackoverflow.com/questions/3775368/jquery-ajax-function-called-twice-with-same-data)

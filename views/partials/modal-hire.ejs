@@ -8,11 +8,12 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-md-6">
+        <div class="col-md-6 small-margin-bottom">
             <img src="/images/imac-hire.png" width="300px">
           </div>
+
           <div class="col-md-5"> 
-            <form role="form" method="post" class="form-horizontal freelance-form" action='/email/freelance'>
+            <form role="form" id="freelanceHire" method="post" class="form-horizontal freelance-form" action='/email/freelance'>
               <div class="form-group">
                 <!-- <label for="name">Name</label> -->
                 <input type="text" class="form-control" id="name" placeholder="Full Name" name="name">
@@ -25,12 +26,12 @@
 
               <div class="form-group">
                 <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                <input type="email" class="form-control" id="inquiryEmail" placeholder="Email" name="email">
               </div>
 
               <div class="form-group">
                 <!-- <label for="description">Description</label> -->
-                <textarea type="text" class="form-control description" id="description" placeholder="Very Basic Description of Freelance Work Needed" name="description"></textarea>
+                <textarea type="text" class="form-control description" name="description" id="description" placeholder="Very Basic Description of Freelance Work Needed"></textarea>
               </div>
 
               <div class="form-group text-center">
@@ -38,7 +39,9 @@
               </div>
 
             </form>
+            <p id="modalErrorMessage" class="text-warning text-xsmall text-center xsmall-margin-top"></p>
           </div>
+
         </div>
       </div>
       <div class="modal-footer">

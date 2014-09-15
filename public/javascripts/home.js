@@ -130,7 +130,7 @@ $("#subscribe").submit(function(event)
     posting.fail(function( data )
     {
         /* Clear the result of the input field */
-        $('#email').val('');
+        //$('#email').val(''); //Don't want to clear field - that's bad UX
         
         /* Put the results in a div */
         $( "#errorMessage" ).html("There was an error when trying to subscribe. Please try again.");
