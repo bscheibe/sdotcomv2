@@ -39,3 +39,5 @@ New Bugs
 - [ ] Make pricing table use Bootstrap
 - [ ] Seperate out athletic tables into different partials
 - [ ] Institue Ghost or that other easy to edit blog package
+- [ ] Have disqus hooked up for you and not Roadmunk
+- [ ] Optimize images again
