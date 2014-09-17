@@ -11,27 +11,27 @@ function switchSelected(clickedElement) {
 
 //Have to do the selected category last to allow for multiple category tags
 function filterBlogs(filter) {
-	if (filter == "ReleaseNotesFilter") {
+	if (filter == "UpdatesFilter") {
 		categories.forEach(function (category) {
-			if (category != "releasenotes") {
+			if (category != "updates") {
 				$("." + category).hide();
 			}
 		})
-		$(".releasenotes").show();
-	} else if (filter == "StartupsFilter") {
+		$(".updates").show();
+	} else if (filter == "EditorialsFilter") {
 		categories.forEach(function (category) {
-			if (category != "startups") {
+			if (category != "editorials") {
 				$("." + category).hide();
 			}
 		})
-		$(".startups").show();
-	} else if (filter == "GeneralFilter") {
+		$(".editorials").show();
+	} else if (filter == "WritingFilter") {
 		categories.forEach(function (category) {
-			if (category != "general") {
+			if (category != "writing") {
 				$("." + category).hide();
 			}
 		})
-		$(".general").show();
+		$(".writing").show();
 	} else {
 		categories.forEach(function (category) {
 			$("." + category).show();

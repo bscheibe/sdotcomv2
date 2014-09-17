@@ -153,6 +153,7 @@ Best Practices
 - When creating a new less file please '-' to represent spaces
 - Try and use '-' when writng CSS classes and use camelCase for JavaScript variables etc. 
 - When adding images (that are being used directly on the site and not in the blog) try to include a `.PSD` file along with it for easy editing.
+- Try to use double quotes "" when encapsulating atrributes, classes and id's in html
 
 EJS Templating
 ======================

@@ -57,6 +57,22 @@ module.exports = [
 		content     : "company"
 	},
 
+	//Company Page Data
+	{
+		title       : "About Roadmunk and the Company | What makes our roadmap tick",
+		description : "Learn what behind the team at the ever popular Roadmunk sofware.",
+		author      : "Brent Scheibelhut",
+		content     : "company"
+	},
+
+	//Athletics Page Data
+	{
+		title       : "Athletics",
+		description : "Learn Brent's athletic records and what makes him tick",
+		author      : "Brent Scheibelhut",
+		content     : "athletics"
+	},
+
 	//Style Guide Page Data
 	{
 		title       : "Roadmunk's Style Guide | The design that influences our product roadmapping software",
