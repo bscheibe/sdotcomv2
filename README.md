@@ -116,10 +116,6 @@ Adding a New Section
 2. If the above section is black (excluding a top section) then use the class `black-white` and similarily if the above section is white use the class `white-black` on the classes attached to the section.
 3. You want to alternate the SVG row so copy over the correct one and past in just below the section header (SHOULDO: Hook up a javascript binding that does this for us)
 
-Changing Prices
-=========================
-1. Go to `/public/javascripts/pricing.js` file and change the pricing variables at the top of the page.
-
 Adding a New Category
 =============================
 1. Go to `/data/blog` and in the `categories` array add a comma at the end of the last element and make a new line. Type the new category you want on this line. This name will show as the category on the blog page.

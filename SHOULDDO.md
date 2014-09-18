@@ -33,14 +33,14 @@ Current Bugs
 New Bugs
 ===============
 - [ ] Get RWD Cleaned up for maps
-- [ ] Google map working on modal?
+- [x] Google map working on modal?
 - [ ] Figure out why the form is being bound twice after adding the function (http://stackoverflow.com/questions/3775368/jquery-ajax-function-called-twice-with-same-data)
-- [ ] Change META data
-- [ ] Make pricing table use Bootstrap
-- [ ] Seperate out athletic tables into different partials
+- [x] Change META data
+- [x] Make pricing table use Bootstrap (no longer have pricing table)
+- [x] Seperate out athletic tables into different partials
 - [ ] Institue Ghost or that other easy to edit blog package
-- [ ] Have disqus hooked up for you and not Roadmunk
-- [ ] Optimize images again
+- [x] Have disqus hooked up for you and not Roadmunk
+- [x] Optimize images again
 - [ ] Send email to Dave asking if I can use his response
 - [ ] Clean up Resume and CV
 - [ ] Add inspect image package?
@@ -48,3 +48,5 @@ New Bugs
 - [ ] Page links break in header on other pages. (You can just hide them)
 - [ ] Clean up Writing page
 - [ ] Figure out weird cube movement
+- [ ] Fix hook up of google analytics events
+- [ ] Put up animations on design page
