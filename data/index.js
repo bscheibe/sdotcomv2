@@ -12,7 +12,7 @@ module.exports = [
 
 	//Design Page Data
 	{
-		title       : "Designs | Brent's designs throughout the ages",
+		title       : "Designs",
 		description : "See Brent's designs throughout the ages",
 		author      : "Brent Scheibelhut",
 		content     : "designs"
@@ -45,8 +45,8 @@ module.exports = [
 
 	//Blog Page Data
 	{
-		title       : "Brent Scheibelhut's Blog | Short Stories, Editorials, and all the Updates ever.",
-		description : "Get all the latest updates and new on Brent",
+		title       : "Blog",
+		description : "Short Stories, Editorials, and all the Updates ever.",
 		author      : "Brent Scheibelhut",
 		content     : "blog",
 		blogData    : blogData
