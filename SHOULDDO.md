@@ -41,3 +41,9 @@ New Bugs
 - [ ] Institue Ghost or that other easy to edit blog package
 - [ ] Have disqus hooked up for you and not Roadmunk
 - [ ] Optimize images again
+- [ ] Send email to Dave asking if I can use his response
+- [ ] Clean up Resume and CV
+- [ ] Add inspect image package?
+- [ ] Save a copy of the roadmunk website on it's own
+- [ ] Page links break in header on other pages. (You can just hide them)
+- [ ] Clean up Writing page

@@ -224,6 +224,21 @@ a {
     }
   }
 
+  &.old-website1 {
+    padding : 15px;
+    border : none;
+    .border-radius(50%);
+  }
+
+  &.old-website2 {
+    padding : 15px 30px;
+    border : none;
+    .border-radius(7px);
+    &:before {
+      content : "Website";
+    }
+  }
+
   &.subscribe {
     padding    : 10px 25px;
     top: -6px;
@@ -256,6 +271,10 @@ a {
 
   &.yellow {
     .color(@dark-yellow, @darker-yellow); 
+  }
+
+  &.red {
+    .color(@dark-red, @darker-red);
   }
 
   &:hover {

@@ -1,0 +1,87 @@
+<% include start %>
+<div class="writing-page">
+	<section class="section blue section-xlarge">
+		<div class="background-media"></div>
+		<div class="background-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<header class="section-header text-center large-margin-bottom">
+						<h1 class="headline text-medium hairline">Brent's Writing</h1>
+						<p>Learn About Brent's Published Articles</p>
+					</header>
+				</div>
+			</div>
+		</div>
+	</section>
+	<article>
+		<section class="section section-normal has-top">
+			<div class="decor-top">
+				<% include ./partials/top-triangle-angle %>
+			</div>
+			<div class="background-media"></div>
+			<div class="background-overlay"></div>
+			<div class="container">
+				<header class="section-header small text-center underline">
+					<!-- Why margin not applying it's in reset -->
+					<h1 class="headline text-large hairline">Published Works</h1>
+				</header>
+				<div class="row medium-margin-top small-margin-bottom">
+					<div class="col-md-12 text-default">
+						<div class="row">
+							<div class="col-md-12">
+								<ul id="categories" class="categories list-unstyled small-margin-bottom">
+									<% writingData.categories.forEach(function (category) { %>
+										<li id="<%= category.replace(/\s/g, '') + 'Filter' %>"
+											<% if (category == "All") { %>
+												class="selected"
+											<% } %>
+										><%= category %></li>
+									<% }); %>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<ul id="listOfBlogs" class="list-unstyled blog-list">
+								<% writingData.articles.forEach(function (article) { %>
+									<li class="col-md-4 <%= article.category %>">
+										<div class="grid-post">
+											<article class="post post-showinfo">
+												<a href="<%= article.url %>" title="<%= article.title %>">
+												<div class="post-media overlay">
+													<%if (article.postImage != "none") { %>
+														<div class="feature-image">
+															<img src="<%= article.postImage %>">
+														</div>
+													<% } %>
+												</div>
+												</a>
+												<div class="post-head">
+													<h2 class="post-title"><a title="<%= article.title %>" href="<%= article.url %>"><%= article.title %></a></h2>
+													<small class="post-author"><%= article.author.name %></small>
+													<small class="post-date"><%= article.date %></small>
+													<div class="post-icon">
+														<div class="hex-alt-big-white">
+															<span class="glyphicon glyphicon-<%= article.icon %>"></span>
+														</div>
+													</div>
+												</div>
+												<div class="post-body">
+													<p><%= article.partial %></p>
+													<a title="<%= article.title %>" href="<%= article.url %>" class="more-link">Read More</a>
+												</div>
+												<div class="post-extras bordered">
+												</div>
+											</article>
+										</div>
+									</li>
+								<% }); %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+</div>
+<% include end %>
