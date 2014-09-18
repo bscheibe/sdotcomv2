@@ -43,7 +43,7 @@ module.exports = [
 		content     : "style-guide"
 	},
 
-	//Roadmunk Blog Page Data
+	//Blog Page Data
 	{
 		title       : "Brent Scheibelhut's Blog | Short Stories, Editorials, and all the Updates ever.",
 		description : "Get all the latest updates and new on Brent",

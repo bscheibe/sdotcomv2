@@ -1,3 +1,7 @@
+//Remove home page links
+$(".home-page-only").css('visibility', 'hidden');
+
+//For the filter?
 $('#blogNav').addClass('on');
 
 var categories = [];

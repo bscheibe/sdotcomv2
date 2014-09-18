@@ -29,7 +29,7 @@ var writingData = module.exports = {
 			icon        : "edit",
 			category    : "recognition",
 			date        : "October 28th, 2013",
-			partial     : "3 Ways to Recognize and Motivate Employees published by Salesforce",
+			partial     : "3 Ways to Recognize and Motivate Employees Using Salesforce published by Salesforce",
 			url         : "http://blogs.salesforce.com/company/2013/10/motivate-employees.html"
 		}, brentArticle),
 

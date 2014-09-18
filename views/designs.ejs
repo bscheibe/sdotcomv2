@@ -1,5 +1,5 @@
 <% include start %>
-<div class="design-page">
+<div class="designs-page">
 	<section class="section blue section-xlarge">
 		<div class="background-media"></div>
 		<div class="background-overlay"></div>
@@ -22,12 +22,73 @@
 			<div class="background-media"></div>
 			<div class="background-overlay"></div>
 			<div class="container">
+				<div class="row large-margin-bottom">
+					<div class="col-md-10 center">
+						<div id="feature_2_text" class="col-md-6 features-right">
+							<header class="small-header features-text-left">
+								<h1 class="headline text-small hairline">All About Design</h1>
+								<p class="body-subheader features">From advertisements, to sketches and everything in between - I've been lucky enough to have a chance to do it all. Designs is much more about a process of working back and forth with client - then it is getting it right the first time around. While now and again a one hit wonder shines through, good design tends to evolve though stages.</p>
+							</header>
+							<div class="row small-margin-bottom">
+								<div class="col-md-12 rotate-buttons">
+									<button class="cta2 rotate yellow" id="show-front">Show Front</button>
+									<button class="cta2 rotate yellow" id="show-back">Show Back</button>
+								</div>
+							</div>
+							<div class="row small-margin-bottom">
+								<div class="col-md-12 rotate-buttons">
+									<button class="cta2 rotate yellow" id="show-right">Show Right</button>
+									<button class="cta2 rotate yellow" id="show-left">Show Left</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 rotate-buttons">
+									<button class="cta2 rotate yellow" id="show-top">Show Top</button>
+									<button class="cta2 rotate yellow" id="show-bottom">Show Bottom</button>
+								</div>
+							</div>
+						</div>
+						<div id="feature_2_img" class="col-md-6 features-text-left medium-margin-top">
+							<section class="cube-container">
+							  <div id="cube">
+							    <figure class="front1">
+							    	<img src="/images/cube/new_sqr.jpg" width="350px" height="350px">
+							    </figure>
+							    <figure class="back1">
+							    	<img src="/images/cube/oliphaunt.gif" width="350px" height="350px">
+							    </figure>
+							    <figure class="right">
+							    	<img src="/images/cube/new_sqr2.jpg" width="350px" height="350px">
+							    </figure>
+							    <figure class="left">
+							    	<img src="/images/cube/df_work.jpg" width="350px" height="350px">
+							    </figure>
+							    <figure class="top">
+							    	<img src="/images/cube/sfdc_goals.jpg" width="350px" height="350px">
+							    </figure>
+							    <figure class="bottom">
+							    	<img src="/images/cube/sfdc_motivate.jpg" width="350px" height="350px">
+							    </figure>
+							  </div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section-normal has-top">
+			<div class="decor-top">
+				<% include ./partials/top-round-angle %>
+			</div>
+			<div class="background-media"></div>
+			<div class="background-overlay"></div>
+			<div class="container">
 				<header class="section-header small text-center underline">
 					<h1 class="headline text-large hairline xsmall-margin-bottom">Old Website</h1>
 				</header>
-				<div class="row large-margin-top">
+				<div class="row large-margin-top medium-margin-bottom">
 					<div class="col-md-12 old-website-buttons">
-						<a title="Old Website" href="http://brentscheibelhut.com">
+						<!--<a title="Old Website" href="http://brentscheibelhut.com">
 							<button class="cta2 old-website1 red">Go</button>
 						</a>
 						<a title="Old Website" href="http://brentscheibelhut.com">
@@ -38,11 +99,45 @@
 						</a>
 						<a title="Old Website" href="http://brentscheibelhut.com">
 							<button class="cta2 old-website2 red"></button>
+						</a>-->
+						<a title="Old Website" href="http://brentscheibelhut.com">
+							<button class="cta2 old-website1 red">Go To Old Website</button>
 						</a>
 					</div>
 				</div>
 			</div>
 		</section>
+		<section class="section section-normal has-top">
+			<div class="decor-top">
+				<% include ./partials/bottom-round-angle %>
+			</div>
+			<div class="background-media"></div>
+			<div class="background-overlay"></div>
+			<div class="container">
+				<header class="section-header small text-center underline">
+					<h1 class="headline text-large hairline xsmall-margin-bottom">More Coming Soon...</h1>
+				</header>
+			</div>
+		</div>
+		<!--<section class="section section-normal has-top">
+			<div class="background-media"></div>
+			<div class="background-overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 center">
+						<div id="feature_3_text" class="col-md-5">
+							<header class="small-header features-text-left">
+								<h1 class="headline text-small hairline">Share your Roadmap as a URL</h1>
+								<p class="body-subheader features">Your audience can view the latest roadmap status and details by interacting with an HTML version of the roadmap, published as a private URL.</p>
+							</header>
+						</div>
+						<div id="feature_3_img" class="col-md-6 features-right features-text-right">
+							<img src="/images/publish-to-url.png" itemprop="screenshot" alt="Share product roadmaps with audience">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>-->
 	</article>
 </div>
 <% include end %>

@@ -8,6 +8,8 @@ function switchSelected(clickedElement) {
         $(clickedElement).addClass("selected");
     } 
 }
+//Remove home page links
+$(".home-page-only").css('visibility', 'hidden');
 
 //Have to do the selected category last to allow for multiple category tags
 function filterBlogs(filter) {
