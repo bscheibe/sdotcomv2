@@ -67,14 +67,6 @@ if (app.get('env') === 'development') {
 	});
 }
 
-/*function redirectSec(req, res, next) {
-        if (req.headers['x-forwarded-proto'] == 'http') { 
-            res.redirect('https://' + req.headers.host + req.path);
-        } else {
-            return next();
-        }
-    }*/
-
 // Have a catch all on the route page so this one isn't needed
 /// catch 404 and forward to error handler
 /*app.use(function(req, res, next) {

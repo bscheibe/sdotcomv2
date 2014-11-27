@@ -16,10 +16,12 @@
 @border-color : @steel-lightest;
 
 .designs-page .container {
-	img {
-		border: 1px solid @border-color;
-		opacity: 1;
-		vertical-align : top;
+	.cube-container {
+		img {	
+			border: 1px solid @border-color;
+			opacity: 1;
+			vertical-align : top;
+		}
 	}
 	.features-text-right {
 		text-align: right;
@@ -31,6 +33,54 @@
 	.features-right {
 		float: right;
 	}
+}
+
+// Animations Latif currently does not want
+.init-clock {
+	position: relative;
+	&:hover {
+	  .clock-hand {
+	    .animation(2s rotate-origin-minute infinite linear);
+	  }
+	  .hour-clock-hand {
+	    //Find out why I have to put top and right here
+	    top: 2px;
+	    right: 135px;
+	    .animation(24s rotate-origin-hour infinite linear);
+	  }
+	}
+}
+
+.clock-hand {
+	position: absolute;
+	top: 40.5px;
+	right: 144px;
+}
+
+.hour-clock-hand {
+	position: absolute;
+	top: 8px;
+	right: 125px;
+	.transform(rotate(225deg))
+}
+
+.init-dl:hover {
+	.download {
+	  .animation(1s download infinite linear);
+	}
+}
+
+.home-svg {
+	margin-top: 35px;
+	&:hover {
+	  .animation(2s rotate infinite linear);
+	}
+}
+
+.download {
+	font-size: 60px;
+	opacity: 0.8;
+	color: @green;
 }
 
 //Styling for cool cube
