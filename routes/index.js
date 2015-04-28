@@ -42,8 +42,8 @@ blogData.blogs.forEach(function (blog) {
 router.get('*', function (req, res) {
   res.render('404',
   {
-    title       : "Roadmunk 404",
-    description : "Roadmunk 404 - Page Not Found. Product and software roadmapping at its best",
+    title       : "Brent Scheibelhut 404",
+    description : "Brent Scheibelhut 404 - Page Not Found",
     author      : "Brent Scheibelhut",
     content     : "404"
   });
