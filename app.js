@@ -14,7 +14,7 @@ var mailchimp  = require('./routes/mailchimp')
 var app = express();
 
 // set MailChimp API key here
-mc = new mcapi.Mailchimp('6f84dfb8b1ce257abbf566d9e134787a-us9');
+mc = new mcapi.Mailchimp(process.env.MAILCHIMP_API_KEY);
 
 //Limits configuration
 var limits_config = {

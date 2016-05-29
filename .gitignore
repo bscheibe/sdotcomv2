@@ -1,2 +1,3 @@
 roadmunk-production.*
 roadmunk-key-production.*
+.env
