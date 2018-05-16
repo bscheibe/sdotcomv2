@@ -1,2 +1,4 @@
 roadmunk-production.*
 roadmunk-key-production.*
+.env
+.DS_Store
